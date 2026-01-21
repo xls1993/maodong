@@ -1,0 +1,5063 @@
+{
+  "title": "我的导航",
+  "description": "由浏览器书签导入生成",
+  "groups": [
+    {
+      "name": "书签栏 / 斑马 / 官网",
+      "links": [
+        {
+          "url": "https://www.zhenguanyu.com/#/home",
+          "title": "小猿之家",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.italent.cn/portal/convoy/targetmanagement?_userSpecialType=1&xpuid=146755258&_menuId=c3792e73-087e-4b97-a1bb-9733e7869673&_menuRootId=9027d6ad-d015-4c62-83d8-3fddb015b59d&_pageType=cloud&_pageTitle=%E6%88%91%E7%9A%84%E7%9B%AE%E6%A0%87&_restoreHref=https%3A%2F%2Fcloud.italent.cn%2Ftargetmanagement%2F%23%2FindexPage%3FmetaObjName%3DTargetManagement.MObjective%26shadow_context%3D%257BappModel%253A%2522italent%2522%252Cuppid%253A%25221%2522%257D#/indexPage?metaObjName=TargetManagement.MObjective&shadow_context=%7BappModel%3A%22italent%22%2Cuppid%3A%221%22%7D&_k=aujv3n",
+          "title": "我的目标（OKR）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://pan.zhenguanyu.com/#/home/file",
+          "title": "看云控股网盘",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://meeting-room.zhenguanyu.com/#/my-meeting",
+          "title": "会议室预定系统",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://yuanlearning.zhenguanyu.com/#/front/home",
+          "title": "学堂",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://kaoshi.bnutc.com/Home/Index",
+          "title": "家指考试",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 斑马 / 用户语音TTS",
+      "links": [
+        {
+          "url": "https://research.zhenguanyu.com/#/speak-score/statistic-read/text/sentence",
+          "title": "语文口语语音库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://research.zhenguanyu.com/#/speech/log/query/2?timeStart=1605715200920&timeEnd=1605801599920&dateEnd=1619841582921&dateStart=1619798400000&text=%3D%E5%AE%A2%E8%88%8D%E9%9D%92%E9%9D%92%E6%9F%B3%E8%89%B2%E6%96%B0&page=0",
+          "title": "用户语音库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/us/#/audio-library/chinese/list?endAnswerDate=1639670400000&maxAnswerCount=2&minAnswerCount=1&page=0&pageSize=20&resourceId=2035477336&resourceType=QUESTION&starArray=2&startAnswerDate=1637078400000&subject=chinese",
+          "title": "音频badcase",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://research.zhenguanyu.com/offsite/#/tts/synthesis/index",
+          "title": "TTS合成音频",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://snow-research-test.zhenguanyu.com/offsite/?from_wecom=1#/tts/synthesis/index",
+          "title": "TTS测试",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/WxRGxTxGGPPVY3RX",
+          "title": "中文TTS bad case修复技巧",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 斑马 / 其他功能",
+      "links": [
+        {
+          "url": "https://conan.zhenguanyu.com/#/academic-management/semesters/3346?_tab=grade",
+          "title": "斑马Conan-S3跟课",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mario.zhenguanyu.com/#/workbench/sql-template",
+          "title": "Mario数据平台",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://cat.zhenguanyu.com/#/systematic-stage-test?startTime=1648396800000&endTime=1650211199999&subjects=chinese&stageNums=1&stageUxs=3&cities=zhengzhou&cities=xian&cities=jinan&_tab=city&_t=1650435876798",
+          "title": "阶段测成绩分布",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://cat.zhenguanyu.com/conan-zts-web/#/user-search/list",
+          "title": "学生账号",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://darwin.zhenguanyu.com/#/issues?tagIds=2889&groupId=0&teamId=0&followers=xulishuang&biz=zebra&endTime=1623427140000&startTime=1620662400000",
+          "title": "Darwin报障",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://conan.zhenguanyu.com/#/academic-management/lessons/list",
+          "title": "conan教务管理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://pipe.zhenguanyu.com/#/board/detail/3/15402006948561483?navId=1945&projectName=%E6%96%91%E9%A9%ACAI%E8%AF%BE",
+          "title": "PIPE",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://jira.zhenguanyu.com/secure/RapidBoard.jspa?rapidView=1657&projectKey=ZDTPM&quickFilter=7758",
+          "title": "Jira",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=71880881",
+          "title": "内容教研",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=79245836",
+          "title": "数据教研",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 斑马",
+      "links": [
+        {
+          "url": "https://x.zhenguanyu.com/react/#/aidraw/text-image?",
+          "title": "斑马纵横文生图",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/encyclopedia/packages/list?coursePackageType=normalPack&formal=true&language=zh&page=0&pageSize=20",
+          "title": "百科",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/lesson/list?subjects=chinese",
+          "title": "大纲",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/episode/detail/chinese/99509?_tab=chapter&nav_activate_status=99509&nav_courseFlatType&nav_courseType=episode&nav_episodeId=99509&nav_objectId=99509&nav_subject=chinese",
+          "title": "单节课",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/episode/movie/list",
+          "title": "视频",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/picbook/list?subject=chinese&_tab=picbook-list",
+          "title": "绘本书籍",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/episode/quiz/chinese/list",
+          "title": "练习",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/question/chinese?_tab=common",
+          "title": "题目",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/knowledge/list/chinese",
+          "title": "知识库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/knowledge/tree/basicPoint/chinese",
+          "title": "考点树",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/cullian/#/free-resource/poetry-tutorial/list",
+          "title": "随材古诗扫码",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain-test.zhenguanyu.com/#/lesson/list?outlineType=ai_course",
+          "title": "zebrain-测试",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/send-mission/batch?_tab=base",
+          "title": "批量推课",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/us/#/dev-tool/upload",
+          "title": "文件上传",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/us/#/audio-library/chinese/list?endAnswerDate=1721059200000&page=0&pageSize=20&starArray=0&starArray=1&starArray=2&starArray=3&startAnswerDate=1720972800000&subject=chinese",
+          "title": "用户语音库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3Dzy5bllMowpSLFy/gZgeG",
+          "title": "推课、跟课账号统计📝",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.cctalk.com/group/study?groupId=91542894&xh_fshareuid=178852159&xh_preshareuid=178852159",
+          "title": "AIGC动画创作训练营",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 常用工具",
+      "links": [
+        {
+          "url": "https://www.iamwawa.cn/zishu.html",
+          "title": "在线字数统计",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.iamwawa.cn/pinyin.html",
+          "title": "在线中文转拼音",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://wantwords.net/",
+          "title": "wantwords",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://wantquotes.net/",
+          "title": "WantQuotes 据意查句",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.shenyandayi.com/wantWordsResult?lang=zh&query=%E6%8B%9B%E7%89%8C",
+          "title": "深言达意",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.aoqiv.com/audio-editPro.html",
+          "title": "音频编辑",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://convertio.co/zh/download/c5e967ab948c6cf8ed629cf89cb2098017d971/",
+          "title": "音频转换格式Convertio",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://tinypng.com/",
+          "title": "缩图",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bejson.com/ui/compress_img/",
+          "title": "图片压缩",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.gaoding.com/",
+          "title": "稿定",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://tools.pdf24.org/zh/",
+          "title": "【用过】PDF24 Tools: 在线PDF工具",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.99pdf.com/?b_scene_zt=1",
+          "title": "PDF压缩",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.pdfpai.com/",
+          "title": "PDF派：PDF转换器",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.processon.com/diagrams",
+          "title": "ProcessOn",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.deepl.com/translator",
+          "title": "DeepL翻译",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://jinshuju.net/",
+          "title": "金数据",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.znpigai.com/experience/ocr_experience.html?_1614134094498",
+          "title": "手写文字识别",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://palette.fm/",
+          "title": "黑白照片上色",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://dongci.kawo.com/?utm_source=zhihu&utm_medium=answer&utm_content=171026",
+          "title": "视频转GIF",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.hanspub.org/journal/WLS.html",
+          "title": "汉斯开源期刊在线阅览",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mooc.chaoxing.com/",
+          "title": "超星慕课",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.bookinlife.net/",
+          "title": "古籍网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://open.163.com/cuvocw/",
+          "title": "中国大学视频公开课_网易公开课",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.mooc.cn/",
+          "title": "MOOC中国 - 慕课、公开课中文分享平台",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://sou-yun.cn/index.aspx",
+          "title": "搜韵-诗词门户网站",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.dacihai.com.cn/index.html",
+          "title": "大辞海",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.freeconvert.com/zh/convert/video-to-gif",
+          "title": "视频转 GIF 转换器 - FreeConvert.com",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨",
+      "links": [
+        {
+          "url": "https://www.yuque.com/dashboard",
+          "title": "语雀工作台",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/desktop",
+          "title": "我的桌面",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/space/lAroGpYyyLN1xhw3",
+          "title": "企业石墨",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3jMXY2pp0vO7IVsN",
+          "title": "01大纲",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Nk6wy1bll9YV2tpA/79d2f",
+          "title": "简版大纲",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kGEyX7NlozZ4Cne9",
+          "title": "《古代寓言》创编尺度讨论",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kpOzBDllB62Ku4OO",
+          "title": "周报",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.im/tables/H8dTQc8YTTV9Vcc9?table=VHa1ZrGlPvQ&view=WR5IBCWew1F",
+          "title": "个人 todo",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/q8wyBR77QJaPU8s8",
+          "title": "13后台（后台工作+走查）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/k6wy1bllraGZspJg",
+          "title": "36语文阶段测",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kgOmKgvvV9r2H1EQ",
+          "title": "33课程数据",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kBzyJOKKDWe2TMr4",
+          "title": "51.学习研究",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27ppOxbOcdmy/MODOC",
+          "title": "日积月累用户行为数据链接🖋",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kyY7v4WWNjbMhJdQ/MODOC",
+          "title": "优课分享（持续补充中）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/umc5E5r0VUM50UIw/RTR8k",
+          "title": "S3汉字视频交互时间节点",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/3RkxjdrVqQV9KcJX",
+          "title": "拼图用",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3Dzy5bllMowpSLFy/RQM1l",
+          "title": "13287071837手机号统计📝📝",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qnvK1x66N5DwhP8x/w2EA2",
+          "title": "01古诗词库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kGEyX7NNJ1D8hwFO/JfyMd",
+          "title": "斑马课程上线情况同步（2020/3/2）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3al78EppzBnYUL0Z/MODOC",
+          "title": "内容研发工作进度",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/6RvdRQ8gwpdkRKQ9/GkLZp",
+          "title": "⭐️语文完课转化续报数据",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qcvcj36xJj9D8HpV/8yX5k",
+          "title": "语文完课转化续报数据（截至1221）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/yHRQwQ8yQDXyWdwx/UWs0y",
+          "title": "内容侧需求收集",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AYjpE0GGJoR1SXFj/YnbUH",
+          "title": "斑马语文产品需求跟进表202106",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/GqXw8gxjwPcwxxdy/0J1P7",
+          "title": "数据看板排期",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/AYjpE0GGvLmwFy7r/MODOC",
+          "title": "练表达数据分析",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/vj6VWXK6ggCtKYCX/CgMsn",
+          "title": "监课数据参考指标",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/8pD8gq8JWGhqh6kw/hkSxJ",
+          "title": "系统课质量评价指标体系-数据监测",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27pplorzs2WY/UR0Up",
+          "title": "重庆店铺课程-节日节气",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kvLQv5EELZjDUy18/MODOC",
+          "title": "展示账号UserID列表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AXnjwGvvne64FQO7/j5la1",
+          "title": "任职资格-阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/zMkXRMqMAo4hgtpR/untj9",
+          "title": "S1—S4古诗",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k6wy1bll242jC8ox/3AqzS",
+          "title": "语文S5/S6线上素材需求",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/yx1bfqLZ6W0mt4T8/ntR2G",
+          "title": "【2023】阅读课程产品资料-内容梳理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q4Ry0dXXYOpVcNjy/03cXE",
+          "title": "【自用】英语各级别能力和能力水平整理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.khanacademy.org/login?continue=%2Fprofile%2Fme%2Fkhanmigo%2Factivities",
+          "title": "Login | Khan Academy",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kMg5zmrrGDKKhevo",
+          "title": "空",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 日积月累 / S6产品文档",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k9zy4jPPyPBwhR7W/4LL2i",
+          "title": "S6产品需求&能力模型（1114讨论版）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/cPcWpQeKybYSpViI/3MV6P",
+          "title": "阅读S6线上素材需求",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 日积月累 / S5S6体验课排期",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/RcwwD3jgq3PGdT3Y/vKUFD",
+          "title": "S5S6体验课教研工作排期（持续更新）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kMg5zmrrmjmGIvDV/5oBDg",
+          "title": "S5、S6体验课相关内部试排",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3O8pG2xx9KQgtaRV/MODOC",
+          "title": "阅读S5S6-双周体验课排期",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 日积月累 / S5日积月累",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3JWpxZNN72M8IpR8",
+          "title": "S5日积月累",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kLJpDgyynReptNn1",
+          "title": "S5日积月累知识点（终版更新）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/jPgvyxwx6wwWvWXC",
+          "title": "S5日积月累工作进度及必要链接",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/30dyDb99Wl9VcMrX",
+          "title": "S5日积月累分镜需求 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/30dyDb99aEj8fV8z/",
+          "title": "S5动画反馈",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 日积月累",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/32wyYb88bJ5QUP0K",
+          "title": "S6 D2D3教研稿定稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/Ad6ZeWppW8mYCXGr",
+          "title": "S6 D2D3剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/qRep1rjjx9dpSJo1",
+          "title": "S6D2D3分镜审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kxYEvBPPQMgXHeyX",
+          "title": "D2D3分镜终稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/30dyDb99bQ58Hjja",
+          "title": "S6 日积月累D1D4分镜脚本（即教研稿定稿）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/Ad6ZeWppe5Gyh9v0",
+          "title": "S6日积月累插画反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/qmOx9rVV9GoxTJNG",
+          "title": "S6台词本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/AzbPvpZZ42VdS001",
+          "title": "S6配音审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/AP2p0Xaa05NBC45Q",
+          "title": "S6走查",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/k6wy1bll1RDPsVDd",
+          "title": "S6 交互",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.mediatrack.cn/personal/projects/1631205442350747648/files?path=1631232497012441088",
+          "title": "(25) 动画-分秒帧",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AXnjwGvv2WgaF9RP/do3O2",
+          "title": "⏰【阅读写字】视频打点时间",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/A1wyzb99PDz9f0K5/MODOC",
+          "title": "阅读S6线上排期",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/e32wyYb880NdbHLq/eAAdq",
+          "title": "语文随材排期0319（S1-S6）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://pan.zhenguanyu.com/#/link/okHp8bYpx4JZPWpCwTWA",
+          "title": "S6线下绘本插画",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://pan.zhenguanyu.com/#/link/vurvCdMxwxTg32RGr0nk",
+          "title": "S6随材定稿下载",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/30dyDb99B2RetWnO/E0lBJ",
+          "title": "S6日积月累优化记录",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/jPgvyxwx6wwWvWXC/mvaO2",
+          "title": "S5日积月累工作进度及必要链接",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kLJpDgyynReptNn1/MODOC",
+          "title": "S5日积月累知识点（终版更新）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3O8pG2xx2wzoCd9J/InPZW",
+          "title": "S5+S6角色绑定汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1672755577708460085&wfr=spider&for=pc",
+          "title": "古越青铜器展",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 排期",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kMg5zmrrPwlWFrF0/bVgue",
+          "title": "随材整期切换信息同步",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kMg5zmrr08jWtWYp/MODOC",
+          "title": "三合一2.1切换时间",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kblP27pprd8bSzz7",
+          "title": "语文2021-季度优化意见",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AXnjwGvv7R9JtE61/PpS3k",
+          "title": "【辅导-教研】优化、迭代信息同步",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/69GxVAeabeQjnBWd/00xOg",
+          "title": "阶段测视频制作排期5.18",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Aw65vQ77rYYDfwJd/MODOC",
+          "title": "语文阶段测制作排期",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/kblP27ppBL1XcELP/YVwcA",
+          "title": "交互习题新排期",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/chRGY98j8hcPkDjG/MODOC",
+          "title": "未来一年规划-语文教研",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3O8pG2xxE4gdf7Y2/UoG4r",
+          "title": "S5交互图片排期-插画、音频",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/vWRwXd9WWyV3kXQW/emAax",
+          "title": "2022-Q1季度优化明细-S3❄️",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3sTvJvqUm1UpWtyS/fxIde",
+          "title": "2021-Q4季度优化明细-S1🍃",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/JmWKnfKyDyYZkWqV/jJPGi",
+          "title": "S6交互、批注图片排期-插画、音频",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 阅读",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/AP2p0XaaWL7Du1Ee",
+          "title": "S3绘本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Ad6ZeWppGwNvUzFN/1JjYr",
+          "title": "S3表达结构和话题、阅读方法",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3QXp9eNNlVDbImBo",
+          "title": "2022.05.09 新课标调研分享 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/wh9ppHWp9HKg39PC/LYh5E",
+          "title": "S3用户答题情况分析",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/folder/qnvK1x66lZgGczeB/",
+          "title": "语文能力模型3.0 - 石墨文档(28)",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/k6wy1bllBKJjH6VW",
+          "title": "12.定期复盘记录 - 石墨文档(23)",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kyY7v4WWbgKrfJ8G",
+          "title": "11.审校问题总结 - 石墨文档(23)",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/PGYJqy8CTDHqQWDt/rP5g4",
+          "title": "能力模型3.0-读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/QvWw8DkkkcyY9Pcq/xORGn",
+          "title": "斑马语文分享",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/30dyDb999nyZiKX1/Ukfyh",
+          "title": "04-语文Pipe数据报告&商分数据报告",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/AzbPvpZZlGXQUMge/MODOC",
+          "title": "部编版一年级拼音梳理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/30dyDb99ODnmT1sW",
+          "title": "4.编校手册 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3oODQKLLvy0Yt0FO/ysNr9",
+          "title": "《中国成语故事》目录",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/mindmaps/Ad6ZeWppKx0PUzFN",
+          "title": "语文课程随材给码、校音流程",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kvLQv5EE4rNXuPFz/EQ0bn",
+          "title": "小学语文知识点标签",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/kgOmKgvv820rTrFm/MODOC",
+          "title": "部编汉字笔顺笔画汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/qmOx9rVVKyvVi9FG/J6elU",
+          "title": "部编教参诗歌释义汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/D38GPpTrQx8GpWkg",
+          "title": "插画素材库（请联系孙孟楠）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/DTTrwcVj8w96vc9P",
+          "title": "教学法资料梳理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/q4Ry0dXX1Ya1uoOe",
+          "title": "编审组】图库资源汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3QXp9eNNglg0t1Fp/MODOC",
+          "title": "语文随材插画常见问题参考图【持续更新】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/docs/GcjDXqjTry8tVQpG",
+          "title": "S1/S2/S3八斗打电话环节数据分析",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/q7wyQnEEO5DLF4Fm/zO9oo",
+          "title": "竞品体验账号",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AYjpE0GGvLmwFy7r/MODOC",
+          "title": "练表达数据分析",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AYjpE0GGvLmwFy7r/K0pl3",
+          "title": "练表达数据分析",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/kMg5zmrry5MwFlvB/ROgC3",
+          "title": "古诗词库稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/qnvK1x66N5DwhP8x/p4Dbo",
+          "title": "1古诗词库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/AYjpE0GG8zn1Ha6O/QeXoh",
+          "title": "各级别推荐古诗词",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/docs/3al78EppgmbJF9FP",
+          "title": "随材中需要注意的敏感内容（持续更新）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/9Hkcc39rywDCjh38",
+          "title": "阅读各级别chapter汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/pcvCdgdRw6yqYJwG/dORLf",
+          "title": "刘莹老师工作内容梳理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/3VlopzaaWmy8fdKV/TWoNb",
+          "title": "词语分级表-研究组",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/32wyYb88dvZGTN6l",
+          "title": "语文阶段测S3Q1-4题目修改建议",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/D1OXujMM93IpJsiT",
+          "title": "S4前期数据分析报告（W1-W16）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/docs/XPt3ykkYqvtCvccx",
+          "title": "思维“题板”讲解拖动和用户学习效果关系探索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/wvPvVt9tKtGxpgwv/MODOC",
+          "title": "语文随材常见字词注音【持续更新】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/PXhy3YTjTV8YhCKc/MODOC",
+          "title": "部编汉字田字格占位（高清）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/3QXp9eNNglg0t1Fp/MODOC",
+          "title": "语文随材插画常见问题参考图【持续更新】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/LTE1Rrk4MI4BFpUY/MODOC",
+          "title": "阅读学习报告表头",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kBzyJOKKPN85tp72",
+          "title": "去年龄化分级文案",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://magazinelib.com/",
+          "title": "Download PDF magazines and ebook free USA, UK, Australia and other",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 编辑",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/AZlp79EEZWVdSdsn",
+          "title": "工作流程及工作流程图 - 石墨文档(3)",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/63Yv3YVQg3cRkrxW",
+          "title": "审核标准 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3JWpxZNN9vM8tjFr/lBC6m",
+          "title": "❄️能力模型1.0",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/gRt3Q8Cd9RcXV8Kk/2Tu3q",
+          "title": "❄️语文能力模型2.0",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/QR6wPHwtVTH8PxgP/oCYrn?corpid=ww20745c5e79cfa434",
+          "title": "❄️布鲁姆的教育目标分类法",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/yWDQJpgXDtcv3rRW/MODOC",
+          "title": "❄️S1 能力模型",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/kGQc99CYjk6CPCHD/MODOC",
+          "title": "❄️S2能力模型2.0",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 石墨 / 高配&加量阶段测",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3al78Epp1l0aS6p6/MODOC",
+          "title": "语文阶段测【高配版】排期",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AzbPvpZZ65LKuL2p/dIAU7",
+          "title": "语文S2阶段测-蓝图",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kKZpKJNNo8aLCB04",
+          "title": "语文S2阶段测-出题说明-0711",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/AzbPvpZZXMB5T1DL",
+          "title": "语文S1Q1&Q3低配版阶段测题目质量简报",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q5jy5bll7VLdiMRY/MODOC?referer=mail_collaborator_invite&parent_id=20464672&recipient=xulishuang%40yuanfudao.com",
+          "title": "语文低配版阶段测S1Q1&Q3实验数据",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/sheets/Qr69wRw6xVqTDYTd/R7ntU",
+          "title": "S3下半个U交互习题混淆项",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/fGuEYxG6yhQBUfQo/erSD3",
+          "title": "语文S1数据分析结果",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/2rPrMTFw2acKmyL5/4EkE5",
+          "title": "语文S2数据分析结果",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Fx4ZaO5FsTwzj4oi/1g2En",
+          "title": "语文S3数据分析结果",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kxYEvBPP7Erwi2e2/MODOC",
+          "title": "语文S3低配题目修改建议_0817",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27ppKM08URRE/MODOC",
+          "title": "三科阶段测等级划分标准",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/Aw65vQ77EY6KTEJY",
+          "title": "0语文阶段测大题量蓝图【V3】迭代策略",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/8GRYijnX5vQsab6l/MODOC",
+          "title": "阶段测【加题版】走查反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://shimo.zhenguanyu.com/docs/rCKgxT6p39XytJxj",
+          "title": "1021&1028阶段测实验结果",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=185391430",
+          "title": "英语S2级别全量阶段测数据复盘 - 复习阶段测学情沟通项目主页 - Confluence",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 官网库",
+      "links": [
+        {
+          "url": "https://www.pep.com.cn/xw/zt/hd/ywsd/",
+          "title": "中小学语文课文示范诵读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://jc.pep.com.cn/",
+          "title": "人教社-中小学教材电子版",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://basic.smartedu.cn/tchMaterial?defaultTag=dfb9da8a-2ae2-4b2e-a733-687e0252443f%2F8c9f2e5c-e403-4f55-812c-289021ac66a0%2F9d7edc22-dfc0-4653-95a5-cbe7e4908755%2F0e4e66fc-ae0b-451e-9a91-9b7d86c0752e",
+          "title": "国家中小学智慧教育平台",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.peeavp.com.cn/zhjdzyk/",
+          "title": "中华经典资源库合辑",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202004/W020200422556593462993.pdf",
+          "title": "2020中小学阅读指导目录",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.khanacademy.org/profile/me/khanmigo/activities",
+          "title": "Khan Academy",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://ebird.org/home?_ga=2.100363998.1983828521.1686045229-1652951710.1686045229&_gl=1*obqxil*_ga*MTY1Mjk1MTcxMC4xNjg2MDQ1MjI5*_ga_QR4NVXZ8BM*MTY4NjA0NTIzMC4xLjEuMTY4NjA0NjM2Ni41OC4wLjA.",
+          "title": "eBird - 发现观鸟新世界！",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.iplant.cn/frps",
+          "title": "《中国植物志》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.guoxuedashi.net/",
+          "title": "国学大师",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://blueanimalbio-mirror.github.io/index.htm",
+          "title": "蓝色动物学（中国动物学科普网）www.Blueanimalbio.com",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.docuchina.cn/2016/11/18/VIDAGWYZIiNiBCyG4l9uqWfU161118.shtml",
+          "title": "本草中国-纪录片网",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 语料库",
+      "links": [
+        {
+          "url": "https://corpus.zhonghuayuwen.org/#/yyzy/xdhy",
+          "title": "中华语文知识库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://ccl.pku.edu.cn:8080/ccl_corpus/",
+          "title": "CCL语料库检索系统（网络版）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://bcc.blcu.edu.cn/",
+          "title": "BCC语料库",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 古籍文献库",
+      "links": [
+        {
+          "url": "https://www.shidianguji.com/?page_from=searching_page",
+          "title": "识典古籍-古籍在线阅读平台",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://ctext.org/resource.pl?node=3925&if=gb&remap=gb",
+          "title": "中国哲学书电子化计划",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://taiwanebook.ncl.edu.tw/zh-tw/book/NCL-000007951/reader",
+          "title": "臺灣華文電子書庫",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://d.gushu.net.cn/",
+          "title": "古书网导航",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 字形库",
+      "links": [
+        {
+          "url": "https://xiaoxue.iis.sinica.edu.tw/",
+          "title": "小學堂字形",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/",
+          "title": "漢語多功能字庫 Multi-function Chinese Character Database",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://qxk.bnu.edu.cn/#/",
+          "title": "汉字全息资源应用系统",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.zdic.net/",
+          "title": "漢典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://jgw.aynu.edu.cn/ajaxpage/home2.0/zkzs/zkzs.html",
+          "title": "殷契文渊-字形库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.kaom.net/index.php",
+          "title": "古音小鏡·歷史語言學",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://szsw.bnu.edu.cn/#/",
+          "title": "数字化《说文解字》",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 辞书",
+      "links": [
+        {
+          "url": "https://sou-yun.cn/QueryPoem.aspx",
+          "title": "诗词检索网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://homeinmists.ilotus.org/hd/hydzd2.php",
+          "title": "漢語大字典檢索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.cihai.com.cn/home",
+          "title": "辞海",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.hydcd.com/",
+          "title": "汉语大辞典_辞海_新华字典电子版在线查询_词典大全 - 汉辞网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://cnkgraph.com/Glossary",
+          "title": "词汇",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 教材",
+      "links": [
+        {
+          "url": "https://mp.weixin.qq.com/s/vcM_8MVNXkNPZu3TQORTUw",
+          "title": "高二语文选修《中国古代诗歌散文欣赏》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.dzkbw.com/books/rjb/",
+          "title": "人教版电子课本-人民教育出版社",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://xueba5.com/sujiaoban/",
+          "title": "苏教版电子课本-江苏教育出版社电子课本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://m.5haoxue.net/keben/yuwen/",
+          "title": "语文课本教材_好学电子课本网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.lbx777.com/about/map.htm",
+          "title": "课本教学——老百晓在线",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://pep.gensee.com/webcast/site/vod/play-b0efee39e02b4b7cb5376ac59bbbc6a1",
+          "title": "小语魏航",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.fx361.com/bk/ywjxzy/",
+          "title": "语文教学之友",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://prichi.hkep.com/",
+          "title": "活學中國語文-香港教育图书有限公司",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.flp.edu.hk/download/Resource/Ten/%EF%BC%88%E8%87%AA%E5%AD%B8%E6%95%99%E6%9D%90%EF%BC%89%E5%A4%9A%E7%BE%A9%E8%A9%9E.pdf",
+          "title": "投影片 1",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://prichi.hkep.com/demo/tools/pdj/",
+          "title": "漢語音節拼讀機",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库",
+      "links": [
+        {
+          "url": "https://www.zjlib.cn/",
+          "title": "浙图",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.qjmy.cn/edu/book/category/",
+          "title": "亲近母语分级阅读书目",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.education.com/",
+          "title": "Education.com | #1 Educational Site for Pre-K through 5",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://ltp.ai/demo.html",
+          "title": "语言技术平台（ Language Technology Plantform | LTP ）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.gushiwen.cn/",
+          "title": "古诗文网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zujuan.xkw.com/",
+          "title": "组卷网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PL0eGJygpmOH6Tl8QXEZ6yfriyq2fVrFWB",
+          "title": "《经典咏流传》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ncha.gov.cn/col/col2586/index.html",
+          "title": "国家文物局",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.meipian.cn/2gic14an",
+          "title": "无锡博物院游记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/wvPvVt9tKtGxpgwv/MODOC",
+          "title": "语文随材常见字词注音【持续更新】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AroGpYyywMmXh98w/1ZfVd",
+          "title": "斑马阅读全部古诗文",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q8wyBR77RYEzhBYP/WhlV9",
+          "title": "出版物审校要点梳理",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 知识库 / 杂",
+      "links": [
+        {
+          "url": "https://www.sohu.com/a/272713249_652871",
+          "title": "中国古代书籍的装帧形式",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.xiexiebang.com/a6/2019051312/5a2e96723fb4a816.html#",
+          "title": "与建筑有关的几个汉字 - 写写帮文库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIxNzM0NzEzNQ==&mid=2247495677&idx=4&sn=9719ff5feb615828cd9a26b0438f3e94&chksm=97f98aada08e03bb08973bbf8654ec92fad0df0a2d3f3dcfbe3a4d5df5745b16a8d00adf4a2a&scene=27",
+          "title": "不是比喻的“像”字句",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1666277673098815206&wfr=spider&for=pc",
+          "title": "借代的特点及其作用",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画",
+      "links": [
+        {
+          "url": "https://x.zhenguanyu.com/react/#/material/encyclopedia-lib?encyclopediaFileCategory=threeDimensionalModal&id=970717",
+          "title": "斑马百科+文学素材库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AroGpYyylYrDfNXm/QRAF0",
+          "title": "百科主题上线规划（11.5更新）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kvLQv5EE7lbEuEvx",
+          "title": "人文动画",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k9zy4jPvvXoXiwB4/MODOC",
+          "title": "【我的--资料链接】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.chnmus.net/ch/collection/appraise/details.html?id=512151095865916821",
+          "title": "盾牌 - 河南博物院",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/AYuxM5zzi9VUHPW9Z_EAPQ?scene=27&version=4.1.32.99555&platform=mac&nwr_flag=1#wechat_redirect",
+          "title": "战国私印31枚赏",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.cn5v.com/2020/02/11068.html",
+          "title": "极简毛笔史 – | 中国书画展赛网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.jianshu.com/p/8d37b01dabee",
+          "title": "古代的兵车 - 简书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://lhsr.sh.gov.cn/jnylwh/20201009/0125405e9f3d48779e5dd441c106b996.html",
+          "title": "传统门窗的沿革——早期的传统门窗_江南园林文化_上海市绿化和市容管理局",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1vd4y177Nk/?share_source=copy_web&vd_source=3688668513b98981d468603b445db779",
+          "title": "【史图馆】春秋列国地图（前770年-前453年）_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/19/0831/02/49854881_858176536.shtml",
+          "title": "青铜艺术——车马器专题",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.acfun.cn/a/ac2471289?from=video",
+          "title": "马车系驾法",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/A1wyzb9Q76OWFY2K",
+          "title": "文学周会-问题讨论",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27pYMLnKSoYB/Yx9ez",
+          "title": "冠军老师-工作进度",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kpOzBDljM6VKt7MD/N0bm0",
+          "title": "文学百科-QA常见问题话术参考",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/30dyDb9929LJhKV5",
+          "title": "00《史记》大纲文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q4Ry0dXXxglgflrX/MODOC",
+          "title": "00《史记》-大纲选段等",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/q5jy5bllKlBBsEJE",
+          "title": "01《史记》教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kpOzBDllPnvjSooJ",
+          "title": "02《史记》剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/bh3wZS2FBOYhdrng/VRuJq",
+          "title": "史记-资产表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/jbcpQFaq9k80ojaL/U55sI",
+          "title": "⭐️⭐️E5-E8交互",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/30dyDb9jvyv9SomN",
+          "title": "《史记》E5-E8相关资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/HVhqd5Z1O10sv8Et",
+          "title": "编剧剧本创作原则（2023.10.12会议纪要）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weread.qq.com/web/reader/6ec32b107268db866ec4e69ka6832360236a684eceeee20",
+          "title": "史记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ziyexing.com/files-5/shiji/shiji_index.htm",
+          "title": "史记〔注释本〕目录 【西汉·司马迁/著】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.peeavp.com.cn/zhjdzyk/jdyj/s/",
+          "title": "史",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://xueba5.com/sujiaoban/gaoeryuwenshijixuandu/",
+          "title": "苏教版高二语文《史记》选读-苏教版高二语文《史记》选读电子课本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/32wyYb8Q1Mr0svg4",
+          "title": "斑马百科·文学课程说明手册-初稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zebrain.zhenguanyu.com/#/encyclopedia/packages/detail/104?tab=3",
+          "title": "Zebrain 《史记》课包",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 教研稿",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/ynWttwXk8Rwl6G5D/56L7v",
+          "title": "E5《陈涉世家》教研内容",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/lQbZIAmf16goZyLr/0WN8W",
+          "title": "E6《留侯世家》教研内容",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/QXRzXX5a7n8tzXoa/0WN8W",
+          "title": "E7《孙子吴起列传》（孙膑）教研内容",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/C1A7XxaFcUYX9ovt/0WN8W",
+          "title": "E8《魏公子列传》教研内容",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kblP27pp6rwGidrZ",
+          "title": "《史记》先导片设想",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qM3j3BvE6okhRjSK/MODOC",
+          "title": "《史记》先导片教研稿1稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/AYjpE0GGgGDohPxn",
+          "title": "《史记》先导片教研稿2稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/eW0V7pAWYKA0gMpD",
+          "title": "《史记》先导片教研稿3稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/hUN5tN7LxJcJSJUl",
+          "title": "《史记》先导片教研稿2.0",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qmOx9rVNPmg8u8oZ/UtRnM",
+          "title": "《史记》十二集大总结",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/OiUIj7ouGIIIrL73",
+          "title": "《史记》先导片教研稿2.0修改",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 资产设定",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/qeOJrZppxB7DFpGL",
+          "title": "整体思路（服饰部分）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kEzy8MNNm2xWh0Y2/zMff3",
+          "title": "战国秦汉库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/A1wyzb9QvdaNIVm4",
+          "title": "角色花纹参考整理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AxkcijcecZs0qwMC/Fl6N3",
+          "title": "史记E1E2-角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/KLz7uUsNA8kyfxBN/2aZJK",
+          "title": "史记E3E4E5E6-角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/316e4pXvnkEErTAI/HboF1",
+          "title": "史记E7E8-角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kKZpKJNNxxnLtbMm/MODOC",
+          "title": "03史记12集资产设定",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/dNg1M5agpv4EqLAo/X4YwQ",
+          "title": "史记-陈涉世家-Epic1&Epic2-人物场景设定资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/edMUEtQ7fnI7shRX/0uFQE",
+          "title": "史记-留侯世家-Epic1&Epic2-人物场景设定资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/ivNA7tybKrQlhgMd/0uFQE",
+          "title": "史记-孙子吴起列传-Epic1&Epic2&Epic3-人物场景设定资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/jwN5IpPkZ54Kcqv3/0uFQE",
+          "title": "史记-魏公子列传-Epic1&Epic2-人物场景设定资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3jMXY2pp7Zabs81O/MODOC",
+          "title": "资产人设清单",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/rZxR9GSdUVAEHv2G",
+          "title": "E5场景平面图描述0118",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/lHyLpabSaZwUvcxO",
+          "title": "E6场景平面图描述",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/sdPKOmdj2LQGfKww",
+          "title": "E7场景平面图描述",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/SpUU9upV8PQ8HQ5x",
+          "title": "E8 场景平面图描述",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AZlp79Ev2arnfQ6l/moGJb",
+          "title": "史记-气氛图-审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/A1wyzb9QGmXRid2q/Sswrg",
+          "title": "史记-MP-审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kblP27pp4GJMc1yD",
+          "title": "史记人物动作规范",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3oODQKLLeDmmhyeL/MODOC",
+          "title": "文史-制作环节审核注意事项1.0",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3oODQKLLVwzBhnze",
+          "title": "服化道参考书目",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k9zy4jPvL2wKip65/9eCOU",
+          "title": "史记-三维资产制作进度",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/A1wyzb9QGmXRid2q/ECdkx",
+          "title": "史记-MP-审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/30dyDb9jRPJdIrRr/tNGZr",
+          "title": "史记审核进度",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.iarch.cn/thread-42054-1-1.html",
+          "title": "【解读】《长安十二时辰》中的若干建筑细节-佛教建筑|电影-专筑网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/qmOx9rVNPezzTROa",
+          "title": "【论语】疑问场景及每集角色选用",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NTMwOTA4NA==&mid=2649269967&idx=1&sn=2a4b7026d0090c79f78e18a07a928992&chksm=bee675bc8991fcaa024178a3652347aa99c6d74e4488d94e3684c7a7367e5c7cfa0f7762922d&scene=27",
+          "title": "现存最早的日晷（guǐ）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/RkZuDWTkUBoAOWkg",
+          "title": "《史记》词条+字幕",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 博物馆",
+      "links": [
+        {
+          "url": "https://www.hbww.org.cn/home/index.html",
+          "title": "湖北省博物馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bmy.com.cn/impor_collections.html",
+          "title": "重要藏品_秦始皇帝陵博物院官网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sxhm.com/collection.html",
+          "title": "藏品_陕西历史博物馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://61.187.53.122/List.aspx?lang=zh-CN",
+          "title": "藏品- 湖南省博物馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.scmuseum.cn/sccms/node/290",
+          "title": "四川博物院",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.chnmus.net/ch/search/index.html",
+          "title": "河南博物院",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/734209623_501362",
+          "title": "如何正确欣赏一尊将军俑？",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://m.chnmuseum.cn/Portals/0/web/vr/",
+          "title": "中国国家博物馆数字展厅",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://digicol.dpm.org.cn/",
+          "title": "故宫博物院数字文物库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://museum.sinica.edu.tw/collection/20/",
+          "title": "居延漢簡 | 中研院歷史語言研究所歷史文物陳列館",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.nlc.cn/web/index.shtml",
+          "title": "中国国家图书馆 · 中国国家数字图书馆 · 国家典籍博物馆",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 视频资料",
+      "links": [
+        {
+          "url": "https://tv.cctv.com/2021/03/21/VIDEduiyfzs8buHVNBxEinmx210321.shtml",
+          "title": "《典籍里的中国》 20210321_史记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://search.cctv.com/search.php?qtext=%E7%AE%80%E7%89%8D%E6%8E%A2%E4%B8%AD%E5%8D%8E&type=video",
+          "title": "央视搜索_简牍探中华",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://search.cctv.com/search.php?qtext=%E5%85%B8%E7%B1%8D%E9%87%8C%E7%9A%84%E4%B8%AD%E5%9B%BD&type=video",
+          "title": "央视搜索_典籍里的中国",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1n64y1o7gU/?buvid=Z546C45106D38DBF4CFC93CADD688A3A2043&from_spmid=search.search-result.0.0&is_story_h5=false&mid=Jws%2BFUpFckAnXlZJVGGoZg%3D%3D&p=1&plat_id=116&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=4BBF7EAB-44F2-4632-957E-D7BEF3B05541&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0×tamp=1716956300&unique_k=PtAm8F7&up_id=484127870&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "跟孙机先生游中国古代服饰文化展",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 一些网页",
+      "links": [
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIzNDQ0MDUwNg==&mid=2247535604&idx=2&sn=81761953c63f6f9d681169ee84886839&chksm=e8f459a1df83d0b78cca70fdc66458a19f78a47f796eaf92196b489ac710c109f781f5dd27d8&scene=27",
+          "title": "观像｜孙机：名称依旧，形制全非——中国服饰史中的几个例子",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/Qz72Naub1O6xDL1UHl23WA",
+          "title": "【连载】连环画《负荆请罪》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weibo.com/ttarticle/p/show?id=2309404765728158122251",
+          "title": "中国古车 [ 壹 ] 独辀车",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/202190527_115423",
+          "title": "释“副车”",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1628804539529507576&wfr=spider&for=pc",
+          "title": "在物质缺乏的古代，古人的主食、蔬菜、水果一般都吃什么",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1685354777209232690&wfr=spider&for=pc",
+          "title": "《大秦赋》首播好评如潮！快来对照场景游秦汉影视城",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/201695028_488126",
+          "title": "读史|秦汉殿式建筑的布局",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ncha.gov.cn/col/col2586/index.html",
+          "title": "国家文物局 旧石器",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://history.sohu.com/a/198906803_503033",
+          "title": "车辚马萧 | （五）战国中山国青铜器——车马器",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/23/1010/16/1099688027_1099688027.shtml",
+          "title": "镜鉴乾坤——青铜古镜，集锦欣赏（1）战国至汉朝篇",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://m.thepaper.cn/baijiahao_17834506",
+          "title": "张辉：各自峥嵘的“战国三床”——中国家具史漫谈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1794144836795084436&wfr=spider&for=pc",
+          "title": "世界睡眠日，来看古蜀人“睡眠的艺术”",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.zhihu.com/tardis/bd/ans/1940923920",
+          "title": "最近在看一本叫“中国古代物质文化”的书，还有没有跟这个类似的书呢？（求推荐）？",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/19/1222/21/20226523_881440401.shtml",
+          "title": "孔子圣迹图（十）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/16/0930/21/20226523_594977959.shtml",
+          "title": "十八、孔子由负函返卫，在卫又住了五年",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.art-meiyu.com/post/show/id/543",
+          "title": "【视觉锐角】陶屋——古代的3D缩微生活 - 美育网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/467180918_267106",
+          "title": "一辆战国马车“复活”分几步？_西戎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weibo.com/ttarticle/p/show?id=2309404056668785756742",
+          "title": "汉代宫殿室内还原",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1657888296019812204&wfr=spider&for=pc",
+          "title": "“运筹帷幄”说的帷幄，就是典型汉代室内陈设“帷”",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/680525439",
+          "title": "关中，华夏历史千年政治中心，细数拱卫关中的那些重要关隘 - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.henanrd.gov.cn/2019/12-19/12225.html",
+          "title": "《中原藏珍.讲述》第六集 东汉六博俑-河南人大网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1685789945328225426&wfr=spider&for=pc",
+          "title": "《大秦赋》中，用来喝酒的“小碗”，在历史上叫什么名字？",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/15/1220/07/27717493_521650774.shtml",
+          "title": "看了《芈月传》才知道战国的家具也可以这么美！",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MDU5Mjc3MQ==&mid=2247486590&idx=1&sn=60fdfb9d80d10c3155114e979ef538b6&chksm=ce254392f952ca849f5eda03ffa7da3cd3d9edfc8f2d7ba9e6d8e777213b2caa506c6c4600c5&scene=27",
+          "title": "斗拱的演变历史及变化规律",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.163.com/dy/article/FSK7CTTV0543HIJQ.html",
+          "title": "王侯的黄昏：曾侯乙的葬礼",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://site.douban.com/204805/widget/notes/13852207/note/281847833/",
+          "title": "中国漆艺史略",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/nD6fPHOSG8Lx1F9n7G6m_A",
+          "title": "《战国钟声》：硬核战国历史片，楚文化爱好者的福音",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1668286430435282264&wfr=spider&for=pc",
+          "title": "东周甲胄：从小兵到周天子都只穿皮甲？曾侯乙墓实锤了",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.meipian.cn/33r9jvc9",
+          "title": "山西省博物馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1796203501192835839&wfr=spider&for=pc",
+          "title": "战国青铜汲酒器：穿越千年的黑科技，让今人自叹不如",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/169442383_503033",
+          "title": "水酒尽欢 | （三）战国中山国青铜器——酒器、水器",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/T9pmpU2msu_BHJSAsDt2Xw",
+          "title": "吃的艺术，艺术的吃－－中国古代炊食具的分类、命名与功能（上）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/15/0225/17/276037_450761639.shtml",
+          "title": "盘点中国古代的交通工具史（车）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://dfz.shaanxi.gov.cn/sqzlk/dqcs/dacswz/shaanxi/sxgddljts/201706/t20170616_910253.html",
+          "title": "第七节 秦地畜力车的发展演变",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.163.com/dy/article/FV6IKT690533B0RT.html",
+          "title": "饱受争议的《大秦赋》，它的道具靠谱吗？能否与博物馆里的对上|酒器|耳杯|湖北省博物馆|湖南省博物馆_网易订阅",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/23/0918/19/43806054_1096989968.shtml",
+          "title": "一只带把杯，重塑中国人的喝酒方式",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.douban.com/group/topic/288987327/?_i=8159893bjuVNgS",
+          "title": "【汉服科普】带钩与多孔腰带",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://news.bjd.com.cn/2022/07/27/10124523.shtml",
+          "title": "古人怎么用菜刀？拍蒜是最基础的要求_北京日报网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mt.sohu.com/20171130/n523890172.shtml",
+          "title": "故宫珍藏官印精选之秦朝篇-搜狐",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzAxNzA3NjcxOA==&mid=2686470613&idx=1&sn=e362f903ef32214eb0eb58361e573309&chksm=be3ff15489487842b2224e84c7ad0f8fbd8d2979e4fd11a49a7ccbd1d470a8261a14de4f093e&scene=27",
+          "title": "《中国书法》：银雀山汉简特辑",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://culture.people.com.cn/n/2015/0424/c22219-26898793.html",
+          "title": "《楚汉传奇》中木枷为穿越物 实为西晋时才出现--文化--人民网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1T34y1f7ip/?vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "《兵器面面观》 中国古兵器传奇·弩 高清 20230124_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.iqiyi.com/v_25nx3nj8yfo.html",
+          "title": "赞叹中国古人智慧，用现代机械原理演示战国弩工作过程。-电影-完整版视频在线观看-爱奇艺",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.chnmuseum.cn/yj/kydt/202309/t20230921_259367.shtml",
+          "title": "探微求实 大家风范——回忆孙机先生二三事",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.meipian.cn/2er1hvvw",
+          "title": "《古今斋》藏品 ——古鎖",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzA5OTc3NDMzOQ==&mid=2654649277&idx=5&sn=83e6087a05e08f482b912bcd559816fe&chksm=8b332151bc44a84783db5b4745eb6adcd84698021743833a5898cade934b9a45fbdbd64654cf&scene=27",
+          "title": "蒹葭、荇菜、芣苡、飞蓬......这么美的草木，竟然就在我们身边！",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Mm421L7bP/?spm_id_from=333.880.my_history.page.click&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "3D复原汉代室内",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weibo.com/7409196757/KswpndOes",
+          "title": "#秦陵铜车马知识小课... - @秦始皇帝陵博物院的微博 - 微博",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.xiaohongshu.com/explore/6566f922000000003801dad9?source=webshare&xsec_token=AB2byjeFGOUQ6dcj93kkA-fIsbcW2IahX19cKFdFUw34M=&xsec_source=pc_share",
+          "title": "图鉴 | 铺首 - 小红书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://new.qq.com/rain/a/20230228A07KZE00",
+          "title": "赵生群：《史记》标题的奥秘",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/298261247_495046",
+          "title": "【百科】车驾繁简明尊卑_轺车",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weibo.com/ttarticle/p/show?id=2309404071737317826629",
+          "title": "《定西荒》建筑复原：东汉城门阙——朱雀阙",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.xiaohongshu.com/explore/66de52ed000000002700086a?source=webshare&xsec_token=AB8u125c489hU0lRtO7_PPBw3ach26ZxqcU2fvUgfEelk=&xsec_source=pc_share",
+          "title": "探物·湖南｜西汉黑漆朱绘六博具｜国庆赏文物 - 小红书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://jzmsm.org/news-2429.html",
+          "title": "古代的舀酒器——漆勺",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/1VVvGEKNuo2NxgAauAGPmw?version=4.1.30.99529&platform=mac&nwr_flag=1#wechat_redirect",
+          "title": "刘绍刚 | 秦汉之际的简牍——以银雀山汉简为例",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/17/0626/22/15585030_666777542.shtml",
+          "title": "尹湾汉墓《博局占》与海昏侯墓《五色食胜》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weibo.com/ttarticle/p/show?id=2309404056668785756742",
+          "title": "汉代宫殿室内还原",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 史记 / 图鉴交互等",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/qmOx9rVV6XxbUGzY",
+          "title": "百科课程说明手册-终稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kEzy8MNNpzJ5hDLJ/MODOC",
+          "title": "史记图鉴+知识卡片目录",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/3jMXY2pp7572tXM1",
+          "title": "人文动画｜史记｜图鉴策划方案",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3VlopzaaE7vGireW/MODOC",
+          "title": "人文动画交互设计",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/OSID6KVFAm0N4Of9/MODOC",
+          "title": "百科WebAPP题型",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kGEyX7NNynm4FBpP",
+          "title": "01- 出题 | 常见题型及示例",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Ad6ZeWppovmwsmvZ/MODOC",
+          "title": "史记原文句及注释释义",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q4Ry0dXXbdJNTXGM/IkI1D",
+          "title": "预配音反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/RkZuDWTkUBoAOWkg",
+          "title": "《史记》剧本正片中的词条及原文汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kEzy8MNNpzJ5hDLJ/tQZbT",
+          "title": "史记图鉴+原典-教研内容",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3jMXY2peNP8lUoZK/eg8Ay",
+          "title": "《史记》交互+图鉴+原典录音需求",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kyY7v4Wp6yxNfW6R",
+          "title": "论语-我的石墨",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qmOx9rVNMP7EFGW6/vnHO3",
+          "title": "论语原文",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/k6wy1bl6Ye5RhD8w",
+          "title": "🌲🌲论语相关资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.mediatrack.cn/projects/1802627626976673792/files?path=1807664317726720000",
+          "title": "论语-分秒帧",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kpOzBDljp81RTbEE/MODOC",
+          "title": "战国秦汉美术设定资料与禁忌（持续更新中）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weread.qq.com/web/reader/bfb32a5071e1e003bfb6932",
+          "title": "论语译注-金良年-微信读书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weread.qq.com/web/reader/28632c907249aa252862593kaab325601eaab3238922e53?",
+          "title": "孔子家语全鉴 - 微信读书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3QXp9eN4vDYQCWyZ/",
+          "title": "论语书目",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kKZpKJNN1YrxcbN4",
+          "title": "00-《论语》大纲",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3JWpxZNNebppu15q/h3kTu",
+          "title": "00-《论语》-大纲选段参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/17/0202/10/31283232_625961434.shtml",
+          "title": "《孔子家语》原文及译文",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3JWpxZN48KMwuG65/MODOC",
+          "title": "论语剧情素材来源",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/xllKzRXrqVoXzrFb/MODOC",
+          "title": "百科内容分级方案-v5.0",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q7wyQnEll2MWFo6g/TkTW7",
+          "title": "教研稿原句、标点核对",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qRep1rj44DKEi22O/kQuYP",
+          "title": "《论语》孔子弟子集数与年表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/GgV4ULgjLjguxaJF/FdB7W",
+          "title": "论语E2交互",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kGEyX7NljNMZIwYe/yhAkV",
+          "title": "文学专家审核意见汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/7ecPeIVVDBkMtBuy",
+          "title": "《论语》词条及原文整理汇总",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://lunyu.5000yan.com/mulu/",
+          "title": "全文目录 - 《论语》",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语 / 一些资料",
+      "links": [
+        {
+          "url": "https://www.xiaohongshu.com/explore/627e2d1a0000000021036583?source=webshare",
+          "title": "🚗盘点中国古代陆上交通工具的演变（上） - 小红书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/AanPK7mRtoo0v2TMYLQKEA",
+          "title": "陈苏镇：秦汉殿式建筑的布局",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://tieba.baidu.com/p/836681969",
+          "title": "中国古典灯具收集贴（先秦至两汉为主）【汉服吧】_百度贴吧",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1779726097878082135&wfr=spider&for=pc",
+          "title": "《孔子圣迹图》三十六幅",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/58472363",
+          "title": "孔子圣迹图【囊括12套珍稀古画】4 - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_2080561",
+          "title": "曾参之“参”究竟应读作何音？_私家历史_澎湃新闻-The Paper",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1691474308139557895&wfr=spider&for=pc",
+          "title": "看见文物｜兵者，存亡之道——银雀山《孙子兵法》《孙膑兵法》汉简",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.docin.com/p-2307676045.html",
+          "title": "东晋帝王百官朝服式样的考证与推定 - 豆丁网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzA5OTM1MDIyMA==&mid=2653569407&idx=1&sn=50f980d38e730e15c953b28ccdae4047&chksm=8b5d42dcbc2acbca6a118bd5934903da174be8c088f8fe18268934106b04d9687bca175272c3&scene=27",
+          "title": "两周至秦汉时期铜铎的考古学观察",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/17/0318/21/14047521_638012211.shtml",
+          "title": "《周易》用蓍草占筮的方法",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/SwL3Nc7mc-gZX6Ug4x7k8Q",
+          "title": "君幸酒食：“舌尖上”的马王堆汉墓",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/67695842",
+          "title": "《论语》注释著作评析 - 知乎",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语 / 视频资料",
+      "links": [
+        {
+          "url": "https://www.bilibili.com/bangumi/play/ss40631?from_spmid=666.19.0.0",
+          "title": "孔子-电视剧-bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baike.baidu.com/item/%E5%AD%94%E5%AD%90/2750846?anchor=2#2",
+          "title": "孔子分集剧情",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Vq4y1E7CV/?spm_id_from=333.337.search-card.all.click&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "孔子 104集全_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIzNDQ0NDEzMA==&mid=2247516205&idx=4&sn=df74d3ec0c0d1f99f7e47977cd471e2f&chksm=e8f48420df830d36753e3cbca6ee55dc1c706acfa216ed38f9cb337e3eafce29fda3bc74dd8b&scene=27",
+          "title": "《典籍里的中国》第5集 论语",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://tv.cctv.cn/2023/10/24/VIDE4LOvAEDQB1v6hEP4OhR5231024.shtml",
+          "title": "《中国》 第1集 春秋",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=EATsAUtkcrg",
+          "title": "孔子傳1 （侯孝贤） - YouTube",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV19J4113765/?spm_id_from=333.788.recommend_more_video.-1&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "孔子故事二十则_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1H4411F7uo/?spm_id_from=333.337.search-card.all.click&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "孔子故事三十则第一集 商羊知雨_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1uP4y197Zf?p=7&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "纪录片《孔子》六集全",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sddsw.org.cn/channels/ch00057/",
+          "title": "齐鲁历史名人",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sddsw.org.cn/articles/ch00057/202112/26af3c58-560a-4d97-aa1a-937b89ac35b4.shtml",
+          "title": "齐鲁历史名人《孙膑》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sddsw.org.cn/articles/ch00057/202112/a36d0205-10a1-4e10-aa93-8a3b99ff39ef.shtml",
+          "title": "齐鲁历史名人《孔子》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Mh4y1x7P6/?vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "清华大学中国经学研究院乡射礼宣传视频_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Hh4y1V728/?spm_id_from=333.999.0.0&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "清华大学中国经学研究院《仪礼·乡射礼》复原展示——射礼流程_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/bangumi/play/ep468848?t=231",
+          "title": "东周列国·春秋篇-bilibili-哔哩哔哩",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Gt411K7XN/?spm_id_from=333.788.recommend_more_video.0&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "孔子CUT-02_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.mediatrack.cn/reviews/1811678012853190656?fileId=1807664376279207936",
+          "title": "论语视频参考-教研-分秒帧",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语 / 我的教研稿",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3jMXY2peVlJnIwxy",
+          "title": "01-《论语》教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Ugm0tlo1wzwrb8Ia/KCOrT",
+          "title": "E2-学而不厌，诲人不倦-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/d9rGvHOXmhAoMesL/0WN8W",
+          "title": "E4-吾将仕矣-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/pyiKkjnzzCk9xzYD/wFAXO",
+          "title": "E6-岁寒，然后知松柏之后凋也-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/gH244dJctuUhnROG/0WN8W",
+          "title": "E8-因材施教-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kpOzBDlj6wDxFwYV/rWAZM",
+          "title": "E10-后生可畏-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q7wyQnEl1ErJTmxn/kUZU8",
+          "title": "E11-述而不作，信而好古-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/MyBoXHwo54ADDZey/0WN8W",
+          "title": "E12-因材施教-教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/lAd2Lmrpi8wdpcGM",
+          "title": "《论语》先导片旁白终稿1217",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kgOmKgvYYeKPI1Dl/pOKrK",
+          "title": "《论语》图鉴+原典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AroGpYy6oXRPFyDv/MODOC",
+          "title": "论语12集片尾大总结及主题关键词",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/yn6nnhttc1I0iMBH/GmXvZ",
+          "title": "教研内部过程稿-《论语》图鉴+原典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kgOmKgvYYeKPI1Dl/BhqGG",
+          "title": "《论语》图鉴+原典+封面",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kEzy8MNKRD5niwJj/MODOC",
+          "title": "《加更了！论语》总结信息一览",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语 / 剧本",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kLJpDgy40QjKI2a5",
+          "title": "02 剧本 - 论语",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kyY7v4WpbL0XU09v",
+          "title": "E2 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kEzy8MNKeG05hGjA",
+          "title": "E4 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/Aw65vQ7rrLj8UyxY",
+          "title": "E6 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3al78EpYYQRBIYRP",
+          "title": "E8 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/30dyDb9jLrNEtVYj",
+          "title": "E10 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/k9zy4jPvZLWOFzVM",
+          "title": "E11 - 石墨文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kvLQv5E6KK8JixGl",
+          "title": "E12 - 石墨文档",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 论语 / 资产设定",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q5jy5blQWYXpHWZM/povD1",
+          "title": "论语-三维资产信息表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27pYpdoMFQzZ/MODOC",
+          "title": "论语-角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Zr4Pk9JA7gUm9JNk/MODOC",
+          "title": "文学-论语-道具审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AYjpE0GrvWLPHY1O/uUBPQ",
+          "title": "论语E1-6美术参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/ssTQg3RFzQkPMu6G/rTsan",
+          "title": "【论语】二维角色/场景：性格/突出特征参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/7SjPOkJCCkYZX2Ht/451f4",
+          "title": "【论语】二维-角色场景设定-日审",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/9FJRcpZz2akpXv2Y/Kq9OB",
+          "title": "【论语】-二维美术-初终稿审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kGEyX7NlzrGEsmpo/MODOC",
+          "title": "论语下载模型确认",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qeOJrZpY12VQU4QB/eTad9",
+          "title": "论语-动捕知识点备注",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AZlp79Ev0K8Xso1E/u2xmx",
+          "title": "交互UI预览图审核建议《论语》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AzbPvpZyML9gim8n/6829K",
+          "title": "论语-标签原文审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/dJV4FmsErHh9jUzl/fHbCX",
+          "title": "百科文学论语-音效反馈",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 左传",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/MqANO45LbxInOnhD",
+          "title": "《左传》大纲框架-终稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27pYDlZoiDzr/TauvV",
+          "title": "《左传》-大纲选段参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/3Dzy5blGDrR2cZn7",
+          "title": "《左传》 教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/qmOx9rVNvKBVCjG8",
+          "title": "《左传》剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/32wyYb8QzGO2C4Nd",
+          "title": "美术审核次数+审核点同步（9.22）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kMg5zmr47zybtvEn/MODOC",
+          "title": "《左传》原文用字核对0126",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AP2p0XaNVNo7iWVv/fGUJ6",
+          "title": "交互题APP走查-《左传》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/32wyYb8QX7QlSZzV/ULxr0",
+          "title": "文学-左传-配音&音乐音效反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q4Ry0dXQMZa1ulV8/MODOC",
+          "title": "左传-渲染初稿-审核反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kGEyX7NlW2GwhPO2/Sl2aq",
+          "title": "《左传》成片走查表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.mediatrack.cn/projects/1897176571068813312/files?path=1900554054904315904",
+          "title": "左传成片",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kblP27pYP4gNHlWE/0ftFt",
+          "title": "教研内部过程稿-《左传》原典",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 左传 / 左传资产设定",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/YCpduG5VvU0wAFe7/8iJnV",
+          "title": "左传-三维资产统计表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/pwyzEYoj5IcMIOES/f6j3f",
+          "title": "左传-三维资产信息表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/sSfr3IG0q9Iw2kun/MODOC",
+          "title": "文学-左传-三维美术审核表⭐️",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/t2IkEH8ox9Utq1Px/vutY3",
+          "title": "《左传》美术框架资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q4Ry0dXQ57MnTmep/MODOC",
+          "title": "古文观止-角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/eon2hsivfcgvJtER/sufSf",
+          "title": "【左传】二维参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/n0kAcGsbzM4TY5SQ/lulpe",
+          "title": "【左传】二维角色审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3Dzy5blGnyEbSYJa/35P8f",
+          "title": "文学动态漫素材需求",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/32wyYb8Q6PeQiVPK",
+          "title": "《左传》E3以后动态漫草图",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/wTO0br20ReE15CeG/MODOC",
+          "title": "文学左传动捕知识点备注表格",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AV9t9xN0TkO2in9w/rMLcp",
+          "title": "【左传E1E2】-二维美术-初终稿审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/2WvNbnao8VLt14FK/dXNyZ",
+          "title": "左传-二维动画-审核反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/3oODQKLpDOMls7VD/MODOC",
+          "title": "《左传》美术核对",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/rr7PoFoJSoqtDOsu/mIlXI",
+          "title": "左传-分镜盘点表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/mCK8m7g0BI7n749A/ZdrPA",
+          "title": "左传-动态漫美术审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/OzOOMQeZrhWlalVi/MODOC",
+          "title": "左传-标签/原文/大总结审核",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/rr7PoFoJSoqtDOsu/zWJbN",
+          "title": "左传-分镜盘点表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/",
+          "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.douban.com/",
+          "title": "豆瓣",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 文学动画 / 左传 / 左传学习资料",
+      "links": [
+        {
+          "url": "https://www.bilibili.com/bangumi/play/ss41133?spm_id_from=333.337.0.0",
+          "title": "东周列国·春秋篇-电视剧-bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV18i4y1f7pd?spm_id_from=333.788.videopod.episodes&vd_source=52a3c7228b1d1a0236219df6b162fa88&p=9",
+          "title": "东周列国（修复版有目录）_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1az4y1F769/?spm_id_from=333.999.0.0&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "刘勋讲《左传》【001-2】_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1Nc411R7FA/?spm_id_from=333.337.search-card.all.click&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "【刘勋《左传》全文通识001期】第一期上_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ihss.pku.edu.cn/templates/learning/index.aspx?nodeid=121&page=ContentPage&contentid=4364",
+          "title": "【文研讲座221】阎步克：先秦礼书所见“五十养于乡” “五十而后爵”新解——父老体制与爵制起源 - 北京大学人文社会科学研究院",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/23/1030/11/26620346_1102150357.shtml",
+          "title": "上古旗帜说略——扬之水",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.xinfajia.net/3449.html",
+          "title": "祝中熹：先秦独特的挑战方式——致师-历史探微--新法家",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/UaX6VPDtQaAukE_xYjI2fQ",
+          "title": "战国秦汉金饼货币类型考略",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/318176486_809316#:~:text=%E2%80%9D%E6%91%84%E5%8F%94%E8%BF%99%E6%A0%B7%E7%9A%84%E8%AF%B4%E8%BE%9E%E6%98%AF%E6%9C%89%E5%8E%9F%E5%9B%A0%E7%9A%84%EF%BC%8C%E5%9C%A8%E6%98%A5%E7%A7%8B%E6%97%B6%E4%BB%A3%E6%9C%89%E4%B8%80%E4%B8%AA%E8%81%8C%E5%8A%A1%E5%8F%AB%E5%85%BD%E4%BA%BA%EF%BC%8C%E4%B8%93%E9%97%A8%E8%B4%9F%E8%B4%A3%E4%B8%80%E5%B9%B4%E5%9B%9B%E5%AD%A3%E6%89%93%E4%B8%8B%E6%9D%A5%E9%87%8E%E5%91%B3%E9%80%81%E7%BB%99%E8%B4%B5%E6%97%8F%E9%A3%9F%E7%94%A8%EF%BC%8C%E6%9C%89%E6%89%80%E8%B0%93%E2%80%9C%E5%A4%8F%E9%80%81%E9%BA%8B%EF%BC%8C%E5%86%AC%E7%8C%AE%E7%8B%BC%EF%BC%8C%E6%98%A5%E7%A7%8B%E7%8C%AE%E5%85%BD%E2%80%9D%E7%9A%84%E8%AF%B4%E6%B3%95%E3%80%82%20%E6%91%84%E5%8F%94%E7%9A%84%E6%84%8F%E6%80%9D%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E6%9C%AC%E6%9D%A5%E6%82%A8%E5%9C%A8%E5%AE%B6%E7%9A%84%E8%AF%9D%EF%BC%8C%E8%BF%99%E4%BC%9A%E5%84%BF%E5%8F%AF%E8%83%BD%E5%85%BD%E4%BA%BA%E5%B7%B2%E7%BB%8F%E6%8A%8A%E9%87%8E%E5%91%B3%E9%80%81%E5%88%B0%E6%82%A8%E5%AE%B6%E4%BA%86%E3%80%82,%E5%8F%AF%E6%98%AF%EF%BC%8C%E6%82%A8%E5%87%BA%E6%9D%A5%E5%BE%81%E6%88%98%EF%BC%8C%E4%B8%80%E6%97%B6%E6%94%B6%E4%B8%8D%E5%88%B0%E9%87%8E%E5%91%B3%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%99%E8%BE%B9%E5%88%9A%E5%A5%BD%E6%89%93%E4%BA%86%E4%B8%80%E5%8F%AA%EF%BC%8C%E5%B0%B1%E8%AF%B7%E4%BD%9C%E4%B8%BA%E6%82%A8%E5%B1%9E%E4%B8%8B%E7%9A%84%E9%A5%AE%E9%A3%9F%E5%90%A7%E3%80%82%20%E4%BD%9C%E4%B8%BA%E5%B1%9E%E4%B8%8B%E7%9A%84%E9%A5%AE%E9%A3%9F%EF%BC%8C%E8%BF%99%E6%98%AF%E8%B0%A6%E8%BE%9E%EF%BC%8C%E5%B0%B1%E6%98%AF%E9%80%81%E7%BB%99%E6%82%A8%E4%BD%9C%E4%B8%BA%E9%A5%AE%E9%A3%9F%EF%BC%8C%E8%AF%B7%E6%82%A8%E7%AC%91%E7%BA%B3%E3%80%82",
+          "title": "【一说春秋】 597.致师射麋_许伯",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/256380546_656484",
+          "title": "赫赫宗周------国立故宫博物院西周文化特展_周文王",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://sanyamuseum.com/a/3/2022/0524/940.html",
+          "title": "殷墟骨笄的种类、源流与功能",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.icppcc.cn/newsDetail_1117110",
+          "title": "国家文物局发布“考古中国”重大项目进展_热点",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/199850304_415387",
+          "title": "战国雄风——中山国狩猎、军事文物",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/203901952_503033",
+          "title": "运筹帷幄 | （六）战国中山国青铜器——帐构和陈设",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.99csw.com/book/4817/index.htm",
+          "title": "中国古代的造船与航海_张静芬_在线阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/ByYi6ImogMDkgj2oGLTzHQ?mpshare=1&scene=1&srcid=1208a8RA3BpsZwAhJySn3bAX&sharer_shareinfo=de0d6dae720fba7466ce872b0a17f5da&sharer_shareinfo_first=de0d6dae720fba7466ce872b0a17f5da&version=4.1.32.99555&platform=mac&nwr_flag=1#wechat_redirect",
+          "title": "樊波成：东周铜箪铜筥考——兼论“樽”与“觯”",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1777253043890186369&wfr=spider&for=pc",
+          "title": "钟少异谈中国先秦时期的车战",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://m.ac.qq.com/chapter/index/id/654504/cid/2464",
+          "title": "简牍之锁——中国古代封泥 - 腾讯动漫",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://chinakongzi.org/kzsf/lsjd/200705/t20070520_28075.htm",
+          "title": "《左传》史论与孔子史学",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/532198060",
+          "title": "《左传》凡例50条：是所谓“春秋笔法”？ - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/536266907",
+          "title": "《左传》君子曰84条汇集：官方解释“春秋大义”？ - 知乎",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kLJpDgy4EBprfg4Q",
+          "title": "《三国演义1》教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/qRep1rj4pxaXCV4n",
+          "title": "《三国演义1》正片剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/qmOx9rVNxaGaiLmb",
+          "title": "《三国演义1》二维剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/k9zy4jPvK9aRc12M",
+          "title": "《三国演义2》教研稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/kblP27pYaoP2CYwK",
+          "title": "《三国演义2》正片剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/folder/AXnjwGvaly7ETjY7",
+          "title": "《三国演义2》二维剧本",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/AXnjwGvaxLNacw76/O3FSY",
+          "title": "文学剧本时长评估",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://sanguo.5000yan.com/",
+          "title": "《三国演义》原文在线阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://weread.qq.com/web/reader/73c32c5071c790f073c460a",
+          "title": "三国演义 - [明]罗贯中 - 微信读书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k9zy4jPv0rbehjdg/LcpIx",
+          "title": "三国1-渲染初稿-审核反馈",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/34yboqlatntR4Rw6/MODOC",
+          "title": "《三国演义1》成片+字幕走查表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.mediatrack.cn/projects/1897176571068813312/files?path=1929771092835041280",
+          "title": "12 - 上传成片-分秒帧",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国 / 三国教研大纲等",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/AzbPvpZyKWWRto6a",
+          "title": "《三国演义1》-大纲框架-终稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kEzy8MNKngnYfj7A/qcKcS",
+          "title": "《三国演义》-大纲框架-选段参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/zjxupg7WuuRlw5t2/MODOC",
+          "title": "三国-二维知识讲解梳理",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/meNqtWCyCKnFhCUK",
+          "title": "三国1 原文字幕+标签统计",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/QItExfnwGeLw0yqz",
+          "title": "《三国演义2》-大纲框架",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/qRep1rj4XDeJT5gL/CRYid",
+          "title": "《三国演义2》大纲选段参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/GQiI2KP2gkAa8Euo",
+          "title": "???-《三国演义3》-大纲框架-初稿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/WfZgzFFGlvDgwxsu/TF2tB",
+          "title": "???-《三国演义3》-大纲框架-选段参考",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国 / 三国1资产设定",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/QBIeiYw9Dn72txz2/MODOC",
+          "title": "三国演义1-三维美术审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/8PZJi1aV4ASZKTR7/MODOC",
+          "title": "三国演义1-三维资产信息表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/u1QhNDmvgkLpC8Dr/12yEQ",
+          "title": "三国演义1-三维资产统计表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/JOK1ZpFKL71zwwYs/MODOC",
+          "title": "《三国演义1》框架资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/k9zy4jPvXNNRF8RD/MODOC",
+          "title": "三国演义1-二维知识讲解-素材需求",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/n5r47yz69TGI07AX/c1hlU",
+          "title": "三国演义1-动捕知识点备注表格",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kxYEvBP42b6oSaoL/lT2bW",
+          "title": "文学动态漫参考",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/q1Pfj5o9hyWqNNcr/I7vBv",
+          "title": "三国演义1-动态漫美术审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/n5r47yz69TGI07AX/uE4u5",
+          "title": "文学-三国演义1-动捕知识点备注表格",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/gblPRhV3JGN3KAL4/AhSWf",
+          "title": "文学-三国演义1-角色配音-资料&反馈表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/22/0206/13/18625050_1016156953.shtml",
+          "title": "《三国演义》人物开脸儿",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/vdKNU3GCQxr9998c/hVD3z",
+          "title": "【三国1E5E6】二维美术-初终稿审核",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国 / 三国2资产设定",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/UQPPFSr0ZDXMHiay/qaM6b",
+          "title": "文学-三国演义2-三维美术审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/7Ywf5qRXdJv2k3Xl/MODOC",
+          "title": "三国演义2-三维资产信息表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/ngLaEjh7q1hNwflV/xqRnf",
+          "title": "三国演义2-分镜盘点表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/A1wyzb9Qpepwcbg5",
+          "title": "文学-地图制作规范（新版）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/u3lbNFNBVi2VKBtp/ZdrPA",
+          "title": "三国演义2-动态漫美术审核表",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/uPFKSYROYY0oL1Vc/K7DbE",
+          "title": "文学-三国演义2-动捕知识点备注表格",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/kLJpDgy4Kgmzc5gn/yviqy",
+          "title": "三国演义2-二维知识讲解-素材需求",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国 / 三国影视动漫",
+      "links": [
+        {
+          "url": "https://www.bilibili.com/bangumi/play/ep327629?from_spmid=666.25.episode.0",
+          "title": "三国演义第25集-bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1nx411N7uq/?spm_id_from=333.788.videopod.episodes&vd_source=52a3c7228b1d1a0236219df6b162fa88&p=11",
+          "title": "三国演义动画_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1rs411v77b?spm_id_from=333.788.player.switch&vd_source=f12c51c8d3b82279870eb7555e62bb14&p=3",
+          "title": "第二部 长江的燃烧 上_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.meipian.cn/3cxrzn9c",
+          "title": "第五章：1963版之前改动分册（一）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.meipian.cn/3cqzodvv",
+          "title": "《三国演义》连环画（上美）前世今生 ——版本初探",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/690130021",
+          "title": "人美版连环画-三国演义之 01《桃园结义》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/788495460_121124391",
+          "title": "上美连环画-三国演义之 01《桃园结义》",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.peeavp.com.cn/zhjdzyk/6/sgyy/",
+          "title": "《三国演义》-中华经典资源库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1WQ4y1v7WW?spm_id_from=333.788.videopod.sections&vd_source=52a3c7228b1d1a0236219df6b162fa88",
+          "title": "三国演义 01 4k 修复版_哔哩哔哩_bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_30719863",
+          "title": "七家“弹幕”评《三国》，谁是你的“超级嘴替”？_澎湃号·湃客_澎湃新闻-The Paper",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1qK41167y9/?spm_id_from=333.788.videopod.episodes&vd_source=d43e55485201dab84a530da762d23b2c",
+          "title": "《三国演义》原文朗读",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 三国 / 三国网页资料",
+      "links": [
+        {
+          "url": "https://www.cne3online.com/picture/",
+          "title": "三国连环画 - 三国演义电子辞典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sanguocn.com/doc-list.html?t=2-0-0",
+          "title": "《三国演义》研究 - 三国艺苑",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://chiculture.org.hk/sc/search?category=details_page_zhwqn&sortType=all&keywords=%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89",
+          "title": "三国演义 | 中国文化研究院",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://chinese.thu.edu.tw/upload/newspaper_upload/26/05%E9%99%B3%E6%85%B6%E5%85%83.pdf",
+          "title": "三国演义的悲剧意识 - 05陳慶元.doc",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://szb.zhenjiang.cn/szb/shgc/202201/bcb43b2417fc4bb1b16ed7fba268f742.shtml",
+          "title": "揭开“甘露寺招亲”的真实面纱| 镇江市史志办公室",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/39316591",
+          "title": "从连环画看建国后关羽青巾的演变 - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://m.thepaper.cn/kuaibao_detail.jsp?contid=30210925&from=kuaibao",
+          "title": "关羽形象的变迁_澎湃号·湃客_澎湃新闻-The Paper",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.zhihu.com/question/296621856/answer/557182622",
+          "title": "赤壁之战的赤壁在今日哪个位置？ - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/725787865_121354740",
+          "title": "《三国演义》中几处重要的地理位置错误简析_诸葛亮_赤壁_黄岗",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kLJpDgy426wNt5xv",
+          "title": "赤壁之战资料",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/3JWpxZN4mgxNiW4B",
+          "title": "赤壁船（曹/江东）的设计元素方向",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_27164845",
+          "title": "南征北战，战功赫赫！这艘著名战船是？_澎湃号·湃客_澎湃新闻-The Paper",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏",
+      "links": [
+        {
+          "url": "https://app.mediatrack.cn/projects/1897176571068813312/files",
+          "title": "帧",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.90tsg.com/e/member/login/",
+          "title": "读秀",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.tboxn.com/sites/320.html",
+          "title": "Z",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/docs/kMg5zmrrGDKKhevo",
+          "title": "空",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/Ei03cMNso3QjASLD/J2NR0",
+          "title": "排期",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 学习",
+      "links": [
+        {
+          "url": "https://wmooc.icourses.cn/",
+          "title": "中国大学MOOC系列课程",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mooc.chaoxing.com/course/156191.html",
+          "title": "山海经专题",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://dportal.nlc.cn:8332/zylb/zylb.htm",
+          "title": "中国国家图书馆•中国国家数字图书馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/",
+          "title": "360doc个人图书馆",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 学习 / 文献库",
+      "links": [
+        {
+          "url": "http://www.guoxue.com/wenxian/wxjing/jingbu.htm",
+          "title": "国学网（经史子集有注解）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.uus8.org/4/",
+          "title": "四库全书电子版（可检索）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://202.114.65.57/net25/queryframe.htm",
+          "title": "《二十五史》全文检索系统",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.poeming.com/web/scindex.htm",
+          "title": "全唐诗宋全词在线检索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://ctext.org/zh",
+          "title": "中國哲學書電子化計劃",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://hanji.sinica.edu.tw/",
+          "title": "中央研究院 漢籍電子文獻",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://skqs.lib.ntnu.edu.tw/dragon/",
+          "title": "寒泉四库全书全文检索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://25s.lib.bnu.edu.cn/net25/",
+          "title": "二十五史全文检索系统(网络版)",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mylib.nlc.gov.cn/web/guest/zhonghuagujishanbenlianheshumuxitong",
+          "title": "中华古籍善本联合书目系统 - 中国国家数字图书馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://m.soshen.cn/soshen/",
+          "title": "搜神",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.i-apple.jp/koji/top.html",
+          "title": "古事類苑はじめました。 - 古事類苑",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://staff.pccu.edu.tw/~chihhowu/new_page_1x.htm",
+          "title": "明史研究小組主頁",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://hanchi.ihp.sinica.edu.tw/ihp/hanji.htm",
+          "title": "新漢籍全文",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.guoxue123.com/",
+          "title": "国学导航－中国国学经典在线阅读－免费的手机国学网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://sinonavi.dahailaozhen.cn/main.asp",
+          "title": "中国研究网络资源导航动态数据库",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 学习 / 文字检索",
+      "links": [
+        {
+          "url": "http://www.eastling.org/tdfweb/midage.aspx",
+          "title": "中古音查询",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.guoxuedashi.com/",
+          "title": "国学大师_国学网_汉字宝典_国学经典&古典文学_四库全书电子版&永乐大典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.iguci.cn/dictionary/oracledict.php",
+          "title": "甲骨文字典 中华博物",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://dict.variants.moe.edu.tw/suo.htm",
+          "title": "教育部《異體字字典》字形檢索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.zdic.net/",
+          "title": "汉典 zdic.net",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.vividict.com/",
+          "title": "象形字典，字形演变，造字解说，字义引申，在线字典，在线说文解字，白话说文解字，汉字简化说明",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.shuowen.org/",
+          "title": "說文解字 - 說文解字注 - 許慎撰 段玉裁注 - 在線查詢 - 篆書字典 - 全文检索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sou-yun.com/",
+          "title": "搜韵-诗词门户网站",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://zd.eywedu.com/",
+          "title": "汉字大典——在线汉语大字典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://xh.5156edu.com/kxbs.html",
+          "title": "新华字典在线查字",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://xiaoxue.iis.sinica.edu.tw/",
+          "title": "小學堂",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://ytenx.org/",
+          "title": "韻典網",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.iguci.cn/dictionary/oracledict.php",
+          "title": "甲骨文字典 中华博物",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 学习 / 瞻岁楼",
+      "links": [
+        {
+          "url": "http://archive.ihp.sinica.edu.tw/hplname/placename/basic",
+          "title": "中國歷史地名查詢系統-簡易檢索",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://skqs.guoxuedashi.com/",
+          "title": "四库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.guoxuedashi.com/zidian/597D.html",
+          "title": "国学大师",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://nccur.lib.nccu.edu.tw/",
+          "title": "政大機構典藏:主頁",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shuge.org/shuge/",
+          "title": "书格",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.wdl.org/zh/",
+          "title": "世界数字图书馆主页",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://ebooks.lib.ntu.edu.tw/Home/ListBooks",
+          "title": "臺灣大學圖書館＊公開取用電子書",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://wenxian.fanren8.com/",
+          "title": "殆知阁藏书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://catalog.hathitrust.org/Record/100070636",
+          "title": "Catalog Record: 唐詩選画本(外題 | Hathi Trust Digital Library",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://kikyo.nichibun.ac.jp/emakimono/",
+          "title": "絵巻物データベース",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://pan.baidu.com/s/1ejcQ1#path=%252F",
+          "title": "21、古今图书集成 -djvu格式清晰版 中華書局影印本_免费高速下载|百度云 网盘-分享无限制",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://lib.bdu.edu.cn/Digital/Trial/2015-03-18/111.html",
+          "title": "中国历史人物传记资源数据库 - 保定学院图书馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://vdisk.weibo.com/u/2672559661?page=1",
+          "title": "森林之歌2006的分享 - 微盘",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.sdmzh.com.cn/",
+          "title": "四大名著 - 中国古典四大名著小说",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://staff.pccu.edu.tw/~chihhowu/new_page_1x.htm",
+          "title": "明史研究小組主頁",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://211.144.107.196/oldpic/",
+          "title": "上海图书馆历史图片搜集与整理系统",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://sou.library.sh.cn/",
+          "title": "上图发现",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://sinonavi.dahailaozhen.cn/main.asp",
+          "title": "中国研究网络资源导航动态数据库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://cls.hs.yzu.edu.tw/sung/sung/index.html",
+          "title": "【宋人與宋詩】地理資訊系統",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://sillok.history.go.kr/mc/main.do",
+          "title": "明实录&清实录",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://122.200.75.13/",
+          "title": "殆知阁",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.gxbd.com/index.php",
+          "title": "全球最大中国传统文化检索引擎 -国学宝典-专业版",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://202.120.82.25/hanxue/shuji.htm",
+          "title": "中国（汉学）研究开放获取学术资源集——书籍（古籍为主）、档案等",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://hanchi.ihp.sinica.edu.tw/ihpc/hanjiquery?26:601700113:10:/raid/ihp_ebook/hanji/ttswebquery.ini:::@SPAWN",
+          "title": "汉籍电子文献资料库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://da.lib.ntnu.edu.tw/ntnuir/ug-201.jsp?xsd_name=ir_dtd&ontoid=A89E1F9B-24FD-06D4-B25A-C7AE1E21D77C&nodeid=0&start_rec=1&page_size=10&sort_order=&display_mode=icon",
+          "title": "國立臺灣師範大學學術期刊資源網",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://shuge.org/",
+          "title": "书格 | 有品格的数字古籍图书馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.jiumodiary.com/",
+          "title": "Jiumo E-Book Search 鸠摩搜书 - 电子书搜索引擎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://library.harvard.edu/",
+          "title": "Harvard Library",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.cll.ncnu.edu.tw/teachers/wu/new_page_1.htm",
+          "title": "旅行与贬谪、左传、魏晋南北朝",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://isites.harvard.edu/icb/icb.do?keyword=k35201",
+          "title": "首頁 § 中國歷代人物傳記資料庫（CBDB）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://lib.scnu.edu.cn/zjk/guji/gjkmain.asp",
+          "title": "lib.scnu.edu.cn/zjk/guji/gjkmain.asp",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 学习 / 报刊",
+      "links": [
+        {
+          "url": "http://hkjo.lib.hku.hk/exhibits/show/hkjo/home",
+          "title": "Hong Kong Journals Online",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://sc.lcsd.gov.hk/TuniS/mmis.hkpl.gov.hk/search-result?p_p_id=search_WAR_mmisportalportlet&p_p_lifecycle=0&p_p_state=normal&_search_WAR_mmisportalportlet_keywords=%E9%81%90%E9%82%87%E8%B2%AB%E7%8F%8D&p_r_p_-1078056564_actual_q=%28%20all_dc.title%3A%28%22%E9%81%90%E9%82%87%E8%B2%AB%E7%8F%8D%22%29%29%20AND+%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%29&p_r_p_-1078056564_sort_field=dc.publicationdate_bsort&_search_WAR_mmisportalportlet__advancedsearch_WAR_mmisportalportlet_formDate=1389840865663&_search_WAR_mmisportalportlet_mode=Advanced&p_r_p_-1078056564_new_search=true&p_r_p_-1078056564_sort_order=desc&_search_WAR_mmisportalportlet_jspPage=%2Fjsp%2Fsearch%2Fcnsc05.jsp",
+          "title": "Search Result - MMIS",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://162.105.138.110:8011/mgqk/index.jsp",
+          "title": "民国报刊",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mylib.nlc.cn/web/guest/minguobaozhi",
+          "title": "民国报纸 - 中国国家数字图书馆",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://cdm.lib.nccu.edu.tw/cdm/landingpage/collection/38clip",
+          "title": "民國38年前重要剪報資料庫",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.cnbksy.com/home",
+          "title": "全國報刊索引",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 阅读类 / 书库",
+      "links": [
+        {
+          "url": "http://www.jyjh.com.cn/jinyong/",
+          "title": "金庸图书馆 - 金庸江湖网旗下金庸小说在线阅读站",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.wutu.info/",
+          "title": "於菟阅读站",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://iask.sina.com.cn/u/1873968025/ish?folderid=989991",
+          "title": "诸子百家之艺文",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.purepen.com/index.html",
+          "title": "中国古典名著在线《金瓶梅》《红楼梦》《三国演义》《水浒传》《西游记》（纯文学网站 PurePen.com ）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.my285.com/",
+          "title": "梦远书城_首页",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.xiexingcun.com/Hlm/index.htm",
+          "title": "汇评脂批石头记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.mangnolia.com/",
+          "title": "木兰-首页(beta)-电子书籍在线阅读网站",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.laikanshu.com/",
+          "title": "首页 - 来看书网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.tianyabook.com/",
+          "title": "天涯在线书库",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://txt.rain8.com/txtmz/",
+          "title": "文学名著下载中外名著TXT电子书下载世界名著下载雨枫TXT电子书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.thn21.com/wen/",
+          "title": "文言专题_华语网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.saohua.com/shuku/",
+          "title": "扫花书库-读书人网址导航|图书网址大全|在线阅读|古典文学|世界名著｜读书网址大全｜小说网址大全｜哲学文史医学书大全",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.wenxue100.com/",
+          "title": "文学100",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.eywedu.org/",
+          "title": "主题阅读网——经典阅读新干线！",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 阅读类 / 断章",
+      "links": [
+        {
+          "url": "http://wufazhuce.com/",
+          "title": "「ONE · 一个」",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://17dujingdian.com/",
+          "title": "读经典",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://aladd.me/page/2",
+          "title": "浮生书店 一家小而安静的书店 Page 2",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://xiaozhongyuedu.lofter.com/",
+          "title": "小众阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.yiyeyuedu.com/",
+          "title": "一页阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://yuedu.fm/",
+          "title": "听见流星的声音-悦读FM",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://aladd.me/page/2",
+          "title": "浮生书店 一家小而安静的书店 Page 2",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 阅读类 / sth",
+      "links": [
+        {
+          "url": "http://www.kanunu.org/jimmy/",
+          "title": "几米 - 几米漫画 - 几米经典语录 - 几米漫画图片,几米漫画全集 - 卡努努",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://book.kanunu.org/files/writer/2665.html",
+          "title": "理查德·耶茨作品集_小说在线阅读_努努书坊",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://yuedu.163.com/source/b3de6a32-9e50-490d-8d01-a6f64db2a1f5_4",
+          "title": "菜根谭--网易云阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://blog.sina.com.cn/s/blog_4c26e27b01019m94.html",
+          "title": "清穿小品——喵王府的婚礼（上）_橘玄雅_新浪博客",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://blog.tianya.cn/blogger/post_read.asp?BlogID=3199355&PostID=39619834",
+          "title": "《中国古代衣食住行》完全整理_近地寂寞大石头_天涯博客",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://bbs.tianya.cn/post-funinfo-4606451-1.shtml",
+          "title": "叶康翡翠的87版红楼梦人物造型及服饰艺术品鉴（修正篇）_娱乐八卦_天涯论坛",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.zhihu.com/question/20022131?utm_campaign=official_account&utm_source=weibo&utm_medium=zhihu&utm_content=question",
+          "title": "练字的诀窍有哪些？ - 书法 - 知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mmmono.com/item/225487/",
+          "title": "中国古代木匠为什么不用钉子？33 张动图带你了解强大的榫卯结构",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://movie.douban.com/top250",
+          "title": "豆瓣电影TOP250",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ourjg.com/kangyong/modules/article/showvolume.php?aid=1&vid=1",
+          "title": "雍正皇帝的家庭生活-清帝系列-[稽古右文·康雍梦华]清史专题文集",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 阅读类 / 知乎",
+      "links": [
+        {
+          "url": "http://www.thepaper.cn/",
+          "title": "澎湃新闻-专注时政与思想-ThePaper.cn",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://account.guokr.com/sign_in/?success=https%3A%2F%2Faccount.guokr.com%2Foauth2%2Fauthorize%2F%3Fclient_id%3D32353%26redirect_uri%3Dhttp%253A%252F%252Fwww.guokr.com%252Fsso%252F%253Flazy%253Dy%2526rid%253D2994378631%2526success%253Dhttp%25253A%25252F%25252Fwww.guokr.com%25252F%26response_type%3Dcode%26state%3Dcc3c78aa3aef199dc9059e20e4d147a006289cde215ce1748a27ef2789b0b6ba--1388849113%26suppress_prompt%3D1",
+          "title": "登录 果壳网 科技有意思",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://gate.guokr.com/",
+          "title": "果壳任意门",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.ibeidou.org/",
+          "title": "北斗网 青年人文生活门户",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.infzm.com/",
+          "title": "南方周末",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://9.douban.com/",
+          "title": "九点",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.yeeyan.org/",
+          "title": "译言",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://yixi.tv/",
+          "title": "一席｜人文.科技.白日梦",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.qdaily.com/",
+          "title": "好奇心日报（QDaily）_好奇驱动你的世界",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "书签栏 / 阅读类",
+      "links": [
+        {
+          "url": "https://weread.qq.com/",
+          "title": "微信读书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://book.chaoxing.com/",
+          "title": "超星读书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.zhihu.com/",
+          "title": "知乎",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.douban.com/",
+          "title": "豆瓣",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.lofter.com/login?urschecked=true",
+          "title": "LOFTER",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.jianshu.com/",
+          "title": "简书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://note.youdao.com/web/#/file/recent/note/3a179076018cbab9b90e1adaa2964d07/",
+          "title": "有道云笔记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.yinxiang.com/Home.action#n=f45b6419-ab0f-4043-9a15-c894ad5a3f2b&s=s26&ses=4&sh=2&sds=5&",
+          "title": "印象笔记",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://yuedu.163.com/index",
+          "title": "网易云阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.gushiwen.org/",
+          "title": "古诗文网",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.zashuguan.cn/",
+          "title": "【雜書舘官网】",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/19/0327/15/37583807_824522866.shtml",
+          "title": "一日谈 | 中国历代服饰复原图（转）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.zggdwx.com/",
+          "title": "中国古典文学 - 国学经典,中国古代文学作品在线阅读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.yooread.net/",
+          "title": "悠读",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://read.douban.com/reader/ebook/17118989/",
+          "title": "斯通纳",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.jjwxc.net/onebook.php?novelid=2630301",
+          "title": "人人都爱马文才",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://weibo.com/ttarticle/p/show?id=2309403940284655400125",
+          "title": "李天飞",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://huaban.com/pins/751446417",
+          "title": "#古墓那些事#【辽代·张文藻墓】1993...@萨伊酱采集到古代器具(613图)_花瓣人文艺术",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://mp.weixin.qq.com/s?__biz=MTI0MDU3NDYwMQ==&mid=404629066&idx=1&sn=58d4a7828b49224f5aa49acf47344687&scene=21#wechat_redirect",
+          "title": "夜读 | 冬至：天时人事日相催，冬至阳生春又来",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/19/0420/16/5512889_830134755.shtml",
+          "title": "根据文物复原的各朝代服饰（一）",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.360doc.com/content/18/1205/18/31655491_799539147.shtml",
+          "title": "《中国历代服饰集萃》中国历朝历代服饰复原图",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "问答AI",
+      "links": [
+        {
+          "url": "https://chatgpt.com/",
+          "title": "ChatGPT",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://chat.deepseek.com/",
+          "title": "DeepSeek",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://yuanbao.tencent.com/chat/naQivTmsDa",
+          "title": "腾讯元宝AI",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.doubao.com/chat/",
+          "title": "豆包 - 字节跳动旗下 AI",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.qianwen.com/?st=null&bizPassParams=%26x-platform%3DexternalH5",
+          "title": "通义千问",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://gemini.google.com/app",
+          "title": "Google Gemini",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://github.com/",
+          "title": "GitHub",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "功能AI",
+      "links": [
+        {
+          "url": "https://jimeng.jianying.com/ai-tool/home",
+          "title": "即梦AI",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://app.klingai.com/cn/",
+          "title": "可灵 AI",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.liblib.art/video-effect",
+          "title": "LiblibAI",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.nano-banana.ai/",
+          "title": "Nano Banana-高级 AI 图像生成器 | Gemini 2.5 Flash 和 Gemini 3 Pro 图像预览 API",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://space.coze.cn/",
+          "title": "扣子空间，你的 AI 办公助手",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://cursor.com/cn/agents",
+          "title": "Agents | Cursor - The AI Code Editor",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://notebooklm.google.com/notebook/7878e4df-3e30-4a1a-acb4-2c361587416f",
+          "title": "Untitled notebook - NotebookLM",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.feixianglaoshi.com/#/home?featureId=20",
+          "title": "飞象老师",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://bailian.console.aliyun.com/cn-beijing/?spm=5176.29597918.J_SEsSjsNv72yRuRFS2VknO.2.4f657b08Bvyu0I&tab=demohouse#/experience/t2v",
+          "title": "阿里云百炼控制台",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "搜索网站",
+      "links": [
+        {
+          "url": "https://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp&gws_rd=ssl",
+          "title": "Google",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://cn.bing.com/?mkt=zh-CN",
+          "title": "必应",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://zh.wikipedia.org/wiki/%E9%84%AD%E5%9C%8B",
+          "title": "维基百科",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.baidu.com/",
+          "title": "百度",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://pan.baidu.com/disk/main#/index?category=all",
+          "title": "百度网盘",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.tboxn.com/sites/320.html",
+          "title": "TBOX导航-zilbrary",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://lackar.com/aa/",
+          "title": "AnywhereAnything",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bgrdh.com/",
+          "title": "办公人导航",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.bilibili.com/?spm_id_from=666.25.0.0",
+          "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.xiaohongshu.com/explore",
+          "title": "小红书 - 你的生活指南",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.weibo.com/u/2698391165/home?wvr=5",
+          "title": "Micro Blog",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.taobao.com/",
+          "title": "淘宝",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "功能网站",
+      "links": [
+        {
+          "url": "https://webmail.vip.163.com/js6/main.jsp?sid=FAtBcLMMHfwsmJOFIBMMPXPWyddKwtRJ&df=mailvip#module=mbox.ListModule%7C%7B%22fid%22%3A1%2C%22order%22%3A%22date%22%2C%22desc%22%3Atrue%7D",
+          "title": "VIP邮箱极致6.0版",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.vcg.com/",
+          "title": "视觉中国",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://music.youtube.com/watch?v=2tqQUdPTtos&list=RDAMVMUKIBvJqblEU",
+          "title": "YouTube Music",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://y.qq.com/",
+          "title": "QQ音乐",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://music.163.com/#/my/m/music/playlist?id=2221663",
+          "title": "网易云音乐",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://calendar.notion.so/week",
+          "title": "Notion 日历",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://help.flomoapp.com/",
+          "title": "flomo",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://docs.qq.com/desktop/recent/wikispace",
+          "title": "腾讯文档",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=987508883",
+          "title": "微信公众平台",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "未分类",
+      "links": [
+        {
+          "url": "https://shimo.zhenguanyu.com/sheets/QvWw8DkkkcyY9Pcq/lMRwD",
+          "title": "斑马语文分享内容合集",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://iclasscloud.cretech.cn/livecloudceshi/index.html?",
+          "title": "创先泰克教育云",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://www.sohu.com/a/272713249_652871",
+          "title": "桑莲居｜中国古代书籍的装帧形式_帛书",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIxNzM0NzEzNQ==&mid=2247495677&idx=4&sn=9719ff5feb615828cd9a26b0438f3e94&chksm=97f98aada08e03bb08973bbf8654ec92fad0df0a2d3f3dcfbe3a4d5df5745b16a8d00adf4a2a&scene=27",
+          "title": "考点：这五种“像”字句并不是比喻句",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://yibao.233h.com/",
+          "title": "医保政策导航",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.wallacechung.cc/",
+          "title": "Wallace",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "http://www.renren.com/433078675",
+          "title": "人人网 - 徐丽爽QuQ",
+          "desc": "",
+          "tags": []
+        },
+        {
+          "url": "https://mail.google.com/mail/#inbox",
+          "title": "everyhsu@gmail.com - Gmail",
+          "desc": "",
+          "tags": []
+        }
+      ]
+    }
+  ]
+}

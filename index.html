@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的导航</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <h1 id="site-title">我的导航</h1>
+          <p id="site-description">把你的收藏夹整理成清爽的导航页</p>
+        </div>
+        <div class="header-actions">
+          <label class="search">
+            <span class="sr-only">搜索</span>
+            <input id="search-input" type="search" placeholder="搜索标题、描述或标签" />
+          </label>
+          <button id="clear-search" class="ghost-button" type="button">清除</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="stats" class="stats"></section>
+      <section id="tag-filters" class="tag-filters"></section>
+      <section id="groups" class="groups"></section>
+    </main>
+
+    <template id="link-card-template">
+      <article class="link-card">
+        <div class="link-card-header">
+          <h3 class="link-title"></h3>
+          <a class="link-url" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <p class="link-desc"></p>
+        <div class="link-tags"></div>
+      </article>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
