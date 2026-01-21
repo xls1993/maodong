@@ -17,8 +17,26 @@ const elements = {
 
 const normalize = (value) => (value || "").toLowerCase().trim();
 
-const flattenLinks = (groups) =>
-  groups.flatMap((group) => group.links.map((link) => ({ ...link, group: group.name })));
+const palette = [
+  "#b8c1c8",
+  "#d6c9b8",
+  "#cfd6c1",
+  "#c8c0b4",
+  "#c9d4d6",
+  "#d9c6cf",
+  "#d3d9cc",
+  "#c8d0d8",
+];
+
+const hashString = (value) => {
+  let hash = 0;
+  for (let i = 0; i < value.length; i += 1) {
+    hash = (hash * 31 + value.charCodeAt(i)) % 2147483647;
+  }
+  return hash;
+};
+
+const pickGroupColor = (name) => palette[hashString(name) % palette.length];
 
 const buildTagIndex = (groups) => {
   const tags = new Set();
@@ -82,6 +100,13 @@ const renderGroups = (groups) => {
     const header = document.createElement("div");
     header.className = "group-header";
 
+    const titleWrap = document.createElement("div");
+    titleWrap.className = "group-title-wrap";
+
+    const dot = document.createElement("span");
+    dot.className = "group-dot";
+    dot.style.backgroundColor = pickGroupColor(group.name);
+
     const title = document.createElement("h2");
     title.className = "group-title";
     title.textContent = group.name;
@@ -90,7 +115,9 @@ const renderGroups = (groups) => {
     count.className = "group-count";
     count.textContent = `${group.links.length} 条链接`;
 
-    header.appendChild(title);
+    titleWrap.appendChild(dot);
+    titleWrap.appendChild(title);
+    header.appendChild(titleWrap);
     header.appendChild(count);
 
     const grid = document.createElement("div");
