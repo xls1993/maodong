@@ -93,8 +93,11 @@ body {
 }
 
 .stats-inline {
-  margin-left: auto;
   white-space: nowrap;
+}
+
+.push-right {
+  margin-left: auto;
 }
 
 .tag-filters {

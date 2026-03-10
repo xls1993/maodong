@@ -218,7 +218,7 @@ const renderTags = (tags) => {
   });
 };
 
-const levelPalette = ["#98ab90", "#9ab2bf", "#d9cbb8", "#c6d5c1", "#b9a9c0", "#dfe3e6"];
+const levelPalette = ["#f1f3f6", "#cddfc9", "#e8d5bd"];
 
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
