@@ -218,14 +218,17 @@ const renderTags = (tags) => {
   });
 };
 
+const levelPalette = ["#98ab90", "#9ab2bf", "#d9cbb8", "#c6d5c1", "#b9a9c0", "#dfe3e6"];
+
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
   const tree = buildTree(groups);
 
-  const renderNode = (node, container) => {
+  const renderNode = (node, container, depth) => {
     const details = document.createElement("details");
     details.className = "tree-node";
     details.open = false;
+    details.style.backgroundColor = levelPalette[depth % levelPalette.length];
 
     const summary = document.createElement("summary");
     summary.className = "tree-summary";
@@ -280,7 +283,7 @@ const renderGroups = (groups) => {
       const childrenWrap = document.createElement("div");
       childrenWrap.className = "tree-children";
       Array.from(node.children.values()).forEach((child) => {
-        renderNode(child, childrenWrap);
+        renderNode(child, childrenWrap, depth + 1);
       });
       details.appendChild(childrenWrap);
     }
@@ -291,7 +294,7 @@ const renderGroups = (groups) => {
   const rootContainer = document.createElement("div");
   rootContainer.className = "tree";
   Array.from(tree.children.values()).forEach((child) => {
-    renderNode(child, rootContainer);
+    renderNode(child, rootContainer, 0);
   });
   elements.groups.appendChild(rootContainer);
 };
