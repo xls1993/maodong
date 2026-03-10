@@ -67,16 +67,17 @@ const parseBookmarksHtml = (htmlText) => {
     for (let i = 0; i < children.length; i += 1) {
       const node = children[i];
       if (node.tagName === "DT") {
-        const folderNode = node.querySelector("h3");
-        const linkNode = node.querySelector("a");
+        const folderNode = node.querySelector(":scope > h3");
+        const linkNode = node.querySelector(":scope > a");
 
         if (folderNode) {
           const folderName = folderNode.textContent.trim() || "未命名文件夹";
-          let next = node.nextElementSibling;
-          while (next && next.tagName !== "DL") {
-            next = next.nextElementSibling;
-          }
-          walkDl(next, [...path, folderName]);
+          const nestedDl =
+            node.querySelector(":scope > dl") ||
+            (node.nextElementSibling && node.nextElementSibling.tagName === "DL"
+              ? node.nextElementSibling
+              : null);
+          walkDl(nestedDl, [...path, folderName]);
         } else if (linkNode) {
           const url = linkNode.getAttribute("href") || linkNode.href || "";
           const title = linkNode.textContent.trim() || url;
@@ -116,6 +117,32 @@ const buildTagIndex = (groups) => {
     });
   });
   return ["全部", ...Array.from(tags).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"))];
+};
+
+const buildTree = (groups) => {
+  const root = { name: "root", children: new Map(), links: [] };
+
+  groups.forEach((group) => {
+    const parts = group.name.split(" / ").map((part) => part.trim()).filter(Boolean);
+    let node = root;
+    parts.forEach((part) => {
+      if (!node.children.has(part)) {
+        node.children.set(part, { name: part, children: new Map(), links: [] });
+      }
+      node = node.children.get(part);
+    });
+    node.links.push(...group.links);
+  });
+
+  return root;
+};
+
+const countLinks = (node) => {
+  let total = node.links.length;
+  node.children.forEach((child) => {
+    total += countLinks(child);
+  });
+  return total;
 };
 
 const filterLinks = (groups, searchTerm, activeTag) => {
@@ -163,53 +190,76 @@ const renderTags = (tags) => {
 
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
-  groups.forEach((group) => {
-    const section = document.createElement("section");
-    section.className = "group";
+  const tree = buildTree(groups);
 
-    const header = document.createElement("div");
-    header.className = "group-header";
+  const renderNode = (node, container) => {
+    const details = document.createElement("details");
+    details.className = "tree-node";
+    details.open = true;
+
+    const summary = document.createElement("summary");
+    summary.className = "tree-summary";
 
     const titleWrap = document.createElement("div");
     titleWrap.className = "group-title-wrap";
 
     const dot = document.createElement("span");
     dot.className = "group-dot";
-    dot.style.backgroundColor = pickGroupColor(group.name);
+    dot.style.backgroundColor = pickGroupColor(node.name);
 
     const title = document.createElement("h2");
     title.className = "group-title";
-    title.textContent = group.name;
+    title.textContent = node.name;
 
     const count = document.createElement("span");
     count.className = "group-count";
-    count.textContent = `${group.links.length} 条链接`;
+    count.textContent = `${countLinks(node)} 条链接`;
 
     titleWrap.appendChild(dot);
     titleWrap.appendChild(title);
-    header.appendChild(titleWrap);
-    header.appendChild(count);
+    summary.appendChild(titleWrap);
+    summary.appendChild(count);
 
-    const grid = document.createElement("div");
-    grid.className = "link-grid";
+    details.appendChild(summary);
 
-    group.links.forEach((link) => {
-      const card = elements.cardTemplate.content.cloneNode(true);
-      const titleNode = card.querySelector(".link-title");
-      titleNode.textContent = link.title || link.url;
-      const urlNode = card.querySelector(".link-url");
-      urlNode.textContent = truncateText(link.url, 60);
-      urlNode.title = link.url || "";
+    if (node.links.length > 0) {
+      const grid = document.createElement("div");
+      grid.className = "link-grid";
 
-      const anchor = card.querySelector(".link-card");
-      anchor.href = link.url;
-      grid.appendChild(card);
-    });
+      node.links.forEach((link) => {
+        const card = elements.cardTemplate.content.cloneNode(true);
+        const titleNode = card.querySelector(".link-title");
+        titleNode.textContent = link.title || link.url;
+        const urlNode = card.querySelector(".link-url");
+        urlNode.textContent = truncateText(link.url, 60);
+        urlNode.title = link.url || "";
 
-    section.appendChild(header);
-    section.appendChild(grid);
-    elements.groups.appendChild(section);
+        const anchor = card.querySelector(".link-card");
+        anchor.href = link.url;
+        grid.appendChild(card);
+      });
+
+      details.appendChild(grid);
+    }
+
+    if (node.children.size > 0) {
+      const childrenWrap = document.createElement("div");
+      childrenWrap.className = "tree-children";
+      Array.from(node.children.values()).forEach((child) => {
+        renderNode(child, childrenWrap);
+      });
+      details.appendChild(childrenWrap);
+    }
+
+    container.appendChild(details);
+  };
+
+  const rootContainer = document.createElement("div");
+  rootContainer.className = "tree";
+  Array.from(tree.children.values()).forEach((child) => {
+    renderNode(child, rootContainer);
   });
+  elements.groups.appendChild(rootContainer);
 };
 
 const render = () => {
