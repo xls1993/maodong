@@ -250,13 +250,18 @@ const renderGroups = (groups) => {
 
     titleWrap.appendChild(dot);
     titleWrap.appendChild(title);
-    summary.appendChild(titleWrap);
-    summary.appendChild(count);
+    const rightWrap = document.createElement("div");
+    rightWrap.className = "tree-summary-right";
 
     const caret = document.createElement("span");
     caret.className = "tree-caret";
     caret.textContent = "▸";
-    summary.appendChild(caret);
+
+    rightWrap.appendChild(count);
+    rightWrap.appendChild(caret);
+
+    summary.appendChild(titleWrap);
+    summary.appendChild(rightWrap);
     details.appendChild(summary);
 
     if (node.links.length > 0) {

@@ -159,6 +159,12 @@ body {
   display: none;
 }
 
+.tree-summary-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .tree-caret {
   margin-left: 8px;
   color: var(--muted);
