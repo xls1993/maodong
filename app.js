@@ -14,6 +14,7 @@ const elements = {
   groups: document.getElementById("groups"),
   searchInput: document.getElementById("search-input"),
   clearSearch: document.getElementById("clear-search"),
+  toggleAll: document.getElementById("toggle-all"),
   uploadButton: document.getElementById("upload-bookmarks"),
   bookmarkFile: document.getElementById("bookmark-file"),
   cardTemplate: document.getElementById("link-card-template"),
@@ -195,7 +196,7 @@ const renderGroups = (groups) => {
   const renderNode = (node, container) => {
     const details = document.createElement("details");
     details.className = "tree-node";
-    details.open = true;
+    details.open = false;
 
     const summary = document.createElement("summary");
     summary.className = "tree-summary";
@@ -220,6 +221,10 @@ const renderGroups = (groups) => {
     summary.appendChild(titleWrap);
     summary.appendChild(count);
 
+    const caret = document.createElement("span");
+    caret.className = "tree-caret";
+    caret.textContent = "▸";
+    summary.appendChild(caret);
     details.appendChild(summary);
 
     if (node.links.length > 0) {
@@ -262,6 +267,16 @@ const renderGroups = (groups) => {
   elements.groups.appendChild(rootContainer);
 };
 
+const updateToggleButton = () => {
+  const nodes = elements.groups.querySelectorAll(".tree-node");
+  if (!nodes.length) {
+    elements.toggleAll.textContent = "全部展开";
+    return;
+  }
+  const allOpen = Array.from(nodes).every((node) => node.open);
+  elements.toggleAll.textContent = allOpen ? "全部折叠" : "全部展开";
+};
+
 const render = () => {
   if (!state.data) return;
   const filteredGroups = filterLinks(state.data.groups, state.searchTerm, state.activeTag);
@@ -282,6 +297,16 @@ const setupEvents = () => {
     render();
   });
 
+  elements.toggleAll.addEventListener("click", () => {
+    const nodes = elements.groups.querySelectorAll(".tree-node");
+    if (!nodes.length) return;
+    const allOpen = Array.from(nodes).every((node) => node.open);
+    nodes.forEach((node) => {
+      node.open = !allOpen;
+    });
+    updateToggleButton();
+  });
+
   elements.uploadButton.addEventListener("click", () => {
     elements.bookmarkFile.click();
   });
@@ -299,6 +324,7 @@ const setupEvents = () => {
       elements.title.textContent = SITE_TITLE;
       elements.description.textContent = data.description;
       render();
+      updateToggleButton();
     } catch (error) {
       elements.stats.textContent = "书签文件解析失败，请确认是 HTML 格式。";
     } finally {
@@ -326,6 +352,7 @@ const init = async () => {
   elements.description.textContent = data.description || "把你的收藏夹整理成清爽的导航页";
   setupEvents();
   render();
+  updateToggleButton();
 };
 
 init();

@@ -151,6 +151,17 @@ body {
   display: none;
 }
 
+.tree-caret {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.tree-node[open] > .tree-summary .tree-caret {
+  transform: rotate(90deg);
+}
+
 .tree-children {
   display: flex;
   flex-direction: column;
