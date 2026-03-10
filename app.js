@@ -4,6 +4,8 @@ const state = {
   activeTag: "全部",
 };
 
+const SITE_TITLE = "瞻岁楼";
+
 const elements = {
   title: document.getElementById("site-title"),
   description: document.getElementById("site-description"),
@@ -37,6 +39,11 @@ const hashString = (value) => {
 };
 
 const pickGroupColor = (name) => palette[hashString(name) % palette.length];
+
+const truncateText = (value, limit) => {
+  if (!value) return "";
+  return value.length > limit ? `${value.slice(0, limit - 1)}…` : value;
+};
 
 const buildTagIndex = (groups) => {
   const tags = new Set();
@@ -125,21 +132,14 @@ const renderGroups = (groups) => {
 
     group.links.forEach((link) => {
       const card = elements.cardTemplate.content.cloneNode(true);
-      card.querySelector(".link-title").textContent = link.title || link.url;
+      const titleNode = card.querySelector(".link-title");
+      titleNode.textContent = link.title || link.url;
       const urlNode = card.querySelector(".link-url");
-      urlNode.href = link.url;
-      urlNode.textContent = link.url;
-      const descNode = card.querySelector(".link-desc");
-      descNode.textContent = link.desc || "暂无描述";
+      urlNode.textContent = truncateText(link.url, 60);
+      urlNode.title = link.url || "";
 
-      const tagsNode = card.querySelector(".link-tags");
-      (link.tags || []).forEach((tag) => {
-        const tagEl = document.createElement("span");
-        tagEl.className = "link-tag";
-        tagEl.textContent = tag;
-        tagsNode.appendChild(tagEl);
-      });
-
+      const anchor = card.querySelector(".link-card");
+      anchor.href = link.url;
       grid.appendChild(card);
     });
 
@@ -184,7 +184,8 @@ const init = async () => {
   }
 
   state.data = data;
-  elements.title.textContent = data.title || "我的导航";
+  elements.title.textContent = SITE_TITLE;
+  document.title = SITE_TITLE;
   elements.description.textContent = data.description || "把你的收藏夹整理成清爽的导航页";
   setupEvents();
   render();
