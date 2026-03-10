@@ -4,7 +4,7 @@ const state = {
   activeTag: "全部",
 };
 
-const SITE_TITLE = "瞻岁楼";
+const SITE_TITLE = "猫冬吧";
 
 const elements = {
   title: document.getElementById("site-title"),
@@ -14,6 +14,8 @@ const elements = {
   groups: document.getElementById("groups"),
   searchInput: document.getElementById("search-input"),
   clearSearch: document.getElementById("clear-search"),
+  uploadButton: document.getElementById("upload-bookmarks"),
+  bookmarkFile: document.getElementById("bookmark-file"),
   cardTemplate: document.getElementById("link-card-template"),
 };
 
@@ -43,6 +45,67 @@ const pickGroupColor = (name) => palette[hashString(name) % palette.length];
 const truncateText = (value, limit) => {
   if (!value) return "";
   return value.length > limit ? `${value.slice(0, limit - 1)}…` : value;
+};
+
+const parseBookmarksHtml = (htmlText) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlText, "text/html");
+  const root = doc.querySelector("dl");
+  const groupsMap = new Map();
+
+  const ensureGroup = (path) => {
+    const groupName = (path.length ? path : ["未分类"]).join(" / ");
+    if (!groupsMap.has(groupName)) {
+      groupsMap.set(groupName, []);
+    }
+    return groupName;
+  };
+
+  const walkDl = (dlNode, path) => {
+    if (!dlNode) return;
+    const children = Array.from(dlNode.children);
+    for (let i = 0; i < children.length; i += 1) {
+      const node = children[i];
+      if (node.tagName === "DT") {
+        const folderNode = node.querySelector("h3");
+        const linkNode = node.querySelector("a");
+
+        if (folderNode) {
+          const folderName = folderNode.textContent.trim() || "未命名文件夹";
+          let next = node.nextElementSibling;
+          while (next && next.tagName !== "DL") {
+            next = next.nextElementSibling;
+          }
+          walkDl(next, [...path, folderName]);
+        } else if (linkNode) {
+          const url = linkNode.getAttribute("href") || linkNode.href || "";
+          const title = linkNode.textContent.trim() || url;
+          const groupName = ensureGroup(path);
+          groupsMap.get(groupName).push({
+            title,
+            url,
+            desc: "",
+            tags: [],
+          });
+        }
+      } else if (node.tagName === "DL") {
+        walkDl(node, path);
+      }
+    }
+  };
+
+  walkDl(root, []);
+
+  const groups = Array.from(groupsMap.entries()).map(([name, links]) => ({
+    name,
+    links,
+  }));
+
+  return {
+    title: SITE_TITLE,
+    description: "由浏览器书签导入生成",
+    groups,
+  };
 };
 
 const buildTagIndex = (groups) => {
@@ -167,6 +230,30 @@ const setupEvents = () => {
     state.searchTerm = "";
     elements.searchInput.value = "";
     render();
+  });
+
+  elements.uploadButton.addEventListener("click", () => {
+    elements.bookmarkFile.click();
+  });
+
+  elements.bookmarkFile.addEventListener("change", async (event) => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const data = parseBookmarksHtml(text);
+      state.data = data;
+      state.searchTerm = "";
+      state.activeTag = "全部";
+      elements.searchInput.value = "";
+      elements.title.textContent = SITE_TITLE;
+      elements.description.textContent = data.description;
+      render();
+    } catch (error) {
+      elements.stats.textContent = "书签文件解析失败，请确认是 HTML 格式。";
+    } finally {
+      event.target.value = "";
+    }
   });
 };
 
