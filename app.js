@@ -52,15 +52,7 @@ const parseBookmarksHtml = (htmlText) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlText, "text/html");
   const root = doc.querySelector("dl");
-  const groupsMap = new Map();
-
-  const ensureGroup = (path) => {
-    const groupName = (path.length ? path : ["未分类"]).join(" / ");
-    if (!groupsMap.has(groupName)) {
-      groupsMap.set(groupName, []);
-    }
-    return groupName;
-  };
+  const entries = [];
 
   const walkDl = (dlNode, path) => {
     if (!dlNode) return;
@@ -82,12 +74,14 @@ const parseBookmarksHtml = (htmlText) => {
         } else if (linkNode) {
           const url = linkNode.getAttribute("href") || linkNode.href || "";
           const title = linkNode.textContent.trim() || url;
-          const groupName = ensureGroup(path);
-          groupsMap.get(groupName).push({
-            title,
-            url,
-            desc: "",
-            tags: [],
+          entries.push({
+            path: [...path],
+            link: {
+              title,
+              url,
+              desc: "",
+              tags: [],
+            },
           });
         }
       } else if (node.tagName === "DL") {
@@ -97,6 +91,41 @@ const parseBookmarksHtml = (htmlText) => {
   };
 
   walkDl(root, []);
+
+  const rootCandidates = new Set();
+  entries.forEach((entry) => {
+    if (entry.path.length > 0) {
+      rootCandidates.add(entry.path[0]);
+    }
+  });
+
+  const rootName = rootCandidates.size === 1 ? Array.from(rootCandidates)[0] : null;
+  const isWrapperRoot =
+    rootName &&
+    /(书签|Bookmarks|Bookmarks bar|Other bookmarks|其他书签|移动设备书签|Mobile bookmarks)/i.test(
+      rootName
+    );
+
+  const normalizedEntries = entries.map((entry) => {
+    if (isWrapperRoot && entry.path[0] === rootName) {
+      return { ...entry, path: entry.path.slice(1) };
+    }
+    return entry;
+  });
+
+  const groupsMap = new Map();
+  const ensureGroup = (path) => {
+    const groupName = (path.length ? path : ["未分类"]).join(" / ");
+    if (!groupsMap.has(groupName)) {
+      groupsMap.set(groupName, []);
+    }
+    return groupName;
+  };
+
+  normalizedEntries.forEach((entry) => {
+    const groupName = ensureGroup(entry.path);
+    groupsMap.get(groupName).push(entry.link);
+  });
 
   const groups = Array.from(groupsMap.entries()).map(([name, links]) => ({
     name,
