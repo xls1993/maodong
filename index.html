@@ -21,6 +21,7 @@
           <input id="bookmark-file" type="file" accept=".html,.htm" hidden />
           <button id="toggle-all" class="ghost-button push-right" type="button">顶层</button>
           <span id="stats" class="stats stats-inline"></span>
+          <button id="open-admin" class="ghost-button" type="button">管理</button>
           <button id="upload-bookmarks" class="ghost-button" type="button">更换书签</button>
           <button id="clear-search" class="ghost-button" type="button">清除</button>
         </div>
@@ -31,6 +32,66 @@
       <section id="tag-filters" class="tag-filters"></section>
       <section id="groups" class="groups"></section>
     </main>
+
+    <aside id="admin-panel" class="admin-panel hidden">
+      <div class="admin-header">
+        <h2>管理</h2>
+        <button id="close-admin" class="ghost-button" type="button">关闭</button>
+      </div>
+      <div class="admin-body">
+        <section class="admin-section">
+          <h3>文件夹</h3>
+          <div class="admin-row">
+            <input id="new-folder-name" type="text" placeholder="新文件夹名称" />
+            <button id="add-folder" class="ghost-button" type="button">添加到当前层级</button>
+          </div>
+          <div class="admin-row">
+            <input id="rename-folder-name" type="text" placeholder="当前文件夹新名称" />
+            <button id="rename-folder" class="ghost-button" type="button">重命名</button>
+            <button id="delete-folder" class="ghost-button danger" type="button">删除</button>
+          </div>
+          <div class="admin-row">
+            <select id="move-folder-target"></select>
+            <button id="move-folder" class="ghost-button" type="button">移动当前文件夹</button>
+          </div>
+          <div id="folder-order" class="admin-list"></div>
+        </section>
+
+        <section class="admin-section">
+          <h3>网址</h3>
+          <div class="admin-row">
+            <input id="new-link-title" type="text" placeholder="标题" />
+            <input id="new-link-url" type="url" placeholder="网址（https://）" />
+            <button id="add-link" class="ghost-button" type="button">添加到当前层级</button>
+          </div>
+          <div class="admin-row">
+            <select id="move-link-item"></select>
+            <select id="move-link-target"></select>
+            <button id="move-link" class="ghost-button" type="button">移动网址</button>
+          </div>
+          <div id="link-list" class="admin-list"></div>
+        </section>
+
+        <section class="admin-section">
+          <h3>配色</h3>
+          <div class="admin-row">
+            <label>页面背景 <input id="color-page" type="color" /></label>
+            <label>分栏背景 <input id="color-column" type="color" /></label>
+            <label>文件夹背景 <input id="color-folder" type="color" /></label>
+            <label>网址背景 <input id="color-link" type="color" /></label>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <h3>数据</h3>
+          <div class="admin-row">
+            <button id="export-data" class="ghost-button" type="button">导出数据</button>
+            <input id="import-data-file" type="file" accept=".json" hidden />
+            <button id="import-data" class="ghost-button" type="button">导入数据</button>
+          </div>
+        </section>
+      </div>
+    </aside>
 
     <template id="link-card-template">
       <a class="link-card" target="_blank" rel="noopener noreferrer">
