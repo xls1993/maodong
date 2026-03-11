@@ -2,6 +2,7 @@ const state = {
   data: null,
   searchTerm: "",
   activeTag: "全部",
+  selectedPath: [],
 };
 
 const SITE_TITLE = "猫冬吧";
@@ -218,100 +219,109 @@ const renderTags = (tags) => {
   });
 };
 
-const levelPalette = ["#f1f3f6", "#cddfc9", "#e8d5bd"];
+const levelPalette = ["#f1f3f6", "#e8d5bd", "#cddfc9"];
 
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
   const tree = buildTree(groups);
+  const columns = document.createElement("div");
+  columns.className = "columns";
 
-  const renderNode = (node, container, depth) => {
-    const details = document.createElement("details");
-    details.className = "tree-node";
-    details.open = false;
-    details.style.backgroundColor = levelPalette[depth % levelPalette.length];
-
-    const summary = document.createElement("summary");
-    summary.className = "tree-summary";
-
-    const titleWrap = document.createElement("div");
-    titleWrap.className = "group-title-wrap";
-
-    const dot = document.createElement("span");
-    dot.className = "group-dot";
-    dot.style.backgroundColor = pickGroupColor(node.name);
-
-    const title = document.createElement("h2");
-    title.className = "group-title";
-    title.textContent = node.name;
-
-    const count = document.createElement("span");
-    count.className = "group-count";
-    count.textContent = `${countLinks(node)} 条链接`;
-
-    titleWrap.appendChild(dot);
-    titleWrap.appendChild(title);
-    const rightWrap = document.createElement("div");
-    rightWrap.className = "tree-summary-right";
-
-    const caret = document.createElement("span");
-    caret.className = "tree-caret";
-    caret.textContent = "▸";
-
-    rightWrap.appendChild(count);
-    rightWrap.appendChild(caret);
-
-    summary.appendChild(titleWrap);
-    summary.appendChild(rightWrap);
-    details.appendChild(summary);
-
-    if (node.links.length > 0) {
-      const grid = document.createElement("div");
-      grid.className = "link-grid";
-
-      node.links.forEach((link) => {
-        const card = elements.cardTemplate.content.cloneNode(true);
-        const titleNode = card.querySelector(".link-title");
-        titleNode.textContent = link.title || link.url;
-        const urlNode = card.querySelector(".link-url");
-        urlNode.textContent = truncateText(link.url, 60);
-        urlNode.title = link.url || "";
-
-        const anchor = card.querySelector(".link-card");
-        anchor.href = link.url;
-        grid.appendChild(card);
-      });
-
-      details.appendChild(grid);
-    }
-
-    if (node.children.size > 0) {
-      const childrenWrap = document.createElement("div");
-      childrenWrap.className = "tree-children";
-      Array.from(node.children.values()).forEach((child) => {
-        renderNode(child, childrenWrap, depth + 1);
-      });
-      details.appendChild(childrenWrap);
-    }
-
-    container.appendChild(details);
+  const buildLevelLabel = (depth) => {
+    const labels = ["一级", "二级", "三级", "四级", "五级", "六级"];
+    return labels[depth] || `第${depth + 1}级`;
   };
 
-  const rootContainer = document.createElement("div");
-  rootContainer.className = "tree";
-  Array.from(tree.children.values()).forEach((child) => {
-    renderNode(child, rootContainer, 0);
-  });
-  elements.groups.appendChild(rootContainer);
+  const renderLinks = (links, container) => {
+    if (!links.length) return;
+    const title = document.createElement("div");
+    title.className = "column-section-title";
+    title.textContent = "未分类链接";
+    container.appendChild(title);
+
+    const list = document.createElement("div");
+    list.className = "column-links";
+    links.forEach((link) => {
+      const card = elements.cardTemplate.content.cloneNode(true);
+      const titleNode = card.querySelector(".link-title");
+      titleNode.textContent = link.title || link.url;
+      const urlNode = card.querySelector(".link-url");
+      urlNode.textContent = truncateText(link.url, 60);
+      urlNode.title = link.url || "";
+
+      const anchor = card.querySelector(".link-card");
+      anchor.href = link.url;
+      list.appendChild(card);
+    });
+    container.appendChild(list);
+  };
+
+  const renderColumn = (node, depth) => {
+    const column = document.createElement("div");
+    column.className = "column";
+    column.style.backgroundColor = levelPalette[depth % levelPalette.length];
+
+    const header = document.createElement("div");
+    header.className = "column-header";
+    header.textContent = buildLevelLabel(depth);
+    column.appendChild(header);
+
+    const folderList = document.createElement("div");
+    folderList.className = "column-folders";
+
+    Array.from(node.children.values()).forEach((child) => {
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "folder-item";
+      const isActive = state.selectedPath[depth] === child.name;
+      if (isActive) item.classList.add("active");
+
+      const left = document.createElement("span");
+      left.className = "folder-name";
+      left.textContent = child.name;
+
+      const right = document.createElement("span");
+      right.className = "folder-count";
+      right.textContent = `${countLinks(child)} 条`;
+
+      item.appendChild(left);
+      item.appendChild(right);
+      item.addEventListener("click", () => {
+        state.selectedPath = [...state.selectedPath.slice(0, depth), child.name];
+        render();
+      });
+      folderList.appendChild(item);
+    });
+
+    if (!folderList.children.length) {
+      const empty = document.createElement("div");
+      empty.className = "column-empty";
+      empty.textContent = "暂无子文件夹";
+      column.appendChild(empty);
+    } else {
+      column.appendChild(folderList);
+    }
+
+    renderLinks(node.links, column);
+    columns.appendChild(column);
+  };
+
+  let current = tree;
+  let depth = 0;
+  renderColumn(current, depth);
+  while (state.selectedPath[depth]) {
+    const next = current.children.get(state.selectedPath[depth]);
+    if (!next) break;
+    current = next;
+    depth += 1;
+    renderColumn(current, depth);
+  }
+
+  elements.groups.appendChild(columns);
 };
 
 const updateToggleButton = () => {
-  const nodes = elements.groups.querySelectorAll(".tree-node");
-  if (!nodes.length) {
-    elements.toggleAll.textContent = "全部展开";
-    return;
-  }
-  const allOpen = Array.from(nodes).every((node) => node.open);
-  elements.toggleAll.textContent = allOpen ? "全部折叠" : "全部展开";
+  elements.toggleAll.textContent = state.selectedPath.length ? "回到顶层" : "顶层";
 };
 
 const render = () => {
@@ -335,13 +345,8 @@ const setupEvents = () => {
   });
 
   elements.toggleAll.addEventListener("click", () => {
-    const nodes = elements.groups.querySelectorAll(".tree-node");
-    if (!nodes.length) return;
-    const allOpen = Array.from(nodes).every((node) => node.open);
-    nodes.forEach((node) => {
-      node.open = !allOpen;
-    });
-    updateToggleButton();
+    state.selectedPath = [];
+    render();
   });
 
   elements.uploadButton.addEventListener("click", () => {
