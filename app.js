@@ -219,8 +219,6 @@ const renderTags = (tags) => {
   });
 };
 
-const levelPalette = ["#f1f3f6", "#e8d5bd", "#cddfc9"];
-
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
   const tree = buildTree(groups);
@@ -259,12 +257,6 @@ const renderGroups = (groups) => {
   const renderColumn = (node, depth) => {
     const column = document.createElement("div");
     column.className = "column";
-    column.style.backgroundColor = levelPalette[depth % levelPalette.length];
-
-    const header = document.createElement("div");
-    header.className = "column-header";
-    header.textContent = buildLevelLabel(depth);
-    column.appendChild(header);
 
     const folderList = document.createElement("div");
     folderList.className = "column-folders";
@@ -293,12 +285,7 @@ const renderGroups = (groups) => {
       folderList.appendChild(item);
     });
 
-    if (!folderList.children.length) {
-      const empty = document.createElement("div");
-      empty.className = "column-empty";
-      empty.textContent = "暂无子文件夹";
-      column.appendChild(empty);
-    } else {
+    if (folderList.children.length) {
       column.appendChild(folderList);
     }
 

@@ -112,21 +112,18 @@ body {
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 12px;
+  max-width: 100%;
 }
 
 .column {
-  min-width: 260px;
+  flex: 0 0 280px;
   border-radius: 16px;
   border: 1px solid var(--border);
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.column-header {
-  font-size: 13px;
-  color: var(--muted);
+  background: rgb(241, 243, 246);
 }
 
 .column-folders {
@@ -137,7 +134,7 @@ body {
 
 .folder-item {
   border: 1px solid var(--border);
-  background: #fff;
+  background: rgb(203, 223, 201);
   color: var(--text);
   border-radius: 12px;
   padding: 10px 12px;
@@ -151,8 +148,9 @@ body {
 }
 
 .folder-item.active {
-  border-color: var(--accent-strong);
-  background: var(--surface-muted);
+  border-color: #7f9f85;
+  box-shadow: 0 0 0 2px rgba(127, 159, 133, 0.35);
+  background: rgb(203, 223, 201);
 }
 
 .folder-name {
@@ -165,20 +163,10 @@ body {
   white-space: nowrap;
 }
 
-.column-section-title {
-  font-size: 12px;
-  color: var(--muted);
-}
-
 .column-links {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.column-empty {
-  font-size: 12px;
-  color: var(--muted);
 }
 
 .tag-filter {
@@ -208,7 +196,7 @@ body {
   border-radius: 12px;
   border: 1px solid var(--border);
   padding: 10px 12px;
-  background: #fff;
+  background: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   gap: 4px;
