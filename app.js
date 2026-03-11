@@ -233,11 +233,6 @@ const renderGroups = (groups) => {
 
   const renderLinks = (links, container) => {
     if (!links.length) return;
-    const title = document.createElement("div");
-    title.className = "column-section-title";
-    title.textContent = "未分类链接";
-    container.appendChild(title);
-
     const list = document.createElement("div");
     list.className = "column-links";
     links.forEach((link) => {

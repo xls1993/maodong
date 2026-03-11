@@ -110,13 +110,11 @@ body {
 .columns {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 12px;
-  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .column {
-  flex: 0 0 280px;
+  flex: 1 1 260px;
   border-radius: 16px;
   border: 1px solid var(--border);
   padding: 14px;
