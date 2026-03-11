@@ -134,7 +134,7 @@ body {
 
 .folder-item {
   border: 1px solid var(--border);
-  background: rgb(203, 223, 201);
+  background: rgb(246, 243, 239);
   color: var(--text);
   border-radius: 12px;
   padding: 10px 12px;
@@ -150,7 +150,7 @@ body {
 .folder-item.active {
   border-color: #7f9f85;
   box-shadow: 0 0 0 2px rgba(127, 159, 133, 0.35);
-  background: rgb(203, 223, 201);
+  background: rgb(246, 243, 239);
 }
 
 .folder-name {

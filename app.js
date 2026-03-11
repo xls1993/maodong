@@ -6,6 +6,7 @@ const state = {
 };
 
 const SITE_TITLE = "猫冬吧";
+const STORAGE_KEY = "nav_site_data";
 
 const elements = {
   title: document.getElementById("site-title"),
@@ -347,6 +348,7 @@ const setupEvents = () => {
       const text = await file.text();
       const data = parseBookmarksHtml(text);
       state.data = data;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
       state.searchTerm = "";
       state.activeTag = "全部";
       elements.searchInput.value = "";
@@ -363,7 +365,18 @@ const setupEvents = () => {
 };
 
 const init = async () => {
-  let data = window.NAV_DATA || null;
+  let data = null;
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    try {
+      data = JSON.parse(stored);
+    } catch (error) {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  }
+  if (!data) {
+    data = window.NAV_DATA || null;
+  }
 
   if (!data) {
     try {
