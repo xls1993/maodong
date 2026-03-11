@@ -301,6 +301,12 @@ const renderGroups = (groups) => {
     renderColumn(current, depth);
   }
 
+  for (let i = depth + 1; i < maxDepth; i += 1) {
+    const column = document.createElement("div");
+    column.className = "column column-empty";
+    columns.appendChild(column);
+  }
+
   elements.groups.appendChild(columns);
 };
 
