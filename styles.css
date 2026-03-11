@@ -110,11 +110,12 @@ body {
 .columns {
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .column {
-  flex: 1 1 260px;
+  flex: 1 1 0;
   border-radius: 16px;
   border: 1px solid var(--border);
   padding: 14px;
@@ -146,8 +147,8 @@ body {
 }
 
 .folder-item.active {
-  border-color: #7f9f85;
-  box-shadow: 0 0 0 2px rgba(127, 159, 133, 0.35);
+  border-color: #c9c4bd;
+  box-shadow: 0 0 0 2px rgba(201, 196, 189, 0.45);
   background: rgb(246, 243, 239);
 }
 

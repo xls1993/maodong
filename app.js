@@ -291,8 +291,9 @@ const renderGroups = (groups) => {
 
   let current = tree;
   let depth = 0;
+  const maxDepth = 4;
   renderColumn(current, depth);
-  while (state.selectedPath[depth]) {
+  while (state.selectedPath[depth] && depth + 1 < maxDepth) {
     const next = current.children.get(state.selectedPath[depth]);
     if (!next) break;
     current = next;
