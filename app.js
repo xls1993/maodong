@@ -45,9 +45,7 @@ const elements = {
   colorColumn: document.getElementById("color-column"),
   colorFolder: document.getElementById("color-folder"),
   colorLink: document.getElementById("color-link"),
-  exportData: document.getElementById("export-data"),
-  importData: document.getElementById("import-data"),
-  importDataFile: document.getElementById("import-data-file"),
+  exportBookmarks: document.getElementById("export-bookmarks"),
 };
 
 const normalize = (value) => (value || "").toLowerCase().trim();
@@ -228,6 +226,47 @@ const treeToGroups = (node, path = []) => {
     groups.push(...treeToGroups(child, [...path, child.name]));
   });
   return groups;
+};
+
+const escapeHtml = (value) =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+
+const buildBookmarksHtml = (root) => {
+  const renderLinks = (links) =>
+    links
+      .map(
+        (link) =>
+          `<DT><A HREF="${escapeHtml(link.url)}">${escapeHtml(link.title || link.url)}</A>`
+      )
+      .join("\n");
+
+  const renderFolder = (node) => {
+    const childrenHtml = node.children.map(renderFolder).join("\n");
+    const linksHtml = renderLinks(node.links);
+    const content = [childrenHtml, linksHtml].filter(Boolean).join("\n");
+    return `
+<DT><H3>${escapeHtml(node.name)}</H3>
+<DL><p>
+${content}
+</DL><p>`;
+  };
+
+  const topFolders = root.children.map(renderFolder).join("\n");
+  const topLinks = renderLinks(root.links);
+  const bodyContent = [topFolders, topLinks].filter(Boolean).join("\n");
+
+  return `<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file. -->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Bookmarks</TITLE>
+<H1>Bookmarks</H1>
+<DL><p>
+${bodyContent}
+</DL><p>`;
 };
 
 const getNodeByPath = (root, path) => {
@@ -766,53 +805,18 @@ const setupEvents = () => {
   elements.colorColumn.addEventListener("input", onColorChange);
   elements.colorFolder.addEventListener("input", onColorChange);
   elements.colorLink.addEventListener("input", onColorChange);
-
-  elements.exportData.addEventListener("click", () => {
-    if (!state.data) return;
-    const payload = {
-      data: state.data,
-      colors: state.colors,
-      exportedAt: new Date().toISOString(),
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  elements.exportBookmarks.addEventListener("click", () => {
+    if (!state.tree) return;
+    const html = buildBookmarksHtml(state.tree);
+    const blob = new Blob([html], { type: "text/html" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "nav-data.json";
+    link.download = "bookmarks.html";
     document.body.appendChild(link);
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
-  });
-
-  elements.importData.addEventListener("click", () => {
-    elements.importDataFile.click();
-  });
-
-  elements.importDataFile.addEventListener("change", async (event) => {
-    const file = event.target.files && event.target.files[0];
-    if (!file) return;
-    try {
-      const text = await file.text();
-      const payload = JSON.parse(text);
-      if (payload.data && payload.data.groups) {
-        state.data = payload.data;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.data));
-      }
-      if (payload.colors) {
-        state.colors = { ...DEFAULT_COLORS, ...payload.colors };
-        saveColors(state.colors);
-      }
-      state.tree = buildTree(state.data.groups || []);
-      state.searchTerm = "";
-      state.activeTag = "全部";
-      elements.searchInput.value = "";
-      render();
-    } catch (error) {
-      elements.stats.textContent = "导入失败，请确认是正确的数据文件。";
-    } finally {
-      event.target.value = "";
-    }
   });
 };
 
