@@ -117,13 +117,24 @@ body {
   gap: 16px;
 }
 
+.columns.columns-scroll {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+}
+
+.columns.columns-scroll .column {
+  flex: 0 0 260px;
+}
+
 .column {
   border-radius: 16px;
   border: 1px solid var(--border);
-  padding: 14px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   background: var(--column-bg);
 }
 
@@ -136,7 +147,7 @@ body {
 .column-folders {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .folder-item {
@@ -144,7 +155,7 @@ body {
   background: var(--folder-bg);
   color: var(--text);
   border-radius: 12px;
-  padding: 10px 12px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,7 +184,7 @@ body {
 .column-links {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tag-filter {
@@ -202,12 +213,12 @@ body {
 .link-card {
   border-radius: 12px;
   border: 1px solid var(--border);
-  padding: 10px 12px;
+  padding: 8px 10px;
   background: var(--link-bg);
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-height: 50px;
+  min-height: 44px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   text-decoration: none;
   color: inherit;
@@ -224,11 +235,25 @@ body {
 }
 
 .link-url {
+  display: none;
+}
+
+.link-tooltip {
+  position: absolute;
+  max-width: min(420px, 80vw);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
   font-size: 12px;
-  color: var(--muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: var(--text);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+  word-break: break-all;
+}
+
+.link-tooltip.hidden {
+  display: none;
 }
 
 

@@ -26,6 +26,7 @@ const elements = {
   uploadButton: document.getElementById("upload-bookmarks"),
   bookmarkFile: document.getElementById("bookmark-file"),
   cardTemplate: document.getElementById("link-card-template"),
+  tooltip: document.getElementById("link-tooltip"),
   newFolderName: document.getElementById("new-folder-name"),
   renameFolderName: document.getElementById("rename-folder-name"),
   addFolder: document.getElementById("add-folder"),
@@ -561,11 +562,12 @@ const renderGroups = (groups) => {
       const titleNode = card.querySelector(".link-title");
       titleNode.textContent = link.title || link.url;
       const urlNode = card.querySelector(".link-url");
-      urlNode.textContent = truncateText(link.url, 60);
-      urlNode.title = link.url || "";
+      urlNode.textContent = "";
+      urlNode.title = "";
 
       const anchor = card.querySelector(".link-card");
       anchor.href = link.url;
+      anchor.dataset.url = link.url;
       list.appendChild(card);
     });
     container.appendChild(list);
@@ -612,7 +614,7 @@ const renderGroups = (groups) => {
 
   let current = tree;
   let depth = 0;
-  const maxDepth = 4;
+  const maxDepth = Math.max(4, state.selectedPath.length + 1);
   renderColumn(current, depth);
   while (state.selectedPath[depth] && depth + 1 < maxDepth) {
     const next = current.children.find((child) => child.name === state.selectedPath[depth]);
@@ -626,6 +628,10 @@ const renderGroups = (groups) => {
     const column = document.createElement("div");
     column.className = "column column-empty";
     columns.appendChild(column);
+  }
+
+  if (maxDepth > 4) {
+    columns.classList.add("columns-scroll");
   }
 
   elements.groups.appendChild(columns);
@@ -817,6 +823,26 @@ const setupEvents = () => {
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
+  });
+
+  const hideTooltip = () => {
+    elements.tooltip.classList.add("hidden");
+  };
+
+  document.addEventListener("click", hideTooltip);
+  document.addEventListener("scroll", hideTooltip, true);
+  document.addEventListener("keydown", hideTooltip);
+
+  document.addEventListener("contextmenu", (event) => {
+    const target = event.target.closest(".link-card");
+    if (!target) return;
+    event.preventDefault();
+    const url = target.dataset.url || "";
+    if (!url) return;
+    elements.tooltip.textContent = url;
+    elements.tooltip.style.left = `${event.pageX + 12}px`;
+    elements.tooltip.style.top = `${event.pageY + 12}px`;
+    elements.tooltip.classList.remove("hidden");
   });
 };
 
