@@ -547,31 +547,31 @@ const renderTags = (tags) => {
   });
 };
 
-const renderGroups = (groups) => {
-  elements.groups.innerHTML = "";
-  const tree = buildTree(groups);
+const isMobile = () => window.innerWidth <= 640;
+
+const renderLinks = (links, container) => {
+  if (!links.length) return;
+  const list = document.createElement("div");
+  list.className = "column-links";
+  links.forEach((link) => {
+    const card = elements.cardTemplate.content.cloneNode(true);
+    const titleNode = card.querySelector(".link-title");
+    titleNode.textContent = link.title || link.url;
+    const urlNode = card.querySelector(".link-url");
+    urlNode.textContent = "";
+    urlNode.title = "";
+
+    const anchor = card.querySelector(".link-card");
+    anchor.href = link.url;
+    anchor.dataset.url = link.url;
+    list.appendChild(card);
+  });
+  container.appendChild(list);
+};
+
+const renderGroupsDesktop = (tree) => {
   const columns = document.createElement("div");
   columns.className = "columns";
-
-  const renderLinks = (links, container) => {
-    if (!links.length) return;
-    const list = document.createElement("div");
-    list.className = "column-links";
-    links.forEach((link) => {
-      const card = elements.cardTemplate.content.cloneNode(true);
-      const titleNode = card.querySelector(".link-title");
-      titleNode.textContent = link.title || link.url;
-      const urlNode = card.querySelector(".link-url");
-      urlNode.textContent = "";
-      urlNode.title = "";
-
-      const anchor = card.querySelector(".link-card");
-      anchor.href = link.url;
-      anchor.dataset.url = link.url;
-      list.appendChild(card);
-    });
-    container.appendChild(list);
-  };
 
   const renderColumn = (node, depth) => {
     const column = document.createElement("div");
@@ -634,7 +634,84 @@ const renderGroups = (groups) => {
     columns.classList.add("columns-scroll");
   }
 
-  elements.groups.appendChild(columns);
+  return columns;
+};
+
+const renderGroupsMobile = (tree) => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "mobile-view";
+
+  let current = tree;
+  for (let i = 0; i < state.selectedPath.length; i += 1) {
+    const next = current.children.find((child) => child.name === state.selectedPath[i]);
+    if (!next) break;
+    current = next;
+  }
+
+  if (state.selectedPath.length > 0) {
+    const backBtn = document.createElement("button");
+    backBtn.type = "button";
+    backBtn.className = "mobile-back";
+    backBtn.textContent = "← 返回上一级";
+    backBtn.addEventListener("click", () => {
+      state.selectedPath = state.selectedPath.slice(0, -1);
+      render();
+    });
+    wrapper.appendChild(backBtn);
+
+    const currentTitle = document.createElement("div");
+    currentTitle.className = "mobile-current-title";
+    currentTitle.textContent = state.selectedPath[state.selectedPath.length - 1];
+    wrapper.appendChild(currentTitle);
+  }
+
+  const column = document.createElement("div");
+  column.className = "column";
+
+  const folderList = document.createElement("div");
+  folderList.className = "column-folders";
+
+  current.children.forEach((child) => {
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "folder-item";
+
+    const left = document.createElement("span");
+    left.className = "folder-name";
+    left.textContent = child.name;
+
+    const right = document.createElement("span");
+    right.className = "folder-count";
+    right.textContent = `${countLinks(child)} 条`;
+
+    item.appendChild(left);
+    item.appendChild(right);
+    item.addEventListener("click", () => {
+      state.selectedPath = [...state.selectedPath, child.name];
+      render();
+    });
+    folderList.appendChild(item);
+  });
+
+  if (folderList.children.length) {
+    column.appendChild(folderList);
+  }
+
+  renderLinks(current.links, column);
+  wrapper.appendChild(column);
+
+  return wrapper;
+};
+
+const renderGroups = (groups) => {
+  elements.groups.innerHTML = "";
+  const tree = buildTree(groups);
+
+  if (isMobile()) {
+    elements.groups.appendChild(renderGroupsMobile(tree));
+  } else {
+    elements.groups.appendChild(renderGroupsDesktop(tree));
+  }
 };
 
 const updateToggleButton = () => {
