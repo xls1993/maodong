@@ -367,11 +367,86 @@ body {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: 96%;
+  }
+
+  .site-header {
+    padding: 16px 0 14px;
+    margin-bottom: 12px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-content h1 {
+    font-size: 22px;
+  }
+
   .header-actions {
     width: 100%;
+    gap: 8px;
   }
 
   .search input {
     width: 100%;
+  }
+
+  .ghost-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .columns.columns-scroll {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .columns.columns-scroll .column {
+    flex: auto;
+  }
+
+  .column {
+    border-radius: 12px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .column.column-empty {
+    display: none;
+  }
+
+  .folder-item {
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .link-card {
+    padding: 8px 10px;
+    border-radius: 10px;
+    min-height: 40px;
+  }
+
+  .tag-filters {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .groups {
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+
+  .link-tooltip {
+    max-width: 90vw;
   }
 }
