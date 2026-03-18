@@ -32,21 +32,6 @@ const elements = {
   bookmarkFile: document.getElementById("bookmark-file"),
   cardTemplate: document.getElementById("link-card-template"),
   tooltip: document.getElementById("link-tooltip"),
-  newFolderName: document.getElementById("new-folder-name"),
-  renameFolderName: document.getElementById("rename-folder-name"),
-  addFolder: document.getElementById("add-folder"),
-  renameFolder: document.getElementById("rename-folder"),
-  deleteFolder: document.getElementById("delete-folder"),
-  moveFolderTarget: document.getElementById("move-folder-target"),
-  moveFolder: document.getElementById("move-folder"),
-  folderOrder: document.getElementById("folder-order"),
-  newLinkTitle: document.getElementById("new-link-title"),
-  newLinkUrl: document.getElementById("new-link-url"),
-  addLink: document.getElementById("add-link"),
-  moveLinkItem: document.getElementById("move-link-item"),
-  moveLinkTarget: document.getElementById("move-link-target"),
-  moveLink: document.getElementById("move-link"),
-  linkList: document.getElementById("link-list"),
   colorPage: document.getElementById("color-page"),
   colorColumn: document.getElementById("color-column"),
   colorFolder: document.getElementById("color-folder"),
@@ -336,185 +321,10 @@ const isPathPrefix = (prefix, path) =>
 
 const renderAdminPanel = () => {
   if (elements.adminPanel.classList.contains("hidden")) return;
-  const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
-  elements.renameFolderName.value = "";
-  elements.newFolderName.value = "";
-  elements.newLinkTitle.value = "";
-  elements.newLinkUrl.value = "";
-
-  elements.renameFolder.disabled = state.selectedPath.length === 0;
-  elements.deleteFolder.disabled = state.selectedPath.length === 0;
-  elements.moveFolder.disabled = state.selectedPath.length === 0;
-
-  const allPaths = getAllFolderPaths(state.tree);
-  const availableTargets = allPaths.filter((path) => {
-    if (state.selectedPath.length === 0) return false;
-    if (isPathPrefix(state.selectedPath, path)) return false;
-    return true;
-  });
-
-  elements.moveFolderTarget.innerHTML = "";
-  const rootOption = document.createElement("option");
-  rootOption.value = "";
-  rootOption.textContent = "根目录";
-  elements.moveFolderTarget.appendChild(rootOption);
-  availableTargets.forEach((path) => {
-    const option = document.createElement("option");
-    option.value = path.join(" / ");
-    option.textContent = pathToLabel(path);
-    elements.moveFolderTarget.appendChild(option);
-  });
-
-  elements.folderOrder.innerHTML = "";
-  currentNode.children.forEach((child, index) => {
-    const item = document.createElement("div");
-    item.className = "admin-item";
-    const title = document.createElement("span");
-    title.className = "admin-item-title";
-    title.textContent = child.name;
-    const actions = document.createElement("div");
-    actions.className = "admin-item-actions";
-
-    const enterBtn = document.createElement("button");
-    enterBtn.className = "ghost-button";
-    enterBtn.type = "button";
-    enterBtn.textContent = "进入";
-    enterBtn.addEventListener("click", () => {
-      state.selectedPath = [...state.selectedPath, child.name];
-      render();
-      renderAdminPanel();
-    });
-
-    const upBtn = document.createElement("button");
-    upBtn.className = "ghost-button";
-    upBtn.type = "button";
-    upBtn.textContent = "上移";
-    upBtn.disabled = index === 0;
-    upBtn.addEventListener("click", () => {
-      currentNode.children.splice(index, 1);
-      currentNode.children.splice(index - 1, 0, child);
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    const downBtn = document.createElement("button");
-    downBtn.className = "ghost-button";
-    downBtn.type = "button";
-    downBtn.textContent = "下移";
-    downBtn.disabled = index === currentNode.children.length - 1;
-    downBtn.addEventListener("click", () => {
-      currentNode.children.splice(index, 1);
-      currentNode.children.splice(index + 1, 0, child);
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    actions.appendChild(enterBtn);
-    actions.appendChild(upBtn);
-    actions.appendChild(downBtn);
-    item.appendChild(title);
-    item.appendChild(actions);
-    elements.folderOrder.appendChild(item);
-  });
-
-  elements.linkList.innerHTML = "";
-  elements.moveLinkItem.innerHTML = "";
-  elements.moveLinkTarget.innerHTML = "";
-  const linkTargetRoot = document.createElement("option");
-  linkTargetRoot.value = "";
-  linkTargetRoot.textContent = "根目录";
-  elements.moveLinkTarget.appendChild(linkTargetRoot);
-  allPaths.forEach((path) => {
-    const option = document.createElement("option");
-    option.value = path.join(" / ");
-    option.textContent = pathToLabel(path);
-    elements.moveLinkTarget.appendChild(option);
-  });
-
-  currentNode.links.forEach((link, index) => {
-    const option = document.createElement("option");
-    option.value = String(index);
-    option.textContent = link.title || link.url;
-    elements.moveLinkItem.appendChild(option);
-  });
-  currentNode.links.forEach((link, index) => {
-    const item = document.createElement("div");
-    item.className = "admin-item";
-    const title = document.createElement("span");
-    title.className = "admin-item-title";
-    title.textContent = link.title || link.url;
-    const actions = document.createElement("div");
-    actions.className = "admin-item-actions";
-
-    const editBtn = document.createElement("button");
-    editBtn.className = "ghost-button";
-    editBtn.type = "button";
-    editBtn.textContent = "编辑";
-    editBtn.addEventListener("click", () => {
-      const nextTitle = prompt("修改标题", link.title || "");
-      if (nextTitle === null) return;
-      const nextUrl = prompt("修改网址", link.url || "");
-      if (nextUrl === null) return;
-      link.title = nextTitle.trim() || link.url;
-      link.url = nextUrl.trim() || link.url;
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "ghost-button danger";
-    deleteBtn.type = "button";
-    deleteBtn.textContent = "删除";
-    deleteBtn.addEventListener("click", () => {
-      currentNode.links.splice(index, 1);
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    const upBtn = document.createElement("button");
-    upBtn.className = "ghost-button";
-    upBtn.type = "button";
-    upBtn.textContent = "上移";
-    upBtn.disabled = index === 0;
-    upBtn.addEventListener("click", () => {
-      currentNode.links.splice(index, 1);
-      currentNode.links.splice(index - 1, 0, link);
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    const downBtn = document.createElement("button");
-    downBtn.className = "ghost-button";
-    downBtn.type = "button";
-    downBtn.textContent = "下移";
-    downBtn.disabled = index === currentNode.links.length - 1;
-    downBtn.addEventListener("click", () => {
-      currentNode.links.splice(index, 1);
-      currentNode.links.splice(index + 1, 0, link);
-      syncDataFromTree();
-      render();
-      renderAdminPanel();
-    });
-
-    actions.appendChild(editBtn);
-    actions.appendChild(upBtn);
-    actions.appendChild(downBtn);
-    actions.appendChild(deleteBtn);
-    item.appendChild(title);
-    item.appendChild(actions);
-    elements.linkList.appendChild(item);
-  });
-
   elements.colorPage.value = state.colors.page;
   elements.colorColumn.value = state.colors.column;
   elements.colorFolder.value = state.colors.folder;
   elements.colorLink.value = state.colors.link;
-
   elements.customTitle.value = state.siteTitle;
   elements.customSlogan.value = state.siteSlogan;
 };
@@ -564,7 +374,35 @@ const renderTags = (tags) => {
 
 const isMobile = () => window.innerWidth <= 640;
 
-const renderLinks = (links, container) => {
+const makeDraggable = (list, items, onReorder) => {
+  let dragIndex = null;
+
+  Array.from(list.children).forEach((el, index) => {
+    el.setAttribute("draggable", "true");
+    el.addEventListener("dragstart", (e) => {
+      dragIndex = index;
+      el.classList.add("dragging");
+      e.dataTransfer.effectAllowed = "move";
+    });
+    el.addEventListener("dragend", () => {
+      el.classList.remove("dragging");
+      dragIndex = null;
+    });
+    el.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+    });
+    el.addEventListener("drop", (e) => {
+      e.preventDefault();
+      if (dragIndex === null || dragIndex === index) return;
+      const [moved] = items.splice(dragIndex, 1);
+      items.splice(index, 0, moved);
+      onReorder();
+    });
+  });
+};
+
+const renderLinks = (links, container, parentNode) => {
   if (!links.length) return;
   const list = document.createElement("div");
   list.className = "column-links";
@@ -582,6 +420,13 @@ const renderLinks = (links, container) => {
     list.appendChild(card);
   });
   container.appendChild(list);
+
+  if (parentNode) {
+    makeDraggable(list, parentNode.links, () => {
+      syncDataFromTree();
+      render();
+    });
+  }
 };
 
 const renderGroupsDesktop = (tree) => {
@@ -622,9 +467,48 @@ const renderGroupsDesktop = (tree) => {
 
     if (folderList.children.length) {
       column.appendChild(folderList);
+      makeDraggable(folderList, node.children, () => {
+        syncDataFromTree();
+        render();
+      });
     }
 
-    renderLinks(node.links, column);
+    renderLinks(node.links, column, node);
+
+    const addBar = document.createElement("div");
+    addBar.className = "column-add-bar";
+
+    const addFolderBtn = document.createElement("button");
+    addFolderBtn.type = "button";
+    addFolderBtn.className = "column-add-btn";
+    addFolderBtn.textContent = "+ 文件夹";
+    addFolderBtn.addEventListener("click", () => {
+      const name = prompt("新文件夹名称");
+      if (!name || !name.trim()) return;
+      if (node.children.find((c) => c.name === name.trim())) return;
+      node.children.push({ name: name.trim(), children: [], links: [] });
+      syncDataFromTree();
+      render();
+    });
+
+    const addLinkBtn = document.createElement("button");
+    addLinkBtn.type = "button";
+    addLinkBtn.className = "column-add-btn";
+    addLinkBtn.textContent = "+ 网址";
+    addLinkBtn.addEventListener("click", () => {
+      const title = prompt("书签标题");
+      if (title === null) return;
+      const url = prompt("网址（https://）");
+      if (!url || !url.trim()) return;
+      node.links.push({ title: title.trim() || url.trim(), url: url.trim(), desc: "", tags: [] });
+      syncDataFromTree();
+      render();
+    });
+
+    addBar.appendChild(addFolderBtn);
+    addBar.appendChild(addLinkBtn);
+    column.appendChild(addBar);
+
     columns.appendChild(column);
   };
 
@@ -711,9 +595,48 @@ const renderGroupsMobile = (tree) => {
 
   if (folderList.children.length) {
     column.appendChild(folderList);
+    makeDraggable(folderList, current.children, () => {
+      syncDataFromTree();
+      render();
+    });
   }
 
-  renderLinks(current.links, column);
+  renderLinks(current.links, column, current);
+
+  const addBar = document.createElement("div");
+  addBar.className = "column-add-bar";
+
+  const addFolderBtn = document.createElement("button");
+  addFolderBtn.type = "button";
+  addFolderBtn.className = "column-add-btn";
+  addFolderBtn.textContent = "+ 文件夹";
+  addFolderBtn.addEventListener("click", () => {
+    const name = prompt("新文件夹名称");
+    if (!name || !name.trim()) return;
+    if (current.children.find((c) => c.name === name.trim())) return;
+    current.children.push({ name: name.trim(), children: [], links: [] });
+    syncDataFromTree();
+    render();
+  });
+
+  const addLinkBtn = document.createElement("button");
+  addLinkBtn.type = "button";
+  addLinkBtn.className = "column-add-btn";
+  addLinkBtn.textContent = "+ 网址";
+  addLinkBtn.addEventListener("click", () => {
+    const title = prompt("书签标题");
+    if (title === null) return;
+    const url = prompt("网址（https://）");
+    if (!url || !url.trim()) return;
+    current.links.push({ title: title.trim() || url.trim(), url: url.trim(), desc: "", tags: [] });
+    syncDataFromTree();
+    render();
+  });
+
+  addBar.appendChild(addFolderBtn);
+  addBar.appendChild(addLinkBtn);
+  column.appendChild(addBar);
+
   wrapper.appendChild(column);
 
   return wrapper;
@@ -849,98 +772,6 @@ const setupEvents = () => {
     } finally {
       event.target.value = "";
     }
-  });
-
-  elements.addFolder.addEventListener("click", () => {
-    const name = elements.newFolderName.value.trim();
-    if (!name) return;
-    const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
-    if (currentNode.children.find((child) => child.name === name)) return;
-    currentNode.children.push({ name, children: [], links: [] });
-    elements.newFolderName.value = "";
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
-  });
-
-  elements.renameFolder.addEventListener("click", () => {
-    const name = elements.renameFolderName.value.trim();
-    if (!name || state.selectedPath.length === 0) return;
-    const currentNode = getNodeByPath(state.tree, state.selectedPath);
-    if (!currentNode) return;
-    const parent = getParentNode(state.tree, state.selectedPath);
-    if (parent && parent.children.some((child) => child.name === name)) return;
-    currentNode.name = name;
-    state.selectedPath[state.selectedPath.length - 1] = name;
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
-  });
-
-  elements.deleteFolder.addEventListener("click", () => {
-    if (state.selectedPath.length === 0) return;
-    const parent = getParentNode(state.tree, state.selectedPath);
-    if (!parent) return;
-    const targetName = state.selectedPath[state.selectedPath.length - 1];
-    parent.children = parent.children.filter((child) => child.name !== targetName);
-    state.selectedPath = state.selectedPath.slice(0, -1);
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
-  });
-
-  elements.moveFolder.addEventListener("click", () => {
-    if (state.selectedPath.length === 0) return;
-    const parent = getParentNode(state.tree, state.selectedPath);
-    if (!parent) return;
-    const targetName = state.selectedPath[state.selectedPath.length - 1];
-    const nodeIndex = parent.children.findIndex((child) => child.name === targetName);
-    if (nodeIndex < 0) return;
-    const [node] = parent.children.splice(nodeIndex, 1);
-
-    const targetPath = elements.moveFolderTarget.value
-      ? elements.moveFolderTarget.value.split(" / ")
-      : [];
-    const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
-    if (targetNode.children.some((child) => child.name === node.name)) {
-      parent.children.splice(nodeIndex, 0, node);
-      return;
-    }
-    targetNode.children.push(node);
-    state.selectedPath = targetPath.concat(node.name);
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
-  });
-
-  elements.addLink.addEventListener("click", () => {
-    const title = elements.newLinkTitle.value.trim();
-    const url = elements.newLinkUrl.value.trim();
-    if (!url) return;
-    const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
-    currentNode.links.push({ title: title || url, url, desc: "", tags: [] });
-    elements.newLinkTitle.value = "";
-    elements.newLinkUrl.value = "";
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
-  });
-
-  elements.moveLink.addEventListener("click", () => {
-    const index = Number(elements.moveLinkItem.value);
-    if (Number.isNaN(index)) return;
-    const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
-    const link = currentNode.links[index];
-    if (!link) return;
-    currentNode.links.splice(index, 1);
-    const targetPath = elements.moveLinkTarget.value
-      ? elements.moveLinkTarget.value.split(" / ")
-      : [];
-    const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
-    targetNode.links.push(link);
-    syncDataFromTree();
-    render();
-    renderAdminPanel();
   });
 
   const onColorChange = () => {

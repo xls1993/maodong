@@ -376,6 +376,45 @@ body {
   padding: 40px 20px;
 }
 
+.column-add-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.column-add-btn {
+  flex: 1;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 6px 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.column-add-btn:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.folder-item.dragging,
+.link-card.dragging {
+  opacity: 0.4;
+}
+
+.folder-item[draggable="true"],
+.link-card[draggable="true"] {
+  cursor: grab;
+}
+
+.folder-item[draggable="true"]:active,
+.link-card[draggable="true"]:active {
+  cursor: grabbing;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
