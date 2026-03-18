@@ -257,6 +257,24 @@ body {
 }
 
 
+.welcome {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.welcome h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 460px;
+  margin: 0 auto 10px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

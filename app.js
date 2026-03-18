@@ -940,21 +940,36 @@ const init = async () => {
   if (!data) {
     try {
       const response = await fetch("data.json");
-      data = await response.json();
+      const fetched = await response.json();
+      if (fetched && fetched.groups && fetched.groups.length) {
+        data = fetched;
+      }
     } catch (error) {
-      elements.stats.textContent = "无法读取数据，请重新导入书签。";
-      return;
+      // no default data available
     }
   }
 
-  state.data = data;
-  state.tree = buildTree(data.groups || []);
   state.colors = loadColors();
   applyColors(state.colors);
   elements.title.textContent = SITE_TITLE;
   document.title = SITE_TITLE;
-  elements.description.textContent = data.description || "把你的收藏夹整理成清爽的导航页";
   setupEvents();
+
+  if (!data || !data.groups || !data.groups.length) {
+    elements.groups.innerHTML = "";
+    const welcome = document.createElement("div");
+    welcome.className = "welcome";
+    welcome.innerHTML =
+      '<h2>欢迎使用猫冬吧</h2>' +
+      '<p>点击右上角「更换书签」上传你的浏览器书签文件（.html），即可生成你的专属导航页。</p>' +
+      '<p>你的书签数据仅保存在你自己的浏览器中，他人无法看到。</p>';
+    elements.groups.appendChild(welcome);
+    return;
+  }
+
+  state.data = data;
+  state.tree = buildTree(data.groups || []);
+  elements.description.textContent = data.description || "把你的收藏夹整理成清爽的导航页";
   render();
   updateToggleButton();
   renderAdminPanel();
