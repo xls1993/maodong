@@ -729,14 +729,20 @@ const render = () => {
 };
 
 const setupEvents = () => {
+  const updateClearButton = () => {
+    elements.clearSearch.classList.toggle("hidden", !state.searchTerm);
+  };
+
   elements.searchInput.addEventListener("input", (event) => {
     state.searchTerm = event.target.value;
+    updateClearButton();
     render();
   });
 
   elements.clearSearch.addEventListener("click", () => {
     state.searchTerm = "";
     elements.searchInput.value = "";
+    updateClearButton();
     render();
   });
 
