@@ -383,6 +383,7 @@ const makeDraggable = (list, items, onReorder) => {
       dragIndex = index;
       el.classList.add("dragging");
       e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", "");
     });
     el.addEventListener("dragend", () => {
       el.classList.remove("dragging");
@@ -391,9 +392,14 @@ const makeDraggable = (list, items, onReorder) => {
     el.addEventListener("dragover", (e) => {
       e.preventDefault();
       e.dataTransfer.dropEffect = "move";
+      el.classList.add("drag-over");
+    });
+    el.addEventListener("dragleave", () => {
+      el.classList.remove("drag-over");
     });
     el.addEventListener("drop", (e) => {
       e.preventDefault();
+      el.classList.remove("drag-over");
       if (dragIndex === null || dragIndex === index) return;
       const [moved] = items.splice(dragIndex, 1);
       items.splice(index, 0, moved);
@@ -407,6 +413,10 @@ const renderLinks = (links, container, parentNode) => {
   const list = document.createElement("div");
   list.className = "column-links";
   links.forEach((link) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "link-card-wrap";
+    wrapper.dataset.url = link.url;
+
     const card = elements.cardTemplate.content.cloneNode(true);
     const titleNode = card.querySelector(".link-title");
     titleNode.textContent = link.title || link.url;
@@ -417,7 +427,8 @@ const renderLinks = (links, container, parentNode) => {
     const anchor = card.querySelector(".link-card");
     anchor.href = link.url;
     anchor.dataset.url = link.url;
-    list.appendChild(card);
+    wrapper.appendChild(card);
+    list.appendChild(wrapper);
   });
   container.appendChild(list);
 
@@ -475,39 +486,15 @@ const renderGroupsDesktop = (tree) => {
 
     renderLinks(node.links, column, node);
 
-    const addBar = document.createElement("div");
-    addBar.className = "column-add-bar";
+    if (!node.children.length && !node.links.length) {
+      const hint = document.createElement("div");
+      hint.className = "column-hint";
+      hint.textContent = "右键可新建文件夹或网址";
+      column.appendChild(hint);
+    }
 
-    const addFolderBtn = document.createElement("button");
-    addFolderBtn.type = "button";
-    addFolderBtn.className = "column-add-btn";
-    addFolderBtn.textContent = "+ 文件夹";
-    addFolderBtn.addEventListener("click", () => {
-      const name = prompt("新文件夹名称");
-      if (!name || !name.trim()) return;
-      if (node.children.find((c) => c.name === name.trim())) return;
-      node.children.push({ name: name.trim(), children: [], links: [] });
-      syncDataFromTree();
-      render();
-    });
-
-    const addLinkBtn = document.createElement("button");
-    addLinkBtn.type = "button";
-    addLinkBtn.className = "column-add-btn";
-    addLinkBtn.textContent = "+ 网址";
-    addLinkBtn.addEventListener("click", () => {
-      const title = prompt("书签标题");
-      if (title === null) return;
-      const url = prompt("网址（https://）");
-      if (!url || !url.trim()) return;
-      node.links.push({ title: title.trim() || url.trim(), url: url.trim(), desc: "", tags: [] });
-      syncDataFromTree();
-      render();
-    });
-
-    addBar.appendChild(addFolderBtn);
-    addBar.appendChild(addLinkBtn);
-    column.appendChild(addBar);
+    column.dataset.nodePath = depth === 0 ? "" : state.selectedPath.slice(0, depth).join(" / ");
+    column.dataset.nodeDepth = depth;
 
     columns.appendChild(column);
   };
@@ -603,39 +590,12 @@ const renderGroupsMobile = (tree) => {
 
   renderLinks(current.links, column, current);
 
-  const addBar = document.createElement("div");
-  addBar.className = "column-add-bar";
-
-  const addFolderBtn = document.createElement("button");
-  addFolderBtn.type = "button";
-  addFolderBtn.className = "column-add-btn";
-  addFolderBtn.textContent = "+ 文件夹";
-  addFolderBtn.addEventListener("click", () => {
-    const name = prompt("新文件夹名称");
-    if (!name || !name.trim()) return;
-    if (current.children.find((c) => c.name === name.trim())) return;
-    current.children.push({ name: name.trim(), children: [], links: [] });
-    syncDataFromTree();
-    render();
-  });
-
-  const addLinkBtn = document.createElement("button");
-  addLinkBtn.type = "button";
-  addLinkBtn.className = "column-add-btn";
-  addLinkBtn.textContent = "+ 网址";
-  addLinkBtn.addEventListener("click", () => {
-    const title = prompt("书签标题");
-    if (title === null) return;
-    const url = prompt("网址（https://）");
-    if (!url || !url.trim()) return;
-    current.links.push({ title: title.trim() || url.trim(), url: url.trim(), desc: "", tags: [] });
-    syncDataFromTree();
-    render();
-  });
-
-  addBar.appendChild(addFolderBtn);
-  addBar.appendChild(addLinkBtn);
-  column.appendChild(addBar);
+  if (!current.children.length && !current.links.length) {
+    const hint = document.createElement("div");
+    hint.className = "column-hint";
+    hint.textContent = "右键可新建文件夹或网址";
+    column.appendChild(hint);
+  }
 
   wrapper.appendChild(column);
 
@@ -886,23 +846,29 @@ const setupEvents = () => {
   document.addEventListener("keydown", () => { hideTooltip(); hideCtxMenu(); });
 
   document.addEventListener("contextmenu", (event) => {
-    const linkTarget = event.target.closest(".link-card");
+    const linkWrap = event.target.closest(".link-card-wrap") || event.target.closest(".link-card");
     const folderTarget = event.target.closest(".folder-item");
-    if (!linkTarget && !folderTarget) return;
+    const columnTarget = event.target.closest(".column");
+    if (!linkWrap && !folderTarget && !columnTarget) return;
     event.preventDefault();
     hideCtxMenu();
 
-    if (linkTarget) {
-      const url = linkTarget.dataset.url || "";
-      if (url) {
-        elements.tooltip.textContent = url;
-        elements.tooltip.style.left = `${event.pageX + 12}px`;
-        elements.tooltip.style.top = `${event.pageY + 12}px`;
-        elements.tooltip.classList.remove("hidden");
-      }
-      elements.ctxMenu._target = { type: "link", name: linkTarget.querySelector(".link-title")?.textContent, url: linkTarget.dataset.url };
+    const ctxBtns = elements.ctxMenu.querySelectorAll("button");
+    ctxBtns.forEach((btn) => { btn.style.display = ""; });
+
+    if (linkWrap) {
+      const url = linkWrap.dataset.url || (linkWrap.querySelector(".link-card") || linkWrap).dataset.url || "";
+      elements.ctxMenu._target = { type: "link", name: (linkWrap.querySelector(".link-title") || linkWrap.closest(".link-card")?.querySelector(".link-title"))?.textContent, url };
     } else if (folderTarget) {
       elements.ctxMenu._target = { type: "folder", name: folderTarget.querySelector(".folder-name")?.textContent, depth: Number(folderTarget.dataset.depth || 0) };
+    } else if (columnTarget) {
+      ctxBtns.forEach((btn) => {
+        const action = btn.dataset.action;
+        if (action !== "add-folder" && action !== "add-link") {
+          btn.style.display = "none";
+        }
+      });
+      elements.ctxMenu._target = { type: "column" };
     }
 
     elements.ctxMenu.style.left = `${event.pageX + 4}px`;
@@ -915,6 +881,29 @@ const setupEvents = () => {
     const target = elements.ctxMenu._target;
     if (!action || !target || !state.tree) return;
     hideCtxMenu();
+
+    if (action === "add-folder") {
+      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const name = prompt("新文件夹名称");
+      if (!name || !name.trim()) return;
+      if (currentNode.children.find((c) => c.name === name.trim())) return;
+      currentNode.children.push({ name: name.trim(), children: [], links: [] });
+      syncDataFromTree();
+      render();
+      return;
+    }
+
+    if (action === "add-link") {
+      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const title = prompt("书签标题");
+      if (title === null) return;
+      const url = prompt("网址（https://）");
+      if (!url || !url.trim()) return;
+      currentNode.links.push({ title: title.trim() || url.trim(), url: url.trim(), desc: "", tags: [] });
+      syncDataFromTree();
+      render();
+      return;
+    }
 
     if (target.type === "folder") {
       const depth = target.depth;
