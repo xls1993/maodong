@@ -11,7 +11,7 @@
       <div class="container header-content">
         <div>
           <h1 id="site-title">猫冬吧</h1>
-          <p id="site-description">把你的收藏夹整理成清爽的导航页</p>
+          <p id="site-description">定制你自己的导航</p>
         </div>
         <div class="header-actions">
           <label class="search">
@@ -34,6 +34,12 @@
     </main>
 
     <div id="link-tooltip" class="link-tooltip hidden"></div>
+
+    <div id="ctx-menu" class="ctx-menu hidden">
+      <button data-action="rename" type="button">重命名</button>
+      <button data-action="delete" type="button">删除</button>
+      <button data-action="move" type="button">移动到…</button>
+    </div>
 
     <aside id="admin-panel" class="admin-panel hidden">
       <div class="admin-header">
@@ -75,7 +81,12 @@
         </section>
 
         <section class="admin-section">
-          <h3>配色</h3>
+          <h3>个性化</h3>
+          <div class="admin-row">
+            <input id="custom-title" type="text" placeholder="网站标题" />
+            <input id="custom-slogan" type="text" placeholder="副标题 / slogan" />
+            <button id="save-title" class="ghost-button" type="button">保存</button>
+          </div>
           <div class="admin-row">
             <label>页面背景 <input id="color-page" type="color" /></label>
             <label>分栏背景 <input id="color-column" type="color" /></label>
@@ -85,9 +96,12 @@
         </section>
 
         <section class="admin-section">
-          <h3>书签</h3>
+          <h3>数据</h3>
           <div class="admin-row">
             <button id="export-bookmarks" class="ghost-button" type="button">导出书签 HTML</button>
+            <button id="export-json" class="ghost-button" type="button">备份数据</button>
+            <input id="import-json-file" type="file" accept=".json" hidden />
+            <button id="import-json" class="ghost-button" type="button">恢复数据</button>
           </div>
         </section>
       </div>

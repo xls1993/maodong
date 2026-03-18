@@ -5,11 +5,16 @@ const state = {
   activeTag: "全部",
   selectedPath: [],
   colors: null,
+  siteTitle: "",
+  siteSlogan: "",
 };
 
-const SITE_TITLE = "猫冬吧";
+const DEFAULT_TITLE = "猫冬吧";
+const DEFAULT_SLOGAN = "定制你自己的导航";
 const STORAGE_KEY = "nav_site_data";
 const COLOR_KEY = "nav_site_colors";
+const TITLE_KEY = "nav_site_title";
+const SLOGAN_KEY = "nav_site_slogan";
 
 const elements = {
   title: document.getElementById("site-title"),
@@ -47,6 +52,13 @@ const elements = {
   colorFolder: document.getElementById("color-folder"),
   colorLink: document.getElementById("color-link"),
   exportBookmarks: document.getElementById("export-bookmarks"),
+  exportJson: document.getElementById("export-json"),
+  importJson: document.getElementById("import-json"),
+  importJsonFile: document.getElementById("import-json-file"),
+  customTitle: document.getElementById("custom-title"),
+  customSlogan: document.getElementById("custom-slogan"),
+  saveTitle: document.getElementById("save-title"),
+  ctxMenu: document.getElementById("ctx-menu"),
 };
 
 const normalize = (value) => (value || "").toLowerCase().trim();
@@ -173,7 +185,7 @@ const parseBookmarksHtml = (htmlText) => {
   }));
 
   return {
-    title: SITE_TITLE,
+    title: state.siteTitle || DEFAULT_TITLE,
     description: "由浏览器书签导入生成",
     groups,
   };
@@ -311,8 +323,8 @@ const countLinks = (node) => {
 const syncDataFromTree = () => {
   if (!state.tree) return;
   state.data = {
-    title: SITE_TITLE,
-    description: state.data?.description || "由浏览器书签导入生成",
+    title: state.siteTitle || DEFAULT_TITLE,
+    description: state.siteSlogan || DEFAULT_SLOGAN,
     groups: treeToGroups(state.tree),
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state.data));
@@ -502,6 +514,9 @@ const renderAdminPanel = () => {
   elements.colorColumn.value = state.colors.column;
   elements.colorFolder.value = state.colors.folder;
   elements.colorLink.value = state.colors.link;
+
+  elements.customTitle.value = state.siteTitle;
+  elements.customSlogan.value = state.siteSlogan;
 };
 
 const filterLinks = (groups, searchTerm, activeTag) => {
@@ -584,6 +599,7 @@ const renderGroupsDesktop = (tree) => {
       const item = document.createElement("button");
       item.type = "button";
       item.className = "folder-item";
+      item.dataset.depth = depth;
       const isActive = state.selectedPath[depth] === child.name;
       if (isActive) item.classList.add("active");
 
@@ -703,8 +719,55 @@ const renderGroupsMobile = (tree) => {
   return wrapper;
 };
 
+const renderSearchResults = (groups) => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "search-results";
+
+  groups.forEach((group) => {
+    if (!group.links.length) return;
+    const section = document.createElement("div");
+    section.className = "search-group";
+
+    const header = document.createElement("div");
+    header.className = "search-group-header";
+    header.textContent = group.name;
+    section.appendChild(header);
+
+    const list = document.createElement("div");
+    list.className = "column-links";
+    group.links.forEach((link) => {
+      const card = elements.cardTemplate.content.cloneNode(true);
+      card.querySelector(".link-title").textContent = link.title || link.url;
+      const urlNode = card.querySelector(".link-url");
+      urlNode.textContent = "";
+      urlNode.title = "";
+      const anchor = card.querySelector(".link-card");
+      anchor.href = link.url;
+      anchor.dataset.url = link.url;
+      list.appendChild(card);
+    });
+    section.appendChild(list);
+    wrapper.appendChild(section);
+  });
+
+  if (!wrapper.children.length) {
+    const empty = document.createElement("div");
+    empty.className = "search-empty";
+    empty.textContent = "没有找到匹配的书签";
+    wrapper.appendChild(empty);
+  }
+
+  return wrapper;
+};
+
 const renderGroups = (groups) => {
   elements.groups.innerHTML = "";
+
+  if (state.searchTerm) {
+    elements.groups.appendChild(renderSearchResults(groups));
+    return;
+  }
+
   const tree = buildTree(groups);
 
   if (isMobile()) {
@@ -776,8 +839,8 @@ const setupEvents = () => {
       state.searchTerm = "";
       state.activeTag = "全部";
       elements.searchInput.value = "";
-      elements.title.textContent = SITE_TITLE;
-      elements.description.textContent = data.description;
+      elements.title.textContent = state.siteTitle || DEFAULT_TITLE;
+      elements.description.textContent = state.siteSlogan || DEFAULT_SLOGAN;
       render();
       updateToggleButton();
       renderAdminPanel();
@@ -894,6 +957,17 @@ const setupEvents = () => {
   elements.colorColumn.addEventListener("input", onColorChange);
   elements.colorFolder.addEventListener("input", onColorChange);
   elements.colorLink.addEventListener("input", onColorChange);
+  elements.saveTitle.addEventListener("click", () => {
+    state.siteTitle = elements.customTitle.value.trim() || DEFAULT_TITLE;
+    state.siteSlogan = elements.customSlogan.value.trim() || DEFAULT_SLOGAN;
+    localStorage.setItem(TITLE_KEY, state.siteTitle);
+    localStorage.setItem(SLOGAN_KEY, state.siteSlogan);
+    elements.title.textContent = state.siteTitle;
+    elements.description.textContent = state.siteSlogan;
+    document.title = state.siteTitle;
+    if (state.tree) syncDataFromTree();
+  });
+
   elements.exportBookmarks.addEventListener("click", () => {
     if (!state.tree) return;
     const html = buildBookmarksHtml(state.tree);
@@ -908,24 +982,179 @@ const setupEvents = () => {
     URL.revokeObjectURL(url);
   });
 
+  elements.exportJson.addEventListener("click", () => {
+    const payload = {
+      data: state.data,
+      colors: state.colors,
+      siteTitle: state.siteTitle,
+      siteSlogan: state.siteSlogan,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "nav-backup.json";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  elements.importJson.addEventListener("click", () => {
+    elements.importJsonFile.click();
+  });
+
+  elements.importJsonFile.addEventListener("change", async (event) => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const payload = JSON.parse(text);
+      if (payload.data && payload.data.groups) {
+        state.data = payload.data;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.data));
+      }
+      if (payload.colors) {
+        state.colors = { ...DEFAULT_COLORS, ...payload.colors };
+        saveColors(state.colors);
+      }
+      if (payload.siteTitle) {
+        state.siteTitle = payload.siteTitle;
+        localStorage.setItem(TITLE_KEY, state.siteTitle);
+      }
+      if (payload.siteSlogan) {
+        state.siteSlogan = payload.siteSlogan;
+        localStorage.setItem(SLOGAN_KEY, state.siteSlogan);
+      }
+      state.tree = buildTree(state.data.groups || []);
+      state.searchTerm = "";
+      state.activeTag = "全部";
+      state.selectedPath = [];
+      elements.searchInput.value = "";
+      elements.title.textContent = state.siteTitle || DEFAULT_TITLE;
+      elements.description.textContent = state.siteSlogan || DEFAULT_SLOGAN;
+      document.title = state.siteTitle || DEFAULT_TITLE;
+      render();
+    } catch (error) {
+      elements.stats.textContent = "导入失败，请确认是正确的备份文件。";
+    } finally {
+      event.target.value = "";
+    }
+  });
+
   const hideTooltip = () => {
     elements.tooltip.classList.add("hidden");
   };
+  const hideCtxMenu = () => {
+    elements.ctxMenu.classList.add("hidden");
+    elements.ctxMenu._target = null;
+  };
 
-  document.addEventListener("click", hideTooltip);
-  document.addEventListener("scroll", hideTooltip, true);
-  document.addEventListener("keydown", hideTooltip);
+  document.addEventListener("click", () => { hideTooltip(); hideCtxMenu(); });
+  document.addEventListener("scroll", () => { hideTooltip(); hideCtxMenu(); }, true);
+  document.addEventListener("keydown", () => { hideTooltip(); hideCtxMenu(); });
 
   document.addEventListener("contextmenu", (event) => {
-    const target = event.target.closest(".link-card");
-    if (!target) return;
+    const linkTarget = event.target.closest(".link-card");
+    const folderTarget = event.target.closest(".folder-item");
+    if (!linkTarget && !folderTarget) return;
     event.preventDefault();
-    const url = target.dataset.url || "";
-    if (!url) return;
-    elements.tooltip.textContent = url;
-    elements.tooltip.style.left = `${event.pageX + 12}px`;
-    elements.tooltip.style.top = `${event.pageY + 12}px`;
-    elements.tooltip.classList.remove("hidden");
+    hideCtxMenu();
+
+    if (linkTarget) {
+      const url = linkTarget.dataset.url || "";
+      if (url) {
+        elements.tooltip.textContent = url;
+        elements.tooltip.style.left = `${event.pageX + 12}px`;
+        elements.tooltip.style.top = `${event.pageY + 12}px`;
+        elements.tooltip.classList.remove("hidden");
+      }
+      elements.ctxMenu._target = { type: "link", name: linkTarget.querySelector(".link-title")?.textContent, url: linkTarget.dataset.url };
+    } else if (folderTarget) {
+      elements.ctxMenu._target = { type: "folder", name: folderTarget.querySelector(".folder-name")?.textContent, depth: Number(folderTarget.dataset.depth || 0) };
+    }
+
+    elements.ctxMenu.style.left = `${event.pageX + 4}px`;
+    elements.ctxMenu.style.top = `${event.pageY + 4}px`;
+    elements.ctxMenu.classList.remove("hidden");
+  });
+
+  elements.ctxMenu.addEventListener("click", (event) => {
+    const action = event.target.dataset.action;
+    const target = elements.ctxMenu._target;
+    if (!action || !target || !state.tree) return;
+    hideCtxMenu();
+
+    if (target.type === "folder") {
+      const depth = target.depth;
+      const folderPath = [...state.selectedPath.slice(0, depth), target.name];
+      const node = getNodeByPath(state.tree, folderPath);
+      const parent = getParentNode(state.tree, folderPath) || state.tree;
+      if (!node) return;
+
+      if (action === "rename") {
+        const newName = prompt("重命名文件夹", target.name);
+        if (!newName || !newName.trim() || newName.trim() === target.name) return;
+        if (parent.children.some((c) => c.name === newName.trim())) return;
+        node.name = newName.trim();
+        if (state.selectedPath[depth] === target.name) {
+          state.selectedPath[depth] = newName.trim();
+        }
+        syncDataFromTree();
+        render();
+      } else if (action === "delete") {
+        if (!confirm(`确定删除「${target.name}」及其所有内容吗？`)) return;
+        parent.children = parent.children.filter((c) => c.name !== target.name);
+        if (state.selectedPath[depth] === target.name) {
+          state.selectedPath = state.selectedPath.slice(0, depth);
+        }
+        syncDataFromTree();
+        render();
+      } else if (action === "move") {
+        const allPaths = getAllFolderPaths(state.tree);
+        const options = ["根目录", ...allPaths.filter((p) => !isPathPrefix(folderPath, p)).map((p) => p.join(" / "))];
+        const choice = prompt("移动到（输入路径或「根目录」）：\n可选：\n" + options.join("\n"), "根目录");
+        if (choice === null) return;
+        const targetPath = choice === "根目录" ? [] : choice.split(" / ");
+        const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
+        if (targetNode.children.some((c) => c.name === node.name)) return;
+        parent.children = parent.children.filter((c) => c.name !== target.name);
+        targetNode.children.push(node);
+        state.selectedPath = [...targetPath, node.name];
+        syncDataFromTree();
+        render();
+      }
+    } else if (target.type === "link") {
+      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const linkIndex = currentNode.links.findIndex((l) => l.url === target.url && l.title === target.name);
+      if (linkIndex < 0) return;
+
+      if (action === "rename") {
+        const newTitle = prompt("修改标题", target.name);
+        if (newTitle === null) return;
+        const newUrl = prompt("修改网址", target.url);
+        if (newUrl === null) return;
+        currentNode.links[linkIndex].title = newTitle.trim() || target.url;
+        currentNode.links[linkIndex].url = newUrl.trim() || target.url;
+        syncDataFromTree();
+        render();
+      } else if (action === "delete") {
+        currentNode.links.splice(linkIndex, 1);
+        syncDataFromTree();
+        render();
+      } else if (action === "move") {
+        const allPaths = getAllFolderPaths(state.tree);
+        const options = ["根目录", ...allPaths.map((p) => p.join(" / "))];
+        const choice = prompt("移动到：\n可选：\n" + options.join("\n"), "根目录");
+        if (choice === null) return;
+        const targetPath = choice === "根目录" ? [] : choice.split(" / ");
+        const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
+        const [link] = currentNode.links.splice(linkIndex, 1);
+        targetNode.links.push(link);
+        syncDataFromTree();
+        render();
+      }
+    }
   });
 };
 
@@ -947,10 +1176,13 @@ const init = async () => {
     data = null;
   }
 
+  state.siteTitle = localStorage.getItem(TITLE_KEY) || DEFAULT_TITLE;
+  state.siteSlogan = localStorage.getItem(SLOGAN_KEY) || DEFAULT_SLOGAN;
   state.colors = loadColors();
   applyColors(state.colors);
-  elements.title.textContent = SITE_TITLE;
-  document.title = SITE_TITLE;
+  elements.title.textContent = state.siteTitle;
+  elements.description.textContent = state.siteSlogan;
+  document.title = state.siteTitle;
   setupEvents();
 
   if (!data || !data.groups || !data.groups.length) {
@@ -958,16 +1190,30 @@ const init = async () => {
     const welcome = document.createElement("div");
     welcome.className = "welcome";
     welcome.innerHTML =
-      '<h2>欢迎使用猫冬吧</h2>' +
-      '<p>点击右上角「更换书签」上传你的浏览器书签文件（.html），即可生成你的专属导航页。</p>' +
-      '<p>你的书签数据仅保存在你自己的浏览器中，他人无法看到。</p>';
+      '<h2>定制你自己的导航</h2>' +
+      '<div class="welcome-actions">' +
+        '<button id="welcome-upload" class="welcome-btn" type="button">上传浏览器书签</button>' +
+        '<button id="welcome-new" class="welcome-btn welcome-btn-alt" type="button">从零开始创建</button>' +
+      '</div>' +
+      '<p>你的数据仅保存在你自己的浏览器中，他人无法看到。</p>';
     elements.groups.appendChild(welcome);
+
+    document.getElementById("welcome-upload").addEventListener("click", () => {
+      elements.bookmarkFile.click();
+    });
+    document.getElementById("welcome-new").addEventListener("click", () => {
+      state.data = { title: state.siteTitle, description: state.siteSlogan, groups: [] };
+      state.tree = buildTree([]);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.data));
+      render();
+      elements.adminPanel.classList.remove("hidden");
+      renderAdminPanel();
+    });
     return;
   }
 
   state.data = data;
   state.tree = buildTree(data.groups || []);
-  elements.description.textContent = data.description || "把你的收藏夹整理成清爽的导航页";
   render();
   updateToggleButton();
   renderAdminPanel();
