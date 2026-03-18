@@ -938,15 +938,7 @@ const init = async () => {
   }
 
   if (!data) {
-    try {
-      const response = await fetch("data.json");
-      const fetched = await response.json();
-      if (fetched && fetched.groups && fetched.groups.length) {
-        data = fetched;
-      }
-    } catch (error) {
-      // no default data available
-    }
+    data = null;
   }
 
   state.colors = loadColors();
