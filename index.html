@@ -44,6 +44,19 @@
       <button data-action="move" type="button">移动到…</button>
     </div>
 
+    <div id="move-modal" class="move-modal hidden">
+      <div class="move-panel">
+        <div class="move-header">
+          <h3 id="move-title">移动到</h3>
+          <button id="close-move" class="ghost-button" type="button">关闭</button>
+        </div>
+        <div class="move-body">
+          <input id="move-search" type="search" placeholder="搜索目录" />
+          <div id="move-options" class="move-options"></div>
+        </div>
+      </div>
+    </div>
+
     <aside id="admin-panel" class="admin-panel hidden">
       <div class="admin-header">
         <h2>管理</h2>

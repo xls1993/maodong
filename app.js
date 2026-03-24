@@ -7,6 +7,8 @@ const state = {
   colors: null,
   siteTitle: "",
   siteSlogan: "",
+  moveRequest: null,
+  recentMovePaths: [],
 };
 
 const DEFAULT_TITLE = "猫冬吧";
@@ -15,6 +17,7 @@ const STORAGE_KEY = "nav_site_data";
 const COLOR_KEY = "nav_site_colors";
 const TITLE_KEY = "nav_site_title";
 const SLOGAN_KEY = "nav_site_slogan";
+const RECENT_MOVE_KEY = "nav_recent_move_paths";
 
 const elements = {
   title: document.getElementById("site-title"),
@@ -44,6 +47,11 @@ const elements = {
   customSlogan: document.getElementById("custom-slogan"),
   saveTitle: document.getElementById("save-title"),
   ctxMenu: document.getElementById("ctx-menu"),
+  moveModal: document.getElementById("move-modal"),
+  moveTitle: document.getElementById("move-title"),
+  closeMove: document.getElementById("close-move"),
+  moveSearch: document.getElementById("move-search"),
+  moveOptions: document.getElementById("move-options"),
 };
 
 const normalize = (value) => (value || "").toLowerCase().trim();
@@ -222,7 +230,7 @@ const buildTree = (groups) => {
 
 const treeToGroups = (node, path = []) => {
   const groups = [];
-  if (node.links.length) {
+  if (node.links.length || (path.length > 0 && node.children.length === 0)) {
     const name = path.length ? path.join(" / ") : "未分类";
     groups.push({ name, links: node.links });
   }
@@ -298,11 +306,6 @@ const getAllFolderPaths = (node, path = []) => {
   return paths;
 };
 
-const isDescendant = (node, targetName, path = []) => {
-  if (node.name === targetName && path.length) return true;
-  return node.children.some((child) => isDescendant(child, targetName, [...path, child.name]));
-};
-
 const countLinks = (node) => {
   let total = node.links.length;
   node.children.forEach((child) => {
@@ -324,6 +327,125 @@ const syncDataFromTree = () => {
 const pathToLabel = (path) => (path.length ? path.join(" / ") : "根目录");
 const isPathPrefix = (prefix, path) =>
   prefix.length <= path.length && prefix.every((part, index) => part === path[index]);
+
+const samePath = (a, b) =>
+  a.length === b.length && a.every((part, index) => part === b[index]);
+
+const loadRecentMovePaths = () => {
+  const stored = localStorage.getItem(RECENT_MOVE_KEY);
+  if (!stored) return [];
+  try {
+    const parsed = JSON.parse(stored);
+    return Array.isArray(parsed) ? parsed.filter((item) => Array.isArray(item)) : [];
+  } catch (error) {
+    localStorage.removeItem(RECENT_MOVE_KEY);
+    return [];
+  }
+};
+
+const saveRecentMovePath = (path) => {
+  const next = [path, ...state.recentMovePaths.filter((item) => !samePath(item, path))].slice(0, 6);
+  state.recentMovePaths = next;
+  localStorage.setItem(RECENT_MOVE_KEY, JSON.stringify(next));
+};
+
+const closeMoveModal = () => {
+  state.moveRequest = null;
+  elements.moveSearch.value = "";
+  elements.moveModal.classList.add("hidden");
+};
+
+const renderMoveOptions = () => {
+  if (!state.moveRequest || !state.tree) return;
+  const keyword = normalize(elements.moveSearch.value);
+  const allPaths = getAllFolderPaths(state.tree);
+  let options = [[]].concat(allPaths);
+  const currentLocation =
+    state.moveRequest.type === "folder" ? state.moveRequest.sourcePath.slice(0, -1) : state.moveRequest.sourcePath;
+
+  if (state.moveRequest.type === "folder") {
+    const sourcePath = state.moveRequest.sourcePath;
+    options = options.filter((path) => !isPathPrefix(sourcePath, path));
+  }
+
+  options = options.filter((path) => {
+    const label = pathToLabel(path);
+    return !keyword || normalize(label).includes(keyword);
+  });
+
+  elements.moveOptions.innerHTML = "";
+  if (!options.length) {
+    const empty = document.createElement("div");
+    empty.className = "move-empty";
+    empty.textContent = "没有匹配的目录";
+    elements.moveOptions.appendChild(empty);
+    return;
+  }
+
+  const recentPaths = state.recentMovePaths.filter((path) => options.some((item) => samePath(item, path)));
+  const normalPaths = options.filter((path) => !recentPaths.some((item) => samePath(item, path)));
+
+  const renderSection = (title, paths) => {
+    if (!paths.length) return;
+    const sectionTitle = document.createElement("div");
+    sectionTitle.className = "move-section-title";
+    sectionTitle.textContent = title;
+    elements.moveOptions.appendChild(sectionTitle);
+    paths.forEach((path) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "move-option";
+    button.style.paddingLeft = `${12 + path.length * 14}px`;
+    const label = pathToLabel(path);
+    const isCurrent = samePath(path, currentLocation);
+    button.title = label;
+    button.innerHTML = `${label}<span class="move-option-path">${path.length ? `${path.length} 级目录` : "顶层"}${isCurrent ? " · 当前位置" : ""}</span>`;
+    if (isCurrent) {
+      button.disabled = true;
+      button.classList.add("is-current");
+    }
+    button.addEventListener("click", () => {
+      if (!state.moveRequest || !state.tree) return;
+      if (state.moveRequest.type === "folder") {
+        const { sourcePath, nodeName } = state.moveRequest;
+        const parent = getParentNode(state.tree, sourcePath);
+        const node = getNodeByPath(state.tree, sourcePath);
+        const targetNode = getNodeByPath(state.tree, path) || state.tree;
+        if (!node || !parent) return;
+        if (targetNode.children.some((c) => c.name === nodeName)) return;
+        parent.children = parent.children.filter((c) => c.name !== nodeName);
+        targetNode.children.push(node);
+        state.selectedPath = [...path, node.name];
+      } else if (state.moveRequest.type === "link") {
+        const { sourcePath, linkIndex } = state.moveRequest;
+        const currentNode = getNodeByPath(state.tree, sourcePath) || state.tree;
+        const targetNode = getNodeByPath(state.tree, path) || state.tree;
+        const [link] = currentNode.links.splice(linkIndex, 1);
+        if (!link) return;
+        targetNode.links.push(link);
+        state.selectedPath = [...path];
+      }
+      saveRecentMovePath(path);
+      syncDataFromTree();
+      closeMoveModal();
+      render();
+    });
+    elements.moveOptions.appendChild(button);
+    });
+  };
+
+  renderSection("最近使用", recentPaths);
+  renderSection("全部目录", normalPaths);
+};
+
+const openMoveModal = (request) => {
+  state.moveRequest = request;
+  elements.moveTitle.textContent =
+    request.type === "folder" ? `移动文件夹：${request.nodeName}` : `移动网址：${request.linkName}`;
+  elements.moveSearch.value = "";
+  renderMoveOptions();
+  elements.moveModal.classList.remove("hidden");
+};
 
 const renderAdminPanel = () => {
   if (elements.adminPanel.classList.contains("hidden")) return;
@@ -527,30 +649,6 @@ const renderGroupsDesktop = (tree) => {
     columns.classList.add("columns-scroll");
   }
 
-  // #region agent log
-  fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Debug-Session-Id": "5cce06",
-    },
-    body: JSON.stringify({
-      sessionId: "5cce06",
-      runId: "repro-before-fix",
-      hypothesisId: "H2",
-      location: "app.js:renderGroupsDesktop",
-      message: "desktop columns rendered",
-      data: {
-        selectedPath: state.selectedPath,
-        maxDepth,
-        rootChildCount: tree.children.length,
-        currentPathDepth: depth,
-      },
-      timestamp: Date.now(),
-    }),
-  }).catch(() => {});
-  // #endregion
-
   return columns;
 };
 
@@ -736,6 +834,20 @@ const setupEvents = () => {
     elements.adminPanel.classList.add("hidden");
   });
 
+  elements.closeMove.addEventListener("click", () => {
+    closeMoveModal();
+  });
+
+  elements.moveModal.addEventListener("click", (event) => {
+    if (event.target === elements.moveModal) {
+      closeMoveModal();
+    }
+  });
+
+  elements.moveSearch.addEventListener("input", () => {
+    renderMoveOptions();
+  });
+
   elements.uploadButton.addEventListener("click", () => {
     elements.bookmarkFile.click();
   });
@@ -873,7 +985,13 @@ const setupEvents = () => {
 
   document.addEventListener("click", () => { hideTooltip(); hideCtxMenu(); });
   document.addEventListener("scroll", () => { hideTooltip(); hideCtxMenu(); }, true);
-  document.addEventListener("keydown", () => { hideTooltip(); hideCtxMenu(); });
+  document.addEventListener("keydown", (event) => {
+    hideTooltip();
+    hideCtxMenu();
+    if (event.key === "Escape") {
+      closeMoveModal();
+    }
+  });
 
   document.addEventListener("contextmenu", (event) => {
     const linkWrap = event.target.closest(".link-card-wrap") || event.target.closest(".link-card");
@@ -887,10 +1005,25 @@ const setupEvents = () => {
     ctxBtns.forEach((btn) => { btn.style.display = ""; });
 
     if (linkWrap) {
-      const url = linkWrap.dataset.url || (linkWrap.querySelector(".link-card") || linkWrap).dataset.url || "";
-      elements.ctxMenu._target = { type: "link", name: (linkWrap.querySelector(".link-title") || linkWrap.closest(".link-card")?.querySelector(".link-title"))?.textContent, url };
+      const url =
+        linkWrap.dataset.url || (linkWrap.querySelector(".link-card") || linkWrap).dataset.url || "";
+      elements.ctxMenu._target = {
+        type: "link",
+        name:
+          (linkWrap.querySelector(".link-title") ||
+            linkWrap.closest(".link-card")?.querySelector(".link-title"))?.textContent,
+        url,
+        targetPath: getColumnPath(linkWrap.closest(".column")),
+      };
     } else if (folderTarget) {
-      elements.ctxMenu._target = { type: "folder", name: folderTarget.querySelector(".folder-name")?.textContent, depth: Number(folderTarget.dataset.depth || 0) };
+      const depth = Number(folderTarget.dataset.depth || 0);
+      const name = folderTarget.querySelector(".folder-name")?.textContent;
+      elements.ctxMenu._target = {
+        type: "folder",
+        name,
+        depth,
+        targetPath: [...state.selectedPath.slice(0, depth), name],
+      };
     } else if (columnTarget) {
       ctxBtns.forEach((btn) => {
         const action = btn.dataset.action;
@@ -898,33 +1031,8 @@ const setupEvents = () => {
           btn.style.display = "none";
         }
       });
-      elements.ctxMenu._target = { type: "column" };
+      elements.ctxMenu._target = { type: "column", targetPath: getColumnPath(columnTarget) };
     }
-
-    // #region agent log
-    fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Debug-Session-Id": "5cce06",
-      },
-      body: JSON.stringify({
-        sessionId: "5cce06",
-        runId: "repro-before-fix",
-        hypothesisId: "H1",
-        location: "app.js:contextmenu",
-        message: "context menu opened",
-        data: {
-          selectedPath: state.selectedPath,
-          targetType: elements.ctxMenu._target?.type || null,
-          targetName: elements.ctxMenu._target?.name || null,
-          targetDepth: elements.ctxMenu._target?.depth ?? null,
-          columnPath: getColumnPath(columnTarget),
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
 
     elements.ctxMenu.style.left = `${event.pageX + 4}px`;
     elements.ctxMenu.style.top = `${event.pageY + 4}px`;
@@ -938,90 +1046,21 @@ const setupEvents = () => {
     hideCtxMenu();
 
     if (action === "add-folder") {
-      const targetPath = [...state.selectedPath];
-      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const targetPath = target.targetPath || [...state.selectedPath];
+      const currentNode = getNodeByPath(state.tree, targetPath) || state.tree;
       const name = prompt("新文件夹名称");
-      // #region agent log
-      fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Debug-Session-Id": "5cce06",
-        },
-        body: JSON.stringify({
-          sessionId: "5cce06",
-          runId: "repro-before-fix",
-          hypothesisId: "H1",
-          location: "app.js:add-folder:before",
-          message: "add-folder triggered",
-          data: {
-            selectedPath: state.selectedPath,
-            targetType: target.type,
-            resolvedTargetPath: targetPath,
-            inputName: name,
-            childNamesBefore: currentNode.children.map((c) => c.name),
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (!name || !name.trim()) return;
-      if (currentNode.children.find((c) => c.name === name.trim())) {
-        // #region agent log
-        fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Debug-Session-Id": "5cce06",
-          },
-          body: JSON.stringify({
-            sessionId: "5cce06",
-            runId: "repro-before-fix",
-            hypothesisId: "H4",
-            location: "app.js:add-folder:duplicate",
-            message: "add-folder rejected as duplicate",
-            data: {
-              selectedPath: state.selectedPath,
-              resolvedTargetPath: targetPath,
-              inputName: name.trim(),
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-        // #endregion
-        return;
-      }
+      if (currentNode.children.find((c) => c.name === name.trim())) return;
       currentNode.children.push({ name: name.trim(), children: [], links: [] });
+      state.selectedPath = [...targetPath, name.trim()];
       syncDataFromTree();
-      // #region agent log
-      fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Debug-Session-Id": "5cce06",
-        },
-        body: JSON.stringify({
-          sessionId: "5cce06",
-          runId: "repro-before-fix",
-          hypothesisId: "H2",
-          location: "app.js:add-folder:after",
-          message: "add-folder inserted and synced",
-          data: {
-            selectedPath: state.selectedPath,
-            resolvedTargetPath: targetPath,
-            childNamesAfter: currentNode.children.map((c) => c.name),
-            groupCount: state.data?.groups?.length || 0,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       render();
       return;
     }
 
     if (action === "add-link") {
-      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const targetPath = target.targetPath || [...state.selectedPath];
+      const currentNode = getNodeByPath(state.tree, targetPath) || state.tree;
       const title = prompt("书签标题");
       if (title === null) return;
       const url = prompt("网址（https://）");
@@ -1058,21 +1097,15 @@ const setupEvents = () => {
         syncDataFromTree();
         render();
       } else if (action === "move") {
-        const allPaths = getAllFolderPaths(state.tree);
-        const options = ["根目录", ...allPaths.filter((p) => !isPathPrefix(folderPath, p)).map((p) => p.join(" / "))];
-        const choice = prompt("移动到（输入路径或「根目录」）：\n可选：\n" + options.join("\n"), "根目录");
-        if (choice === null) return;
-        const targetPath = choice === "根目录" ? [] : choice.split(" / ");
-        const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
-        if (targetNode.children.some((c) => c.name === node.name)) return;
-        parent.children = parent.children.filter((c) => c.name !== target.name);
-        targetNode.children.push(node);
-        state.selectedPath = [...targetPath, node.name];
-        syncDataFromTree();
-        render();
+        openMoveModal({
+          type: "folder",
+          nodeName: node.name,
+          sourcePath: folderPath,
+        });
       }
     } else if (target.type === "link") {
-      const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
+      const sourcePath = target.targetPath || [...state.selectedPath];
+      const currentNode = getNodeByPath(state.tree, sourcePath) || state.tree;
       const linkIndex = currentNode.links.findIndex((l) => l.url === target.url && l.title === target.name);
       if (linkIndex < 0) return;
 
@@ -1090,16 +1123,12 @@ const setupEvents = () => {
         syncDataFromTree();
         render();
       } else if (action === "move") {
-        const allPaths = getAllFolderPaths(state.tree);
-        const options = ["根目录", ...allPaths.map((p) => p.join(" / "))];
-        const choice = prompt("移动到：\n可选：\n" + options.join("\n"), "根目录");
-        if (choice === null) return;
-        const targetPath = choice === "根目录" ? [] : choice.split(" / ");
-        const targetNode = getNodeByPath(state.tree, targetPath) || state.tree;
-        const [link] = currentNode.links.splice(linkIndex, 1);
-        targetNode.links.push(link);
-        syncDataFromTree();
-        render();
+        openMoveModal({
+          type: "link",
+          linkName: target.name,
+          sourcePath,
+          linkIndex,
+        });
       }
     }
   });
@@ -1126,6 +1155,7 @@ const init = async () => {
   state.siteTitle = localStorage.getItem(TITLE_KEY) || DEFAULT_TITLE;
   state.siteSlogan = localStorage.getItem(SLOGAN_KEY) || DEFAULT_SLOGAN;
   state.colors = loadColors();
+  state.recentMovePaths = loadRecentMovePaths();
   applyColors(state.colors);
   elements.title.textContent = state.siteTitle;
   elements.description.textContent = state.siteSlogan;
