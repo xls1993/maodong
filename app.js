@@ -85,6 +85,12 @@ const saveColors = (colors) => {
   applyColors(colors);
 };
 
+const getColumnPath = (column) => {
+  if (!column) return [];
+  const rawPath = column.dataset.nodePath || "";
+  return rawPath ? rawPath.split(" / ") : [];
+};
+
 const parseBookmarksHtml = (htmlText) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlText, "text/html");
@@ -521,6 +527,30 @@ const renderGroupsDesktop = (tree) => {
     columns.classList.add("columns-scroll");
   }
 
+  // #region agent log
+  fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Debug-Session-Id": "5cce06",
+    },
+    body: JSON.stringify({
+      sessionId: "5cce06",
+      runId: "repro-before-fix",
+      hypothesisId: "H2",
+      location: "app.js:renderGroupsDesktop",
+      message: "desktop columns rendered",
+      data: {
+        selectedPath: state.selectedPath,
+        maxDepth,
+        rootChildCount: tree.children.length,
+        currentPathDepth: depth,
+      },
+      timestamp: Date.now(),
+    }),
+  }).catch(() => {});
+  // #endregion
+
   return columns;
 };
 
@@ -871,6 +901,31 @@ const setupEvents = () => {
       elements.ctxMenu._target = { type: "column" };
     }
 
+    // #region agent log
+    fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "5cce06",
+      },
+      body: JSON.stringify({
+        sessionId: "5cce06",
+        runId: "repro-before-fix",
+        hypothesisId: "H1",
+        location: "app.js:contextmenu",
+        message: "context menu opened",
+        data: {
+          selectedPath: state.selectedPath,
+          targetType: elements.ctxMenu._target?.type || null,
+          targetName: elements.ctxMenu._target?.name || null,
+          targetDepth: elements.ctxMenu._target?.depth ?? null,
+          columnPath: getColumnPath(columnTarget),
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+    // #endregion
+
     elements.ctxMenu.style.left = `${event.pageX + 4}px`;
     elements.ctxMenu.style.top = `${event.pageY + 4}px`;
     elements.ctxMenu.classList.remove("hidden");
@@ -883,12 +938,84 @@ const setupEvents = () => {
     hideCtxMenu();
 
     if (action === "add-folder") {
+      const targetPath = [...state.selectedPath];
       const currentNode = getNodeByPath(state.tree, state.selectedPath) || state.tree;
       const name = prompt("新文件夹名称");
+      // #region agent log
+      fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Debug-Session-Id": "5cce06",
+        },
+        body: JSON.stringify({
+          sessionId: "5cce06",
+          runId: "repro-before-fix",
+          hypothesisId: "H1",
+          location: "app.js:add-folder:before",
+          message: "add-folder triggered",
+          data: {
+            selectedPath: state.selectedPath,
+            targetType: target.type,
+            resolvedTargetPath: targetPath,
+            inputName: name,
+            childNamesBefore: currentNode.children.map((c) => c.name),
+          },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+      // #endregion
       if (!name || !name.trim()) return;
-      if (currentNode.children.find((c) => c.name === name.trim())) return;
+      if (currentNode.children.find((c) => c.name === name.trim())) {
+        // #region agent log
+        fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Debug-Session-Id": "5cce06",
+          },
+          body: JSON.stringify({
+            sessionId: "5cce06",
+            runId: "repro-before-fix",
+            hypothesisId: "H4",
+            location: "app.js:add-folder:duplicate",
+            message: "add-folder rejected as duplicate",
+            data: {
+              selectedPath: state.selectedPath,
+              resolvedTargetPath: targetPath,
+              inputName: name.trim(),
+            },
+            timestamp: Date.now(),
+          }),
+        }).catch(() => {});
+        // #endregion
+        return;
+      }
       currentNode.children.push({ name: name.trim(), children: [], links: [] });
       syncDataFromTree();
+      // #region agent log
+      fetch("http://127.0.0.1:7242/ingest/b32080d2-12b5-4ea6-8058-9ca867aa0b9c", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Debug-Session-Id": "5cce06",
+        },
+        body: JSON.stringify({
+          sessionId: "5cce06",
+          runId: "repro-before-fix",
+          hypothesisId: "H2",
+          location: "app.js:add-folder:after",
+          message: "add-folder inserted and synced",
+          data: {
+            selectedPath: state.selectedPath,
+            resolvedTargetPath: targetPath,
+            childNamesAfter: currentNode.children.map((c) => c.name),
+            groupCount: state.data?.groups?.length || 0,
+          },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+      // #endregion
       render();
       return;
     }
